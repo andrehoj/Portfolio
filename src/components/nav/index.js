@@ -1,7 +1,6 @@
 import React from "react";
 import { useMediaPredicate } from "react-media-hook";
-import Sidebaricon from "../sidebaricon";
-import Topbarlinks from "../topbarlinks";
+
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
@@ -10,25 +9,25 @@ import { BiCodeAlt } from "react-icons/bi";
 
 const Nav = () => {
   const biggerThan1000 = useMediaPredicate("(min-width: 1000px)");
-
-  const biggerThan500 = useMediaPredicate("(min-width: 500px)");
+  const biggerThan500 = useMediaPredicate("(min-width: 550px)");
 
   const topNavLinks = ["Home", "About Me", "Projects", "Contact"];
+  const sideBarIcons = [ImHome, GoPerson, BiCodeAlt, GrMail];
 
   if (biggerThan1000) {
     return (
-      <div className="nav-large ">
+      <div className="nav-large">
         <nav className="h-full flex flex-col items-center justify-end">
           <div className="mt-24 grow">
-            <Sidebaricon icon={<ImHome size="36" />} />
-            <Sidebaricon icon={<GoPerson size="36" />} />
-            <Sidebaricon icon={<BiCodeAlt size="36" />} />
-            <Sidebaricon icon={<GrMail size="36" />} />
+            {sideBarIcons.map((Icon, i) => (
+              <div className="sidebar-icon" key={i}>
+                <Icon size="36" />
+              </div>
+            ))}
           </div>
-
           <div className="mb-8">
-            <Sidebaricon icon={<BsGithub size="22" />} />
-            <Sidebaricon icon={<BsLinkedin size="22" />} />
+            <BsGithub size="36" className="sidebar-icon" />
+            <BsLinkedin size="36" className="sidebar-icon" />
           </div>
         </nav>
       </div>
@@ -39,14 +38,23 @@ const Nav = () => {
         <nav
           className={`flex h-full ${
             biggerThan500
-              ? " justify-end items-center gap-10 mr-14"
-              : "flex-col justify-center items-end gap-2 mr-12"
+              ? " justify-end items-center gap-5 mr-14"
+              : "flex justify-end items-center gap-x-3 mr-4 "
           } `}
         >
-          <Topbarlinks link={topNavLinks[0]} />
-          <Topbarlinks link={topNavLinks[1]} />
-          <Topbarlinks link={topNavLinks[2]} />
-          <Topbarlinks link={topNavLinks[3]} />
+          {topNavLinks.map((link, i) => (
+            <div className={`top-nav-link ${!biggerThan500 && "text-responsive"}`}>
+              <a href="/" className="link-item " key={i}>
+                {link}
+              </a>
+            </div>
+          ))}
+          <div
+            className={`flex gap-4 ${!biggerThan500 && "justify-center"}`}
+          >
+            <BsGithub size="22" className="topbar-icon" />
+            <BsLinkedin size="22" className="topbar-icon" />
+          </div>
         </nav>
       </div>
     );
