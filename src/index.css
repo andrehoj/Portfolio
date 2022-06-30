@@ -8,7 +8,7 @@
   }
 
   .nav-small {
-    @apply fixed right-0 w-11/12 h-16 bg-primary rounded-bl-full;
+    @apply fixed right-0 w-11/12 h-16 bg-primary rounded-bl-full ;
   }
 
   .nav-xsmall {
@@ -31,12 +31,19 @@
   .nav-active-icon {
     @apply text-secondary bg-text_color rounded-xl transition-none;
   }
+}
 
- 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
   padding-left: 6rem;
+  background-color: #051622;
+  color: #deb992;
+  font-family: "Source Code Pro", Times, serif;
 }
 
 @media screen and (max-width: 1000px) {
@@ -46,24 +53,33 @@ body {
 }
 
 .link-item {
-  box-shadow: inset 0 0 0 0 #fba92c;
-  color: #fba92c;
+  box-shadow: inset 0 0 0 0 #33b6ae;
+  color: #33b6ae;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .link-item:hover {
-  box-shadow: inset 100px 0 0 0 #fba92c;
+  box-shadow: inset 100px 0 0 0 #33b6ae;
   color: #565656;
 }
 
 .nav-active-link {
-  box-shadow: inset 100px 0 0 0 #fba92c;
+  box-shadow: inset 100px 0 0 0 #33b6ae;
   color: #565656;
 }
 
-.text-responsive{
+/* .text-responsive{
   font-size: ;
+} */
+
+.message-placeholder {
+  height: 200px;
+  padding: 20px;
+}
+
+textarea {
+  resize: none;
 }
 
 .random-rainbow-text {
@@ -117,3 +133,7 @@ body {
   --css-color: #304cdc;
   --html-color: #d35836;
 } */
+
+/* #051622
+#1BA098
+#DEB992 */
