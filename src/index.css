@@ -8,7 +8,7 @@
   }
 
   .nav-small {
-    @apply fixed right-0 w-11/12 h-16 bg-primary rounded-bl-full ;
+    @apply fixed right-0 w-11/12 h-16 bg-primary rounded-bl-full;
   }
 
   .nav-xsmall {
@@ -24,11 +24,11 @@
     transition-all duration-200 ease-linear;
   }
 
-  .top-nav-link {
-    @apply text-lg font-serif text-text_color;
+  .topbar-icon {
+    @apply text-text_color;
   }
 
-  .nav-active-icon {
+  .icon-active {
     @apply text-secondary bg-text_color rounded-xl transition-none;
   }
 }

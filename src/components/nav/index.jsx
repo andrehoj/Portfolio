@@ -1,14 +1,12 @@
 import React from "react";
-
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { BiCodeAlt } from "react-icons/bi";
+import { GiHammerNails } from "react-icons/gi";
 
 const Nav = (props) => {
-  const topNavLinks = ["Home", "About Me", "Projects", "Contact"];
-  const sideBarIcons = [ImHome, GoPerson, BiCodeAlt, GrMail];
+  const sideBarIcons = [ImHome, GoPerson, GiHammerNails, GrMail];
 
   if (props.biggerThan1000) {
     return (
@@ -34,22 +32,22 @@ const Nav = (props) => {
         <nav
           className={`flex h-full ${
             props.biggerThan500
-              ? " justify-end items-center gap-5 mr-14"
+              ? " justify-end items-center gap-6 mr-14"
               : "flex justify-end items-center gap-x-3 mr-4 "
           } `}
         >
-          {topNavLinks.map((link, i) => (
-            <div className={`top-nav-link ${!props.biggerThan500 && ""}`}>
-              <a href="/" className="link-item " key={i}>
-                {link}
-              </a>
+          {sideBarIcons.map((Icon) => (
+            <div className={`topbar-icon ${!props.biggerThan500 && ""}`}>
+              <Icon size="34" />
             </div>
           ))}
           <div
             className={`flex gap-4 ${!props.biggerThan500 && "justify-center"}`}
           >
-            <BsGithub size="22" className="topbar-icon" />
-            <BsLinkedin size="22" className="topbar-icon" />
+            <div className="ml-10 flex gap-3">
+              <BsGithub size="22" className="topbar-icon" />
+              <BsLinkedin size="22" className="topbar-icon" />
+            </div>
           </div>
         </nav>
       </div>
