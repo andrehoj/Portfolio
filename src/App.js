@@ -3,6 +3,7 @@ import "@fontsource/source-code-pro";
 import { useMediaPredicate } from "react-media-hook";
 import Nav from "./components/nav";
 import Contact from "./components/contact";
+import About from "./components/about";
 
 function App() {
   const biggerThan1000 = useMediaPredicate("(min-width: 1000px)");
@@ -12,6 +13,7 @@ function App() {
     <div>
       <Nav biggerThan1000={biggerThan1000} biggerThan500={biggerThan500} />
       <Contact biggerThan1000={biggerThan1000} biggerThan500={biggerThan500} />
+      <About biggerThan1000={biggerThan1000} biggerThan500={biggerThan500} />
     </div>
   );
 }
