@@ -3,7 +3,7 @@ import React from "react";
 function about(props) {
   return (
     <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
-      <p className="text-6xl">About me</p>
+      <p className="title-text">About me</p>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
         cumque ducimus praesentium, deserunt perspiciatis, pariatur impedit

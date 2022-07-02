@@ -39,7 +39,7 @@ function project(props) {
 
   return (
     <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
-      <h2 className="text-6xl">Things I've built</h2>
+      <h2 className="title-text">Things I've built</h2>
       <div className="project-container fourty">
         <h1 className="project-title">Developer Hangout</h1>
         <img

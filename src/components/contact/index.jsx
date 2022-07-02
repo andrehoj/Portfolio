@@ -2,8 +2,8 @@ import React from "react";
 
 function contact(props) {
   return (
-    <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
-      <h2 className="text-6xl">Contact me</h2>
+    <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5 mb-20">
+      <h2 className="title-text">Contact me</h2>
       <p className={` ${!props.biggerThan1000 ? "w-10/12" : "w-full"}`}>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eligendi
         consectetur iste illo nam veniam totam harum et beatae. Sapiente facere
