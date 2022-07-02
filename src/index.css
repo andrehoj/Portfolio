@@ -31,7 +31,17 @@
   .icon-active {
     @apply text-secondary bg-text_color rounded-xl transition-none;
   }
+
+  .project-container {
+    @apply flex flex-col items-center  w-96  mt-10 mb-10 m-auto p-5;
+  }
+
+  .project-card {
+    @apply flex flex-col p-3 relative rounded-xl -top-10 w-3/4 h-fit text-center bg-back text-third_text text-xl transition ease-in-out duration-500;
+  }
 }
+
+
 
 * {
   padding: 0;
@@ -50,6 +60,18 @@ body {
   body {
     padding: 0;
   }
+}
+
+.tilt {
+  transform: perspective(200px) rotateX(5deg);
+}
+
+.tilt:hover {
+  transform: perspective(none);
+}
+
+.fourty {
+  min-width: 40rem;
 }
 
 .link-item {
