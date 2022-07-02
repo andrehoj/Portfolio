@@ -1,5 +1,4 @@
 import "./index.css";
-import "@fontsource/source-code-pro";
 import { useMediaPredicate } from "react-media-hook";
 import Nav from "./components/nav";
 import Contact from "./components/contact";
