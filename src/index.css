@@ -31,7 +31,7 @@
   }
 
   .icon-active {
-    @apply text-secondary bg-text_color rounded-xl transition-none;
+    @apply text-secondary bg-text_color rounded-xl p-2 mb-5;
   }
 
   .project-container {
@@ -47,6 +47,11 @@
   font-size: calc(2.5rem + 1vw);
   white-space: nowrap;
   line-height: 1;
+}
+
+.p-text {
+  font-size: calc(1rem + 1vw);
+  line-height: 1.4;
 }
 
 * {
@@ -66,6 +71,10 @@ body {
   body {
     padding: 0;
   }
+}
+
+.sections{
+  height: 100vh;
 }
 
 .tilt {
@@ -94,6 +103,7 @@ body {
 
 .nav-active-link {
   box-shadow: inset 100px 0 0 0 #33b6ae;
+  border-radius: 25%;
   color: #565656;
 }
 
@@ -105,9 +115,6 @@ body {
   text-align: center;
   color: #33b6ae;
 }
-/* .text-responsive{
-  font-size: ;
-} */
 
 .message-placeholder {
   height: 200px;
@@ -117,59 +124,3 @@ body {
 textarea {
   resize: none;
 }
-
-.random-rainbow-text {
-  font-size: 2.5rem;
-  font-family: "Source Code Pro";
-  background: linear-gradient(
-    to right,
-    #6666ff,
-    #0099ff,
-    #00ff00,
-    #ff3399,
-    #6666ff
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow_animation 6s ease-in-out infinite;
-  background-size: 400% 100%;
-}
-
-@keyframes rainbow_animation {
-  0%,
-  100% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 100% 0;
-  }
-}
-
-/* <div className="flex flex-col">
-            <span className="random-rainbow-text">D</span>
-            <span className="random-rainbow-text">E</span>
-            <span className="random-rainbow-text">V</span>
-          </div> */
-
-/* 
-:root {
-  --background-color: #282c34;
-  --variable-color: #e06c75;
-  --string-color: #98c379;
-  --object-color: #e5c07b;
-  --method-color: #61afef;
-  --keyword-color: #c678dd;
-  --prototype-color-: #56b6c2;
-  --comment-color: #abb2bf;
-  --fontStackOne-: "source code pro", sans-serif;
-  --fontStackTwo: "Open Sans", sans-serif;
-  --javascript-color: #f7e018;
-  --css-color: #304cdc;
-  --html-color: #d35836;
-} */
-
-/* #051622
-#1BA098
-#DEB992 */
