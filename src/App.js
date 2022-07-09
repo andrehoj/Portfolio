@@ -15,11 +15,8 @@ function App() {
   const options = { threshold: 0.6 };
 
   const { ref, inView } = useInView(options);
-
   const { ref: ref1, inView: inView1 } = useInView(options);
-
   const { ref: ref2, inView: inView2 } = useInView(options);
-
   const { ref: ref3, inView: inView3 } = useInView(options);
 
   const [activeElement, setActiveElement] = useState("home");

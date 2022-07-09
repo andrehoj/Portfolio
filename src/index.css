@@ -17,29 +17,25 @@
     @apply fixed right-0 w-11/12 h-20 bg-primary rounded-bl-full z-10;
   }
 
-  .sidebar-icon {
-    @apply mb-5 text-text_color hover:cursor-pointer bg-secondary p-2 rounded-3xl  hover:bg-text_color hover:text-secondary hover:rounded-xl transition-all duration-200 ease-linear;
-  }
-
   .topbar-icon {
     @apply text-text_color  hover:cursor-pointer  hover:text-secondary  
     transition-all duration-200 ease-linear;
   }
 
-  .topbar-icon {
-    @apply text-text_color;
+  .sidebar-icon {
+    @apply text-text_color  hover:text-secondary  hover:opacity-30 hover:cursor-pointer transition-all duration-200 ease-linear;
   }
 
   .icon-active {
-    @apply text-secondary bg-text_color rounded-xl p-2 mb-5;
+    @apply text-secondary opacity-30  transition-all duration-200 ease-linear;
   }
 
   .project-container {
-    @apply flex flex-col items-center  mt-10 mb-10 m-auto p-5;
+    @apply flex flex-col items-center mt-10 mb-10 m-auto p-5;
   }
 
   .project-card {
-    @apply flex flex-col p-3 relative rounded-xl -top-10 w-3/4 h-fit text-center bg-back text-third_text text-xl transition ease-in-out duration-500;
+    @apply flex flex-col p-3 relative -top-10 w-3/4 h-fit text-center bg-back text-third_text text-xl transition ease-in-out duration-500;
   }
 }
 
@@ -73,8 +69,8 @@ body {
   }
 }
 
-.sections{
-  height: 100vh;
+.sections {
+  min-height: 100vh;
 }
 
 .tilt {
@@ -124,3 +120,32 @@ body {
 textarea {
   resize: none;
 }
+
+.icon-container::after {
+  position: relative;
+  top: -30px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1rem;
+  color: #33b6ae;
+  content: "home";
+  transition: all ease-in-out 0.3s;
+}
+
+.icon-container:hover::after {
+  opacity: 1;
+  visibility: visible;
+  top: 0px;
+  cursor: pointer;
+}
+
+/* 
+.icon-active  .icon-container::after {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  font-size: 1rem;
+  color: #33b6ae;
+  content: "home";
+  transition: all ease-in-out 0.3s;
+} */

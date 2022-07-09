@@ -46,7 +46,7 @@ function project(props) {
           <img
             src="https://picsum.photos/600/350"
             alt=""
-            className="min-h-full max-w-full rounded-xl filter grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+            className="min-h-full max-w-full filter grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
           />
           <div className="project-card tilt ">
             <p>Built with</p>

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsStackOverflow } from "react-icons/bs";
 import { GiHammerNails } from "react-icons/gi";
 import { icons } from "react-icons/lib";
 import { act } from "react-dom/test-utils";
@@ -31,8 +31,6 @@ function Nav(props) {
 
   const [activeNav, setActiveNav] = useState("home");
 
-  console.log(activeNav);
-
   useEffect(() => {
     setActiveNav(props.activeElement);
   });
@@ -45,38 +43,67 @@ function Nav(props) {
         <nav className="h-full flex flex-col items-center justify-end">
           <div className="mt-24 grow">
             <div
-              onClick={() => setActiveNav("home")}
-              className={`${
-                activeNav === "home" ? "icon-active" : "sidebar-icon"
-              }`}
+              onClick={() => {
+                const anchor = document.querySelector("#Home");
+                anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+              className="mb-5 p-2 icon-container"
             >
-              <ImHome size="36" />
+              <ImHome
+                size="36"
+                className={`${
+                  activeNav === "home" ? "icon-active" : "sidebar-icon"
+                }`}
+              />
             </div>
             <div
-              className={`${
-                activeNav === "about" ? "icon-active" : "sidebar-icon"
-              }`}
+              onClick={() => {
+                const anchor = document.querySelector("#About");
+                anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+              className="mb-5 p-2"
             >
-              <GoPerson size="36" />
+              <GoPerson
+                size="36"
+                className={`${
+                  activeNav === "about" ? "icon-active" : "sidebar-icon"
+                }`}
+              />
             </div>
             <div
-              className={`${
-                activeNav === "project" ? "icon-active" : "sidebar-icon"
-              }`}
+              onClick={() => {
+                const anchor = document.querySelector("#Project");
+                anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+              className=" mb-5 p-2"
             >
-              <GiHammerNails size="36" />
-            </div>{" "}
+              <GiHammerNails
+                size="36"
+                className={`${
+                  activeNav === "project" ? "icon-active" : "sidebar-icon"
+                }`}
+              />
+            </div>
+
             <div
-              className={`${
-                activeNav === "contact" ? "icon-active" : "sidebar-icon"
-              }`}
+              onClick={() => {
+                const anchor = document.querySelector("#Contact");
+                anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+              className=" mb-5 p-2"
             >
-              <GrMail size="36" />
+              <GrMail
+                size="36"
+                className={`${
+                  activeNav === "contact" ? "icon-active" : "sidebar-icon"
+                }`}
+              />
             </div>
           </div>
           <div className="mb-8">
-            <BsGithub size="36" className="sidebar-icon" />
-            <BsLinkedin size="36" className="sidebar-icon" />
+            <BsGithub size="26" className="mb-4  sidebar-icon" />
+            <BsLinkedin size="26" className=" mb-4 sidebar-icon" />
+            <BsStackOverflow size="26" className="sidebar-icon" />
           </div>
         </nav>
       </nav>
@@ -109,6 +136,7 @@ function Nav(props) {
             <div className="ml-10 flex gap-3">
               <BsGithub size="22" className="topbar-icon" />
               <BsLinkedin size="22" className="topbar-icon" />
+              <BsStackOverflow size="22" className="topbar-icon" />
             </div>
           </div>
         </nav>
