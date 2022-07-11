@@ -20,6 +20,7 @@ function App() {
   const { ref: ref3, inView: inView3 } = useInView(options);
 
   const [activeElement, setActiveElement] = useState("home");
+ 
 
   useEffect(() => {
     if (inView) {

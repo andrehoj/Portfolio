@@ -37,52 +37,45 @@ function Nav(props) {
 
   const sideBarIcons = [ImHome, GoPerson, GiHammerNails, GrMail];
 
+  console.log(props.activeElement);
+
   if (props.biggerThan1000) {
     return (
-      <nav className="nav-large">
-        <nav className="h-full flex flex-col items-center justify-end">
-          <div className="mt-24 grow">
+      <div className="nav-large">
+        <nav className="h-full flex flex-col items-center justify-between">
+          <div className="responsive-nav flex flex-col items-center h-fit gap-4 shrink">
             <div
               onClick={() => {
                 const anchor = document.querySelector("#Home");
                 anchor.scrollIntoView({ behavior: "smooth", block: "center" });
               }}
-              className="mb-5 p-2 icon-container"
+              className={`icon-container home ${
+                activeNav === "home" ? "icon-active" : ""
+              }`}
             >
-              <ImHome
-                size="36"
-                className={`${
-                  activeNav === "home" ? "icon-active" : "sidebar-icon"
-                }`}
-              />
+              <ImHome size="36" className={`sidebar-icon`} />
             </div>
             <div
               onClick={() => {
                 const anchor = document.querySelector("#About");
                 anchor.scrollIntoView({ behavior: "smooth", block: "center" });
               }}
-              className="mb-5 p-2"
+              className={`icon-container about ${
+                activeNav === "about" ? "icon-active" : ""
+              }`}
             >
-              <GoPerson
-                size="36"
-                className={`${
-                  activeNav === "about" ? "icon-active" : "sidebar-icon"
-                }`}
-              />
+              <GoPerson size="36" className={`sidebar-icon`} />
             </div>
             <div
               onClick={() => {
                 const anchor = document.querySelector("#Project");
                 anchor.scrollIntoView({ behavior: "smooth", block: "center" });
               }}
-              className=" mb-5 p-2"
+              className={`icon-container projects ${
+                activeNav === "project" ? "icon-active" : ""
+              }`}
             >
-              <GiHammerNails
-                size="36"
-                className={`${
-                  activeNav === "project" ? "icon-active" : "sidebar-icon"
-                }`}
-              />
+              <GiHammerNails size="36" className={`sidebar-icon`} />
             </div>
 
             <div
@@ -90,23 +83,46 @@ function Nav(props) {
                 const anchor = document.querySelector("#Contact");
                 anchor.scrollIntoView({ behavior: "smooth", block: "center" });
               }}
-              className=" mb-5 p-2"
+              className={`icon-container contact ${
+                activeNav === "contact" ? "icon-active" : ""
+              }`}
             >
-              <GrMail
-                size="36"
-                className={`${
-                  activeNav === "contact" ? "icon-active" : "sidebar-icon"
-                }`}
-              />
+              <GrMail size="36" className={`sidebar-icon`} />
             </div>
           </div>
-          <div className="mb-8">
-            <BsGithub size="26" className="mb-4  sidebar-icon" />
-            <BsLinkedin size="26" className=" mb-4 sidebar-icon" />
-            <BsStackOverflow size="26" className="sidebar-icon" />
+
+          <div className="flex flex-col gap-2 mb-12">
+            <div className="resume-container mb-6">
+              <a href="" download={""}>
+                <button className="font-bold  border border-second_text px-2 py-1 hover:bg-second_text hover:text-primary transition-all duration-200 ease-linear active:scale-75">
+                  Resume
+                </button>
+              </a>
+            </div>
+            <a
+              href="https://github.com/AgentA12?tab=repositories"
+              target={"blank"}
+              className="self-center place-self-center justify-self-center github"
+            >
+              <BsGithub size="26" className="mb-4 " />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/andrew-howran-01470222a/"
+              target={"blank"}
+              className="self-center place-self-center justify-self-center"
+            >
+              <BsLinkedin size="26" className="mb-4 sidebar-icon linkedin" />
+            </a>
+            <a
+              href="https://stackoverflow.com/users/17832653/andrew-h"
+              target={"blank"}
+              className="self-center place-self-center justify-self-center"
+            >
+              <BsStackOverflow size="26" className="sidebar-icon stackof" />
+            </a>
           </div>
         </nav>
-      </nav>
+      </div>
     );
   } else {
     return (
@@ -118,26 +134,61 @@ function Nav(props) {
         <nav
           className={`flex h-full ${
             props.biggerThan500
-              ? " justify-end items-center gap-6 mr-14"
+              ? " justify-end items-center gap-24 mr-6"
               : "flex justify-end items-center gap-x-3 mr-4 "
           } `}
         >
-          {sideBarIcons.map((Icon) => (
-            <div
-              className={`topbar-icon ${!props.biggerThan500 && ""}`}
-              key={Icon.name}
-            >
-              <Icon size="34" />
-            </div>
-          ))}
+          <div className="flex gap-6 ">
+            {sideBarIcons.map((Icon) => (
+              <div
+                onClick={() => {
+                  const anchor = document.querySelector("#Contact");
+                  anchor.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                }}
+                className={` flex items-center topbar-icon ${
+                  !props.biggerThan500 && ""
+                }`}
+                key={Icon.name}
+              >
+                <span className="mr-1 text-2xl">Home</span>
+                <Icon size="25" />
+              </div>
+            ))}
+          </div>
           <div
-            className={`flex gap-4 ${!props.biggerThan500 && "justify-center"}`}
+            className={`flex items-center gap-4 ${
+              !props.biggerThan500 && "justify-center"
+            }`}
           >
-            <div className="ml-10 flex gap-3">
-              <BsGithub size="22" className="topbar-icon" />
-              <BsLinkedin size="22" className="topbar-icon" />
-              <BsStackOverflow size="22" className="topbar-icon" />
+            <div className="resume-container mr-4">
+              <a href="" download={""}>
+                <button className="text-sm font-bold border border-second_text px-2 py-1 hover:bg-second_text hover:text-primary transition-all duration-200 ease-linear active:scale-75">
+                  Resume
+                </button>
+              </a>
             </div>
+
+            <a
+              href="https://github.com/AgentA12?tab=repositories"
+              target={"blank"}
+            >
+              <BsGithub size="20" className="topbar-icon github" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/andrew-howran-01470222a/"
+              target={"blank"}
+            >
+              <BsLinkedin size="20" className="topbar-icon linkedin" />
+            </a>
+            <a
+              href="https://stackoverflow.com/users/17832653/andrew-h"
+              target={"blank"}
+            >
+              <BsStackOverflow size="20" className="topbar-icon stackof" />
+            </a>
           </div>
         </nav>
       </div>

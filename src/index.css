@@ -10,11 +10,11 @@
   }
 
   .nav-small {
-    @apply fixed right-0 w-11/12 h-16 bg-primary rounded-bl-full z-10;
+    @apply fixed right-0 w-full h-16 rounded-bl-full z-10;
   }
 
   .nav-xsmall {
-    @apply fixed right-0 w-11/12 h-20 bg-primary rounded-bl-full z-10;
+    @apply fixed right-0 w-full h-20 bg-primary rounded-bl-full z-10;
   }
 
   .topbar-icon {
@@ -22,12 +22,16 @@
     transition-all duration-200 ease-linear;
   }
 
+  .icon-container {
+    @apply flex flex-col text-text_color hover:text-secondary  hover:cursor-pointer transition-all duration-200 ease-linear;
+  }
+
   .sidebar-icon {
-    @apply text-text_color  hover:text-secondary  hover:opacity-30 hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply self-center place-self-center justify-self-center;
   }
 
   .icon-active {
-    @apply text-secondary opacity-30  transition-all duration-200 ease-linear;
+    @apply text-secondary transition-all duration-200 ease-linear;
   }
 
   .project-container {
@@ -37,6 +41,25 @@
   .project-card {
     @apply flex flex-col p-3 relative -top-10 w-3/4 h-fit text-center bg-back text-third_text text-xl transition ease-in-out duration-500;
   }
+
+  .github {
+    @apply hover:text-secondary text-text_color hover:cursor-pointer hover:scale-110
+    transition-all ease-in duration-100;
+  }
+
+  .linkedin {
+    @apply hover:text-linkedIn_color text-text_color hover:cursor-pointer hover:scale-110
+    transition-all ease-in duration-100;
+  }
+
+  .stackof {
+    @apply hover:text-stackOF_color text-text_color  hover:cursor-pointer hover:scale-110
+    transition-all ease-in duration-100;
+  }
+}
+
+.nav-small {
+  backdrop-filter: blur(20px);
 }
 
 .title-text {
@@ -54,6 +77,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+button {
+  border-style: outset;
 }
 
 body {
@@ -127,8 +154,9 @@ textarea {
   opacity: 0;
   visibility: hidden;
   font-size: 1rem;
+  font-weight: 700;
   color: #33b6ae;
-  content: "home";
+
   transition: all ease-in-out 0.3s;
 }
 
@@ -139,13 +167,39 @@ textarea {
   cursor: pointer;
 }
 
-/* 
-.icon-active  .icon-container::after {
+.icon-active::after {
   position: relative;
+  top: 0px;
   opacity: 1;
   visibility: visible;
   font-size: 1rem;
+  font-weight: 700;
   color: #33b6ae;
-  content: "home";
+
   transition: all ease-in-out 0.3s;
-} */
+}
+
+.home::after {
+  content: "Home";
+}
+
+.about::after {
+  content: "About";
+}
+
+.projects::after {
+  content: "Projects";
+}
+.contact::after {
+  content: "Contact";
+}
+
+.responsive-nav {
+  margin-top: 6rem;
+}
+
+@media only screen and (max-height: 680px) {
+  .responsive-nav {
+    margin-top: 1rem;
+  }
+}

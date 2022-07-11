@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
+import { capitalizeFirstLetter } from "../../utils/helpers.js";
 
 function Contact(props) {
   const [formState, setFormState] = useState({
-    user_name: "",
+    name: "",
     user_email: "",
     message: "",
   });
@@ -17,7 +18,7 @@ function Contact(props) {
     if (e.target.name === "user_email") {
       const isValid = validateEmail(e.target.value);
       if (!isValid) {
-        setErrorMessage("Your email is invalid.");
+        setErrorMessage("Email is invalid.");
       } else {
         setErrorMessage("");
       }
@@ -39,13 +40,12 @@ function Contact(props) {
   const sendEmail = (e) => {
     e.preventDefault();
     if (!errorMessage) {
-      console.log("email sent!");
       // emailjs
       //   .sendForm(
-      //     "service_bbrsffm",
-      //     "template_8y9jxkw",
+      //     "SERVICE_ID",
+      //     "TEMPLATE_ID",
       //     form.current,
-      //     "8268wx-YQfeyZJ_Gb"
+      //     "PUBLIC_KEY"
       //   )
       //   .then(
       //     (result) => {
@@ -56,6 +56,7 @@ function Contact(props) {
       //       console.log(error.text);
       //     }
       //   );
+      console.log("email sent!");
     }
   };
 
@@ -76,10 +77,10 @@ function Contact(props) {
         >
           <input
             type="text"
-            name="user_name"
+            name="name"
             id=""
             placeholder="Name"
-            className="bg-slate-600 rounded-3xl p-3 pl-6 focus:outline-text_color outline-none"
+            className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none focus:outline-none"
             onBlur={handleChange}
           />
           <input
@@ -87,24 +88,35 @@ function Contact(props) {
             name="user_email"
             id=""
             placeholder="Email"
-            className="bg-slate-600 rounded-3xl p-3 pl-6 focus:outline-text_color outline-none"
+            className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none focus:outline-none"
             onBlur={handleChange}
           />
           <textarea
             name="message"
             id=""
-            className="bg-slate-600 rounded-3xl p-3 pl-6 h-40 focus:outline-text_color outline-none"
+            className="bg-slate-600  p-3 pl-6 h-40 border-none focus:border-none outline-none focus:outline-none"
             placeholder="Message"
             resize="none"
             onBlur={handleChange}
           ></textarea>
-          <div>
-            {errorMessage && <div className="errorMsg">{errorMessage}</div>}
-          </div>
+          <div
+            className={`${
+              !errorMessage ? "justify-end" : "justify-between "
+            }   flex align-center `}
+          >
+            {errorMessage && (
+              <div className="inline whitespace-nowrap text-xl">
+                {capitalizeFirstLetter(errorMessage)}
+              </div>
+            )}
 
-          <button className="self-end text-text_color border-text_color border-2 justify-center mr-10 rounded-lg px-3 py-1 bg-third hover:bg-text_color hover:text-third transition-all duration-200 ease-linear tracking-widest">
-            SEND
-          </button>
+            <button
+              // disabled
+              className={` text-text_color border-text_color border justify-center mr-5  px-3 py-1 bg-third hover:bg-text_color  hover:text-third transition-all duration-200 ease-linear tracking-widest font-bold active:scale-75`}
+            >
+              SEND
+            </button>
+          </div>
         </form>
       </div>
     </section>

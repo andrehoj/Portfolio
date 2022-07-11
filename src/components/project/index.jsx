@@ -1,15 +1,12 @@
 import React from "react";
 import TechIcons from "../techicons";
-
+import { BiLinkExternal } from "react-icons/bi";
+import { FaGithubAlt } from "react-icons/fa";
 function project(props) {
   const devHangtechIcons = [
     {
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
       name: "nodejs",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      name: "html5",
     },
     {
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
@@ -19,9 +16,14 @@ function project(props) {
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
       name: "mysql",
     },
+
     {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
-      name: "sequelize",
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      name: "html5",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      name: "css5",
     },
     {
       link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
@@ -37,8 +39,40 @@ function project(props) {
     },
   ];
 
+  const estateLinks = [
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      name: "nodejs",
+    },
+
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      name: "express",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      name: "mongodb",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      name: "html5",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      name: "css5",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      name: "react",
+    },
+    {
+      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      name: "tailwind",
+    },
+  ];
+
   return (
-    <section id="Project" className="sections" ref={props.innerRef}>
+    <section id="Project" className="sections " ref={props.innerRef}>
       <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
         <h2 className="title-text">Things I've built</h2>
         <div className="project-container fourty">
@@ -65,20 +99,12 @@ function project(props) {
             </p>
             <div className="flex justify-center gap-16 mt-5 text-text_color">
               <div className="flex flex-col  justify-center items-center  hover:cursor-pointer hover:brightness-75">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                  height="30px"
-                  width="30px"
-                />
+                <FaGithubAlt size={"24"} />
                 <p>Repo</p>
               </div>
 
               <div className="flex flex-col justify-center items-center hover:cursor-pointer hover:brightness-75">
-                <img
-                  height="30px"
-                  width="30px"
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
-                />
+                <BiLinkExternal size={"24"} />
 
                 <p>App</p>
               </div>
