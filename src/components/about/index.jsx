@@ -1,8 +1,8 @@
 import React from "react";
 
-function about(props) {
+export default function about({ innerRef }) {
   return (
-    <section id="About" className="sections" ref={props.innerRef}>
+    <section id="About" className="sections" ref={innerRef}>
       <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
         <p className="title-text">About me</p>
         <p>
@@ -27,4 +27,4 @@ function about(props) {
   );
 }
 
-export default about;
+

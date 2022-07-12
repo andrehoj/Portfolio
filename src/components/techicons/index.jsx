@@ -1,6 +1,6 @@
 import React from "react";
 
-function techIcons({ link, icon }) {
+function TechIcons({ link, icon }) {
   return (
     <div className="">
       <img
@@ -22,4 +22,4 @@ function techIcons({ link, icon }) {
   );
 }
 
-export default techIcons;
+export default TechIcons;

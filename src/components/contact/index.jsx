@@ -1,18 +1,18 @@
 import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
 
-function Contact(props) {
+export default function Contact({ biggerThan1000, innerRef }) {
   const [formState, setFormState] = useState({
     name: "",
-    user_email: "",
+    from_email: "",
     message: "",
   });
 
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { user_name, user_email, message } = formState;
+  //const { name, from_email, message } = formState;
 
   const handleChange = (e) => {
     if (e.target.name === "user_email") {
@@ -30,41 +30,39 @@ function Contact(props) {
       }
     }
     if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log("Handle Form", formState);
+      setFormState({ ...formState });
     }
   };
 
   const form = useRef();
-
   const sendEmail = (e) => {
     e.preventDefault();
     if (!errorMessage) {
       // emailjs
       //   .sendForm(
-      //     "SERVICE_ID",
-      //     "TEMPLATE_ID",
+      //     { service_id: process.env.SERVICE_ID },
+      //     { template_id: process.env.TEMPLATE_ID },
       //     form.current,
-      //     "PUBLIC_KEY"
+      //     { public_key: process.env.PUBLIC_KEY }
       //   )
       //   .then(
       //     (result) => {
-      //       console.log(result.text);
+      //       console.log(result);
       //       e.target.reset();
+      //       console.log("email sent!");
       //     },
       //     (error) => {
       //       console.log(error.text);
       //     }
       //   );
-      console.log("email sent!");
     }
   };
 
   return (
-    <section id="Contact" className="sections" ref={props.innerRef}>
+    <section id="Contact" className="sections" ref={innerRef}>
       <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5 mb-20">
         <h2 className="title-text">Contact me</h2>
-        <p className={` ${!props.biggerThan1000 ? "w-10/12" : "w-full"}`}>
+        <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eligendi
           consectetur iste illo nam veniam totam harum et beatae. Sapiente
           facere iusto!
@@ -78,7 +76,6 @@ function Contact(props) {
           <input
             type="text"
             name="name"
-            id=""
             placeholder="Name"
             className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none focus:outline-none"
             onBlur={handleChange}
@@ -86,14 +83,12 @@ function Contact(props) {
           <input
             type="email"
             name="user_email"
-            id=""
             placeholder="Email"
             className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none focus:outline-none"
             onBlur={handleChange}
           />
           <textarea
             name="message"
-            id=""
             className="bg-slate-600  p-3 pl-6 h-40 border-none focus:border-none outline-none focus:outline-none"
             placeholder="Message"
             resize="none"
@@ -111,8 +106,8 @@ function Contact(props) {
             )}
 
             <button
-              // disabled
-              className={` text-text_color border-text_color border justify-center mr-5  px-3 py-1 bg-third hover:bg-text_color  hover:text-third transition-all duration-200 ease-linear tracking-widest font-bold active:scale-75`}
+              // disabled when an email is successfully sent, can bots click the send btn?
+              className={` text-lightest_blue border-lightest_blue border justify-center mr-2 px-3 py-1 bg-third hover:bg-lightest_blue hover:text-lighter_blue  transition-all duration-200 ease-linear tracking-widest font-bold active:scale-75 btns`}
             >
               SEND
             </button>
@@ -122,5 +117,3 @@ function Contact(props) {
     </section>
   );
 }
-
-export default Contact;

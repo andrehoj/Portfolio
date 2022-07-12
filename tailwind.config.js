@@ -2,17 +2,16 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: { font_code: "Source Code Pro", font_dev: "VT323" },
     extend: {
       colors: {
-        primary: "#282c34",
-        secondary: "#565656",
-        back: "#0d293d",
-        third: "#051622",
-        second_text: "#deb992",
-        text_color: "#33B6AE",
-        second_color: "#ffffff",
-        third_text: "#afbfc9",
-        font_two: "Source Code Pro",
+        dark_grey: "#282c34",
+        light_grey: "#565656",
+        lightest_grey: "#afbfc9",
+        dark_blue: "#051622",
+        lighter_blue: "#0d293d",
+        lightest_blue: "#33B6AE",
+        main_orange: "#deb992",
         github_color: "#1b1f23",
         linkedIn_color: "#0077B5",
         stackOF_color: "#f18d3c",

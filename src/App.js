@@ -1,5 +1,5 @@
 import "./index.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import { useInView } from "react-intersection-observer";
 import Nav from "./components/nav";
@@ -8,9 +8,9 @@ import About from "./components/about";
 import Project from "./components/project";
 import Home from "./components/home";
 
-function App() {
+export default function App() {
   const biggerThan1000 = useMediaPredicate("(min-width: 1000px)");
-  const biggerThan500 = useMediaPredicate("(min-width: 550px)");
+  const biggerThan750 = useMediaPredicate("(min-width: 750px)");
 
   const options = { threshold: 0.6 };
 
@@ -19,21 +19,20 @@ function App() {
   const { ref: ref2, inView: inView2 } = useInView(options);
   const { ref: ref3, inView: inView3 } = useInView(options);
 
-  const [activeElement, setActiveElement] = useState("home");
- 
+  const [activeElement, setActiveElement] = useState("Home");
 
   useEffect(() => {
     if (inView) {
-      setActiveElement("home");
+      setActiveElement("Home");
     }
     if (inView1) {
-      setActiveElement("about");
+      setActiveElement("About");
     }
     if (inView2) {
-      setActiveElement("project");
+      setActiveElement("Projects");
     }
     if (inView3) {
-      setActiveElement("contact");
+      setActiveElement("Contact");
     }
   }, [inView, inView1, inView2, inView3]);
 
@@ -41,31 +40,13 @@ function App() {
     <div>
       <Nav
         biggerThan1000={biggerThan1000}
-        biggerThan500={biggerThan500}
+        biggerThan750={biggerThan750}
         activeElement={activeElement}
       />
-      <Home
-        biggerThan1000={biggerThan1000}
-        biggerThan500={biggerThan500}
-        innerRef={ref}
-      />
-      <About
-        biggerThan1000={biggerThan1000}
-        biggerThan500={biggerThan500}
-        innerRef={ref1}
-      />
-      <Project
-        biggerThan1000={biggerThan1000}
-        biggerThan500={biggerThan500}
-        innerRef={ref2}
-      />
-      <Contact
-        biggerThan1000={biggerThan1000}
-        biggerThan500={biggerThan500}
-        innerRef={ref3}
-      />
+      <Home innerRef={ref} />
+      <About innerRef={ref1} />
+      <Project innerRef={ref2} />
+      <Contact biggerThan1000={biggerThan1000} innerRef={ref3} />
     </div>
   );
 }
-
-export default App;

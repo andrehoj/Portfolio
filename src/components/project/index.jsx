@@ -2,77 +2,11 @@ import React from "react";
 import TechIcons from "../techicons";
 import { BiLinkExternal } from "react-icons/bi";
 import { FaGithubAlt } from "react-icons/fa";
-function project(props) {
-  const devHangtechIcons = [
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      name: "nodejs",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      name: "express",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      name: "mysql",
-    },
+import { devHangOutIcons } from "../../utils/projectIconData";
 
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      name: "html5",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      name: "css5",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-      name: "bootstrap",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-      name: "jquery",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-      name: "socketio",
-    },
-  ];
-
-  const estateLinks = [
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      name: "nodejs",
-    },
-
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      name: "express",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-      name: "mongodb",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      name: "html5",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      name: "css5",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      name: "react",
-    },
-    {
-      link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      name: "tailwind",
-    },
-  ];
-
+export default function project({ innerRef }) {
   return (
-    <section id="Project" className="sections " ref={props.innerRef}>
+    <section id="Projects" className="sections " ref={innerRef}>
       <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
         <h2 className="title-text">Things I've built</h2>
         <div className="project-container fourty">
@@ -85,7 +19,7 @@ function project(props) {
           <div className="project-card tilt ">
             <p>Built with</p>
             <div className="m-5 flex flex-wrap justify-center gap-5">
-              {devHangtechIcons.map((iconObj, i) => (
+              {devHangOutIcons.map((iconObj) => (
                 <TechIcons
                   icon={iconObj.name}
                   link={iconObj.link}
@@ -104,7 +38,7 @@ function project(props) {
               </div>
 
               <div className="flex flex-col justify-center items-center hover:cursor-pointer hover:brightness-75">
-                <BiLinkExternal size={"24"} />
+                <BiLinkExternal size={"24"}  />
 
                 <p>App</p>
               </div>
@@ -115,4 +49,3 @@ function project(props) {
     </section>
   );
 }
-export default project;

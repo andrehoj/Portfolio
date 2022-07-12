@@ -2,28 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Merriweather:ital@1&family=Montserrat&family=Open+Sans&family=PT+Sans&family=Source+Code+Pro:wght@300&family=Tapestry&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=VT323&display=swap");
 
 @layer components {
+  body {
+    @apply text-main_orange bg-dark_blue font-font_code;
+  }
+
   .nav-large {
-    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-primary;
+    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-dark_grey;
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 rounded-bl-full z-10;
-  }
-
-  .nav-xsmall {
-    @apply fixed right-0 w-full h-20 bg-primary rounded-bl-full z-10;
+    @apply fixed right-0 w-full h-16 bg-dark_blue shadow-2xl z-10;
   }
 
   .topbar-icon {
-    @apply text-text_color  hover:cursor-pointer  hover:text-secondary  
+    @apply text-lightest_blue  hover:cursor-pointer hover:text-light_grey  
     transition-all duration-200 ease-linear;
   }
 
   .icon-container {
-    @apply flex flex-col text-text_color hover:text-secondary  hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col text-lightest_blue hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
+  }
+
+  .icon-container-md {
+    @apply flex flex-col w-20 text-center text-lightest_blue hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
   }
 
   .sidebar-icon {
@@ -31,7 +35,15 @@
   }
 
   .icon-active {
-    @apply text-secondary transition-all duration-200 ease-linear;
+    @apply text-light_grey transition-all duration-200 ease-linear;
+  }
+
+  .icon-active-md {
+    @apply text-light_grey transition-all duration-200 ease-linear;
+  }
+
+  .mobile-nav-active{
+    @apply font-bold text-main_orange
   }
 
   .project-container {
@@ -39,27 +51,28 @@
   }
 
   .project-card {
-    @apply flex flex-col p-3 relative -top-10 w-3/4 h-fit text-center bg-back text-third_text text-xl transition ease-in-out duration-500;
+    @apply flex flex-col p-3 relative -top-10 w-3/4 h-fit text-center
+     bg-lighter_blue text-lightest_grey text-xl transition ease-in-out duration-500;
   }
 
   .github {
-    @apply hover:text-secondary text-text_color hover:cursor-pointer hover:scale-110
+    @apply hover:text-light_grey text-lightest_blue hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .linkedin {
-    @apply hover:text-linkedIn_color text-text_color hover:cursor-pointer hover:scale-110
+    @apply hover:text-linkedIn_color text-lightest_blue hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .stackof {
-    @apply hover:text-stackOF_color text-text_color  hover:cursor-pointer hover:scale-110
+    @apply hover:text-stackOF_color text-lightest_blue  hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
-}
 
-.nav-small {
-  backdrop-filter: blur(20px);
+  .resume-btn {
+    @apply border border-main_orange px-2 py-1 font-bold  hover:bg-main_orange hover:text-dark_grey transition-all duration-200 ease-linear active:scale-75;
+  }
 }
 
 .title-text {
@@ -79,15 +92,12 @@
   box-sizing: border-box;
 }
 
-button {
+.btns {
   border-style: outset;
 }
 
 body {
   padding-left: 6rem;
-  background-color: #051622;
-  color: #deb992;
-  font-family: "Source Code Pro";
 }
 
 @media screen and (max-width: 1000px) {
@@ -119,6 +129,7 @@ body {
   padding: 0 0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .link-item:hover {
   box-shadow: inset 100px 0 0 0 #33b6ae;
   color: #565656;
@@ -131,12 +142,16 @@ body {
 }
 
 .project-title {
-  font-family: "source code pro";
-  font-size: 32px;
+  font-family: "VT323";
+  font-size: 50px;
   font-weight: 400;
   line-height: 48px;
   text-align: center;
   color: #33b6ae;
+}
+
+.tester {
+  background-color: #565656;
 }
 
 .message-placeholder {
@@ -156,7 +171,6 @@ textarea {
   font-size: 1rem;
   font-weight: 700;
   color: #33b6ae;
-
   transition: all ease-in-out 0.3s;
 }
 
@@ -175,7 +189,34 @@ textarea {
   font-size: 1rem;
   font-weight: 700;
   color: #33b6ae;
+  transition: all ease-in-out 0.3s;
+}
 
+.icon-container-md::after {
+  height: 0;
+  position: relative;
+  top: -30px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #33b6ae;
+  transition: all ease-in-out 0.3s;
+}
+
+.icon-container-md:hover::after {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.icon-active-md::after {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #33b6ae;
   transition: all ease-in-out 0.3s;
 }
 
