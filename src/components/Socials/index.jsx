@@ -11,8 +11,7 @@ function Socials({ biggerThan1000 }) {
     return (
       <div className="flex flex-col gap-2 mb-12">
         <div className=" mb-6 flex flex-col  items-center ">
-          <BsDownload size={24} className="mb-1" />
-          <a href="" download={""} className="resume-btn">
+          <a href="/" download={""} className="resume-btn">
             <span>Resume</span>
           </a>
         </div>
@@ -43,7 +42,7 @@ function Socials({ biggerThan1000 }) {
   return (
     <div className="flex items-center gap-4 justify-around">
       <a
-        href=""
+        href="/"
         download={""}
         className={"flex items-center gap-1 mr-2 text-sm resume-btn"}
       >

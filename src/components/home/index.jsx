@@ -12,7 +12,7 @@ export default function Home({ innerRef }) {
           </span>
           <span className="block">And my name's Andrew.</span>
           <p className="text-text_color text-lg mt-3">
-            Full Stack Development / Javascript || Node.js
+            Full Stack JavaScript Developer
           </p>
         </h1>
       </div>

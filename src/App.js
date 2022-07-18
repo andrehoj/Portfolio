@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import Nav from "./components/nav";
 import Contact from "./components/contact";
 import About from "./components/about";
-import Project from "./components/project";
+import Projects from "./components/projects";
 import Home from "./components/home";
 
 export default function App() {
@@ -45,7 +45,7 @@ export default function App() {
       />
       <Home innerRef={ref} />
       <About innerRef={ref1} />
-      <Project innerRef={ref2} />
+      <Projects innerRef={ref2} />
       <Contact biggerThan1000={biggerThan1000} innerRef={ref3} />
     </div>
   );
