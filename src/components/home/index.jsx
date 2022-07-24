@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Home({ innerRef }) {
+export default function Home({ innerRef, biggerThan750 }) {
   return (
     <section id="Home" className="sections" ref={innerRef}>
-      <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5">
+      <div className={` pt-32 ml-20 max-w-2xl flex flex-col gap-5`}>
         <h1 className="title-text">
           <span className="block">Hi,</span>
           <span className="block">

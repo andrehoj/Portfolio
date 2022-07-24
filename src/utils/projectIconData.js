@@ -1,93 +1,93 @@
 export const devHangOutIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    name: "nodejs",
+    name: "Node.js",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    name: "express",
+    name: "Express",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    name: "mysql",
+    name: "Mysql",
   },
 
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    name: "html5",
+    name: "Html5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    name: "css5",
+    name: "Css5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    name: "bootstrap",
+    name: "Bootstrap",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-    name: "jquery",
+    name: "Jquery",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-    name: "socketio",
+    name: "Socket.io",
   },
 ];
 
 export const findYourEstateIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    name: "html5",
+    name: "Html5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    name: "css5",
+    name: "Css5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    name: "react",
+    name: "React",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    name: "materialui",
+    name: "Material ui",
   },
 ];
 
 export const spawsIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    name: "html5",
+    name: "Html5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    name: "css5",
+    name: "Css5",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    name: "javascript",
+    name: "Javascript",
   },
 ];
 
 export const groceryStoreIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-    name: "graphql",
+    name: "Graphql",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    name: "mongodb",
+    name: "Mongodb",
   },
 
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    name: "react",
+    name: "React",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    name: "materialui",
+    name: "Material ui",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    name: "express",
+    name: "Express",
   },
 ];

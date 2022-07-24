@@ -35,6 +35,7 @@ export default function Contact({ biggerThan1000, innerRef }) {
   };
 
   const form = useRef();
+  
   const sendEmail = (e) => {
     e.preventDefault();
     if (!errorMessage) {
@@ -60,7 +61,7 @@ export default function Contact({ biggerThan1000, innerRef }) {
 
   return (
     <section id="Contact" className="sections" ref={innerRef}>
-      <div className="pt-44 ml-20 max-w-2xl flex flex-col gap-5 mb-20">
+      <div className="pt-32 ml-20 max-w-2xl flex flex-col gap-5 mb-20">
         <h2 className="title-text">Contact me</h2>
         <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eligendi

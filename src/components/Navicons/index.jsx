@@ -12,7 +12,7 @@ export default function Navicons({
       <div
         onClick={() => {
           const anchor = document.querySelector(`#${IconObj.name}`);
-          anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+          anchor.scrollIntoView({ behavior: "smooth", block: "start", align: true });
         }}
         className={` ${
           biggerThan1000 ? "icon-container" : "icon-container-md"

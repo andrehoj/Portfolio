@@ -75,6 +75,10 @@
   }
 }
 
+.wid {
+  max-width: 600px;
+}
+
 .title-text {
   font-size: calc(2.5rem + 1vw);
   white-space: nowrap;
