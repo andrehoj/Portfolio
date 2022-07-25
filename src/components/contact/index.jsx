@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
 
-export default function Contact({ biggerThan1000, innerRef }) {
+export default function Contact({ biggerThan1000, innerRef, biggerThan750 }) {
   const [formState, setFormState] = useState({
     name: "",
     from_email: "",
@@ -35,7 +35,7 @@ export default function Contact({ biggerThan1000, innerRef }) {
   };
 
   const form = useRef();
-  
+
   const sendEmail = (e) => {
     e.preventDefault();
     if (!errorMessage) {
@@ -61,7 +61,7 @@ export default function Contact({ biggerThan1000, innerRef }) {
 
   return (
     <section id="Contact" className="sections" ref={innerRef}>
-      <div className="pt-32 ml-20 max-w-2xl flex flex-col gap-5 mb-20">
+      <div className={` ${biggerThan750 ? "ml-20" : "m-auto text-center items-center"} max-w-2xl flex flex-col gap-5`}>
         <h2 className="title-text">Contact me</h2>
         <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eligendi

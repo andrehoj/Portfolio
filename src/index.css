@@ -6,7 +6,11 @@
 
 @layer components {
   body {
-    @apply text-main_orange bg-dark_blue font-font_code;
+    @apply text-main_orange bg-dark_blue font-main_font;
+  }
+
+  .sections {
+    @apply pt-20 min-h-screen
   }
 
   .nav-large {
@@ -75,12 +79,12 @@
   }
 }
 
-.wid {
+.project-card-width {
   max-width: 600px;
 }
 
 .title-text {
-  font-size: calc(2.5rem + 1vw);
+  font-size: calc(2.5rem + 2vw);
   white-space: nowrap;
   line-height: 1;
 }
@@ -108,22 +112,6 @@ body {
   body {
     padding: 0;
   }
-}
-
-.sections {
-  min-height: 100vh;
-}
-
-.tilt {
-  transform: perspective(200px) rotateX(5deg);
-}
-
-.tilt:hover {
-  transform: perspective(none);
-}
-
-.fourty {
-  min-width: 40rem;
 }
 
 .link-item {

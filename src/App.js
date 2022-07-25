@@ -44,10 +44,18 @@ export default function App() {
         biggerThan750={biggerThan750}
         activeElement={activeElement}
       />
-      <Home innerRef={ref} biggerThan1000={biggerThan1000} biggerThan750={biggerThan750} />
+      <Home
+        innerRef={ref}
+        biggerThan1000={biggerThan1000}
+        biggerThan750={biggerThan750}
+      />
       <About innerRef={ref1} biggerThan750={biggerThan750} />
       <Projects innerRef={ref2} biggerThan750={biggerThan750} />
-      <Contact biggerThan1000={biggerThan1000} innerRef={ref3} />
+      <Contact
+        biggerThan1000={biggerThan1000}
+        biggerThan750={biggerThan750}
+        innerRef={ref3}
+      />
     </div>
   );
 }

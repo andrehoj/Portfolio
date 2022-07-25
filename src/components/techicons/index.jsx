@@ -1,9 +1,9 @@
 import React from "react";
-import { Tooltip, Button } from "@material-tailwind/react";
+import { Tooltip } from "@material-tailwind/react";
 
-function TechIcons({ link, icon}) {
+export default function TechIcons({ link, icon }) {
   return (
-    <Tooltip content={icon} className="bg-black rounded-md text-white" >
+    <Tooltip content={icon} className="bg-black rounded-md text-white">
       <img
         src={link}
         data-tooltip-target={icon}
@@ -14,5 +14,3 @@ function TechIcons({ link, icon}) {
     </Tooltip>
   );
 }
-
-export default TechIcons;

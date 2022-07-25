@@ -2,7 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    fontFamily: { font_code: "Source Code Pro", font_dev: "VT323" },
+    fontFamily: { main_font: "open sans regular", font_dev: "VT323" },
     extend: {
       colors: {
         dark_grey: "#282c34",

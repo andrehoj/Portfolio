@@ -10,26 +10,6 @@ import Hamburger from "hamburger-react";
 export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
   const [isOpen, setOpen] = useState(false);
 
-  const [show, setShow] = useState(true);
-
-  let lastScroll = window.scrollY;
-
-  const controllNav = () => {
-    if (lastScroll < window.scrollY) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-    lastScroll = window.scrollY;
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", controllNav);
-    return () => {
-      window.removeEventListener("scroll", controllNav);
-    };
-  });
-
   const [activeNav, setActiveNav] = useState("Home");
 
   useEffect(() => {
@@ -64,7 +44,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
     );
   } else if (biggerThan750) {
     return (
-      <div className={`nav-small ${!show && "opacity-0 invisible"} `}>
+      <div className={`nav-small  `}>
         <nav className="flex h-full justify-end items-center gap-24 mr-6">
           <div className="flex gap-2 ">
             {sideBarIcons.map((IconObj) => (
@@ -115,3 +95,26 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
     </div>
   );
 }
+
+//hiding nav bar on scroll down
+// const [show, setShow] = useState(true);
+
+// let lastScroll = window.scrollY;
+
+// const controllNav = () => {
+//   if (lastScroll < window.scrollY) {
+//     setShow(false);
+//   } else {
+//     setShow(true);
+//   }
+//   lastScroll = window.scrollY;
+// };
+
+// useEffect(() => {
+//   window.addEventListener("scroll", controllNav);
+//   return () => {
+//     window.removeEventListener("scroll", controllNav);
+//   };
+// });
+
+//${!show && "opacity-0 invisible"}

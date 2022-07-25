@@ -6,7 +6,7 @@ import {
   BsDownload,
 } from "react-icons/bs";
 
-function Socials({ biggerThan1000 }) {
+export default function Socials({ biggerThan1000 }) {
   if (biggerThan1000) {
     return (
       <div className="flex flex-col gap-2 mb-12">
@@ -67,5 +67,3 @@ function Socials({ biggerThan1000 }) {
     </div>
   );
 }
-
-export default Socials;

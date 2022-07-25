@@ -4,7 +4,7 @@ import { FaGithubAlt, FaRocket } from "react-icons/fa";
 
 export default function SingleProject({ project }) {
   return (
-    <div className="container wid my-12">
+    <div className="container project-card-width my-12">
       <div className="project-container items-center">
         <h1 className="project-title text-center my-4">{project.title}</h1>
         <div className="overflow-hidden rounded-t-lg">

@@ -8,6 +8,7 @@ import {
   export const projectData = [
     {
       title: "Developer Hangout",
+      font: "font_dev",
       img: "",
       icons: devHangOutIcons,
       description:

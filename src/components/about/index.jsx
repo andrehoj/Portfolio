@@ -3,7 +3,11 @@ import React from "react";
 export default function about({ innerRef, biggerThan750 }) {
   return (
     <section id="About" className="sections" ref={innerRef}>
-      <div className={`pt-32 ml-20 max-w-xl flex flex-col gap-5`}>
+      <div
+        className={`${
+          biggerThan750 ? "ml-20 mr-8 max-w-2xl" : "mx-8 m-auto text-center"
+        } flex flex-col gap-5 `}
+      >
         <p className="title-text">About me</p>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
