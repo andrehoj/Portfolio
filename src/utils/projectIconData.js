@@ -1,24 +1,7 @@
 export const devHangOutIcons = [
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    name: "Node.js",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    name: "Express",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    name: "Mysql",
-  },
-
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    name: "Html5",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    name: "Css5",
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg",
+    name: "HandleBars",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
@@ -29,6 +12,14 @@ export const devHangOutIcons = [
     name: "Jquery",
   },
   {
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    name: "Express",
+  },
+  {
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    name: "Mysql",
+  },
+  {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
     name: "Socket.io",
   },
@@ -36,20 +27,16 @@ export const devHangOutIcons = [
 
 export const findYourEstateIcons = [
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    name: "Html5",
-  },
-  {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    name: "Css5",
-  },
-  {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     name: "Material ui",
+  },
+  {
+    link: "https://www.vectorlogo.zone/logos/rapidapi/rapidapi-icon.svg",
+    name: "Rapid Api",
   },
 ];
 
