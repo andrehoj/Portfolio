@@ -3,6 +3,7 @@ import {
     findYourEstateIcons,
     spawsIcons,
     groceryStoreIcons,
+    portfolioIcons
   } from "./projectIconData";
   
   export const projectData = [
@@ -16,6 +17,7 @@ import {
     },
     {
       title: "Find Your Estate",
+      font: "",
       img: "",
       icons: findYourEstateIcons,
       description:
@@ -24,6 +26,7 @@ import {
   
     {
       title: "Spaws",
+      font: "",
       img: "",
       icons: spawsIcons,
       description:
@@ -31,10 +34,20 @@ import {
     },
     {
       title: "Grocery Store",
+      font: "",
       img: "",
       icons: groceryStoreIcons,
       description:
         "A full stack app that allows users to shop online for groceries with cart functionality and strip for payment.",
+    },
+
+    {
+      title: "This Portfolio",
+      font: "",
+      img: "",
+      icons: portfolioIcons,
+      description:
+        "What your looking at right now",
     },
   ];
   

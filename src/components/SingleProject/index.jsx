@@ -6,7 +6,9 @@ export default function SingleProject({ project }) {
   return (
     <div className="container project-card-width my-12">
       <div className="project-container items-center">
-        <h1 className="project-title text-center my-4">{project.title}</h1>
+        <h1 className={`font-${project.font} project-title text-center my-4`}>
+          {project.title}
+        </h1>
         <div className="overflow-hidden rounded-t-lg">
           <img
             src="https://picsum.photos/850/450"
@@ -14,7 +16,6 @@ export default function SingleProject({ project }) {
             className="rounded-t-lg filter brightness-50 hover:brightness-100 hover:scale-110 hover:cursor-pointer transition-all duration-200"
           />
         </div>
-
         <div className="w-full rounded-b-xl p-5 bg-lighter_blue">
           <p className="text-center text-2xl">Built with</p>
           <div className="m-5 flex flex-wrap justify-center gap-5">
@@ -34,7 +35,6 @@ export default function SingleProject({ project }) {
               <FaGithubAlt size={"24"} />
               <p>Code</p>
             </div>
-
             <div className="flex flex-col justify-center text-lightest_blue items-center hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150">
               <FaRocket size={"24"} />
               <p>App</p>

@@ -1,3 +1,5 @@
+import apolloImage from "./apollo_icon.svg";
+import mongooseImage from "./mongoose_image.png";
 export const devHangOutIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg",
@@ -18,6 +20,11 @@ export const devHangOutIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     name: "Mysql",
+  },
+
+  {
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
+    name: "Sequelize",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
@@ -76,5 +83,24 @@ export const groceryStoreIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
     name: "Express",
+  },
+  {
+    link: apolloImage,
+    name: "Apollo",
+  },
+  // {
+  //   link: mongooseImage,
+  //   name: "Mongoose",
+  // }
+];
+
+export const portfolioIcons = [
+  {
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    name: "React",
+  },
+  {
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    name: "Tail wind css",
   },
 ];
