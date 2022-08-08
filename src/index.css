@@ -79,19 +79,20 @@
   }
 }
 
-.project-card-width {
-  max-width: 600px;
-}
-
 .title-text {
   font-size: calc(2.5rem + 2vw);
-  white-space: nowrap;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 .p-text {
   font-size: calc(1rem + 1vw);
   line-height: 1.4;
+}
+
+@media only screen and (max-width: 650px){
+  .title-text{
+    font-size: calc(1.5rem + 2vw);
+  }
 }
 
 * {

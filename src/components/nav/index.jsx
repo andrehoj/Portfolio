@@ -65,14 +65,13 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
   }
   return (
     <div className="nav-small ">
-      <div className="h-full flex items-center justify-between mr-6 ml-6">
+      <div className="h-full flex items-center justify-between mx-3">
         <Socials />
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
           duration={0.6}
           label="Show menu"
-          className=""
         />
       </div>
       <div

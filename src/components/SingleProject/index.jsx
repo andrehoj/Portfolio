@@ -4,8 +4,8 @@ import { FaGithubAlt, FaRocket } from "react-icons/fa";
 
 export default function SingleProject({ project }) {
   return (
-    <div className="container project-card-width my-12">
-      <div className="project-container items-center">
+    <div className="max-w-xl group ">
+      <div className="project-container mx-5">
         <h1 className={`font-${project.font} project-title text-center my-4`}>
           {project.title}
         </h1>
@@ -13,7 +13,7 @@ export default function SingleProject({ project }) {
           <img
             src="https://picsum.photos/850/450"
             alt=""
-            className="rounded-t-lg filter brightness-50 hover:brightness-100 hover:scale-110 hover:cursor-pointer transition-all duration-200"
+            className="rounded-t-lg filter brightness-50 group-hover:brightness-100 group-hover:scale-110 hover:cursor-pointer transition-all duration-200"
           />
         </div>
         <div className="w-full rounded-b-xl p-5 bg-lighter_blue">
