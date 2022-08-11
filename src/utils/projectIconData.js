@@ -1,5 +1,5 @@
 import apolloImage from "./apollo_icon.svg";
-import mongooseImage from "./mongoose_image.png";
+// import mongooseImage from "./mongoose_image.png";
 export const devHangOutIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg",

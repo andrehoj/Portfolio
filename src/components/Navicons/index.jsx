@@ -1,4 +1,5 @@
 import React from "react";
+import { animated, useSpring } from "react-spring";
 
 export default function Navicons({
   IconObj,
@@ -6,13 +7,26 @@ export default function Navicons({
   biggerThan1000,
   biggerThan750,
   setOpen,
+  delayTime,
 }) {
+  console.log(delayTime);
+  const props = useSpring({
+    from: { opacity: 0, marginRight: 100 },
+    to: { opacity: 1, marginRight: 0 },
+    delay: delayTime,
+  });
+
   if (biggerThan750) {
     return (
-      <div
+      <animated.div
+        style={props}
         onClick={() => {
           const anchor = document.querySelector(`#${IconObj.name}`);
-          anchor.scrollIntoView({ behavior: "smooth", block: "start", align: true });
+          anchor.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            align: true,
+          });
         }}
         className={` ${
           biggerThan1000 ? "icon-container" : "icon-container-md"
@@ -22,14 +36,11 @@ export default function Navicons({
         }`}
       >
         <IconObj.Icon size="36" className={`sidebar-icon`} />
-      </div>
+      </animated.div>
     );
   }
   return (
-    <div
-      className="flex justify-center p-3 bg-back  shadow-2xl
-    "
-    >
+    <div className="flex justify-center p-3 bg-back shadow-2xl">
       <div
         onClick={() => {
           setOpen(false);

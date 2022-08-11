@@ -2,6 +2,7 @@ import "./index.css";
 import { useState, useEffect } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import { useInView } from "react-intersection-observer";
+import { LightModeProvider } from "./utils/LightModeContext";
 import Nav from "./components/nav";
 import Contact from "./components/contact";
 import About from "./components/about";
@@ -38,7 +39,7 @@ export default function App() {
   }, [inView, inView1, inView2, inView3]);
 
   return (
-    <div>
+    <LightModeProvider>
       <Nav
         biggerThan1000={biggerThan1000}
         biggerThan750={biggerThan750}
@@ -56,6 +57,6 @@ export default function App() {
         biggerThan750={biggerThan750}
         innerRef={ref3}
       />
-    </div>
+    </LightModeProvider>
   );
 }

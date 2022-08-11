@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { LightModeContext } from "../../utils/LightModeContext";
 import Navicons from "../Navicons";
 import Socials from "../Socials";
 import { GoPerson } from "react-icons/go";
@@ -6,8 +7,11 @@ import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
 import Hamburger from "hamburger-react";
+import { useContext } from "react";
 
 export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
+  const { lightMode, toggleLightMode } = useContext(LightModeContext);
+
   const [isOpen, setOpen] = useState(false);
 
   const [activeNav, setActiveNav] = useState("Home");
@@ -17,10 +21,10 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
   }, [activeElement]);
 
   const sideBarIcons = [
-    { Icon: ImHome, name: "Home" },
-    { Icon: GoPerson, name: "About" },
-    { Icon: GiHammerNails, name: "Projects" },
-    { Icon: GrMail, name: "Contact" },
+    { Icon: ImHome, name: "Home", delayTime: 200 },
+    { Icon: GoPerson, name: "About", delayTime: 400 },
+    { Icon: GiHammerNails, name: "Projects", delayTime: 600 },
+    { Icon: GrMail, name: "Contact", delayTime: 800 },
   ];
 
   if (biggerThan1000) {
@@ -35,6 +39,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
                 activeNav={activeNav}
                 biggerThan1000={biggerThan1000}
                 biggerThan750={biggerThan750}
+                delayTime={IconObj.delayTime}
               />
             ))}
           </div>
@@ -55,6 +60,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
                 activeElement={activeElement}
                 biggerThan1000={biggerThan1000}
                 biggerThan750={biggerThan750}
+               
               />
             ))}
           </div>
@@ -77,7 +83,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
       <div
         className={`${
           !isOpen && "opacity-0 invisible"
-        }  w-full h-fit border-t border-main_orange bg-lighter_blue group transition-all duration-200 ease-in`}
+        }  w-full h-fit border-t dark:border-white border-main_orange bg-lighter_blue group transition-all duration-200 ease-in`}
       >
         {sideBarIcons.map((IconObj) => (
           <Navicons
