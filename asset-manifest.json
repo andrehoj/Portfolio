@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0205ec05.css",
-    "main.js": "/Portfolio/static/js/main.9c2ac9ef.js",
+    "main.css": "/Portfolio/static/css/main.d49da636.css",
+    "main.js": "/Portfolio/static/js/main.1653a634.js",
+    "static/media/key-shop.png": "/Portfolio/static/media/key-shop.830d024512e240b62842.png",
+    "static/media/find-your-estate-1.png": "/Portfolio/static/media/find-your-estate-1.352b60901d25c5a9bfd8.png",
+    "static/media/Stop_Shop_image.png": "/Portfolio/static/media/Stop_Shop_image.440c9daeff4c2fb6df6c.png",
+    "static/media/dev-hangout-image.png": "/Portfolio/static/media/dev-hangout-image.f7260587deaaeb31d431.png",
+    "static/media/Budget_tracker.image.png": "/Portfolio/static/media/Budget_tracker.image.4211ac6ebefb45ff42b1.png",
+    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.2dad5b2756ad2f7cc500.pdf",
+    "static/media/apollo_icon.svg": "/Portfolio/static/media/apollo_icon.332430b02499427fd106c782a184a34f.svg",
     "index.html": "/Portfolio/index.html",
-    "main.0205ec05.css.map": "/Portfolio/static/css/main.0205ec05.css.map",
-    "main.9c2ac9ef.js.map": "/Portfolio/static/js/main.9c2ac9ef.js.map"
+    "main.d49da636.css.map": "/Portfolio/static/css/main.d49da636.css.map",
+    "main.1653a634.js.map": "/Portfolio/static/js/main.1653a634.js.map"
   },
   "entrypoints": [
-    "static/css/main.0205ec05.css",
-    "static/js/main.9c2ac9ef.js"
+    "static/css/main.d49da636.css",
+    "static/js/main.1653a634.js"
   ]
 }
