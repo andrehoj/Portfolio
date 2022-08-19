@@ -6,7 +6,6 @@ import { animated, useSpring } from "react-spring";
 
 export default function SingleProject({ project }) {
   const { ref, inView } = useInView();
-  console.log(inView);
 
   const props = useSpring({
     to: { opacity: 1 },
@@ -24,16 +23,18 @@ export default function SingleProject({ project }) {
           <img
             src={require(`${project.img}`)}
             alt=""
-            className="rounded-t-lg filter brightness-50  group-hover:brightness-100 hover:cursor-pointer transition-all duration-200"
+            className="rounded-t-lg filter brightness-50 group-hover:brightness-100 hover:cursor-pointer hover:filter-none transition-all duration-200"
+            s
           />
         </div>
-        <div className="w-full rounded-b-xl p-5 bg-lighter_blue">
+        <div className="w-full rounded-b-xl p-5 bg-light_blue">
           <p className="text-center text-2xl">Built with</p>
           <div className="m-5 flex flex-wrap justify-center gap-5">
             {project.icons.map((iconObj) => (
               <TechIcons
                 icon={iconObj.name}
                 link={iconObj.link}
+                color={iconObj.color}
                 key={iconObj.name}
               />
             ))}
@@ -42,14 +43,22 @@ export default function SingleProject({ project }) {
             {project.description}
           </p>
           <div className="flex justify-center gap-16 mt-5 text-text_color">
-            <div className="flex flex-col justify-center text-lightest_blue items-center  hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150">
+            <a
+              href={`${project.repo}`}
+              target="_blank"
+              className="flex flex-col justify-center text-blue items-center  hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150"
+            >
               <FaGithubAlt size={"24"} />
               <p>Code</p>
-            </div>
-            <div className="flex flex-col justify-center text-lightest_blue items-center hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150">
+            </a>
+            <a
+              href={`${project.link}`}
+              target="_blank"
+              className="flex flex-col justify-center text-blue items-center hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150"
+            >
               <FaRocket size={"24"} />
               <p>App</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

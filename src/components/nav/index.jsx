@@ -49,7 +49,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
     );
   } else if (biggerThan750) {
     return (
-      <div className={`nav-small  `}>
+      <div className="nav-small">
         <nav className="flex h-full justify-end items-center gap-24 mr-6">
           <div className="flex gap-2 ">
             {sideBarIcons.map((IconObj) => (
@@ -60,7 +60,6 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
                 activeElement={activeElement}
                 biggerThan1000={biggerThan1000}
                 biggerThan750={biggerThan750}
-               
               />
             ))}
           </div>
@@ -83,7 +82,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
       <div
         className={`${
           !isOpen && "opacity-0 invisible"
-        }  w-full h-fit border-t dark:border-white border-main_orange bg-lighter_blue group transition-all duration-200 ease-in`}
+        }  w-full h-fit border-t border-white  bg-light_blue group transition-all duration-200 ease-in`}
       >
         {sideBarIcons.map((IconObj) => (
           <Navicons

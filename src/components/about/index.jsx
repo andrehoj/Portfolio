@@ -1,4 +1,5 @@
 import React from "react";
+import Skills from "../Skills/Skills";
 
 export default function about({ innerRef, biggerThan750 }) {
   return (
@@ -10,21 +11,17 @@ export default function about({ innerRef, biggerThan750 }) {
       >
         <p className="title-text">About me</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt
-          cumque ducimus praesentium, deserunt perspiciatis, pariatur impedit
-          minima quis beatae tenetur quasi cum alias ab magnam non.
+          Hi! My name is Andrew Howran and I'm an enthusiast Web Developer who
+          loves to solve problems using all kinds of web technologies. Im always
+          learning and adapting to the constant changing enviroment that is the
+          web.
         </p>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, ab
-          excepturi laborum voluptas animi illum non.
-        </p>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, vitae
-          accusantium. Pariatur dicta reprehenderit fugiat vel tenetur
-          voluptates nemo velit nam nihil aliquam sapiente quo, aut quas ab quod
-          non!
+          Fell free to contact me whether its about a project, job opportunity
+          or if you have any questions.
         </p>
       </div>
+      <Skills />
     </section>
   );
 }

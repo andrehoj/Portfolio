@@ -9,10 +9,9 @@ export default function Navicons({
   setOpen,
   delayTime,
 }) {
-  console.log(delayTime);
   const props = useSpring({
-    from: { opacity: 0, marginRight: 100 },
-    to: { opacity: 1, marginRight: 0 },
+    from: { marginRight: 200 },
+    to: { marginRight: 0 },
     delay: delayTime,
   });
 
@@ -25,7 +24,7 @@ export default function Navicons({
           anchor.scrollIntoView({
             behavior: "smooth",
             block: "start",
-            align: true,
+            alignToTop: true,
           });
         }}
         className={` ${
@@ -45,7 +44,11 @@ export default function Navicons({
         onClick={() => {
           setOpen(false);
           const anchor = document.querySelector(`#${IconObj.name}`);
-          anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+          anchor.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            alignToTop: true,
+          });
         }}
         className={` ${biggerThan1000 ? "icon-container" : "icon-container-md"} 
         `}

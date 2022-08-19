@@ -2,36 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Taviraj:ital,wght@0,200;0,400;0,600;1,300;1,600&family=VT323&display=swap");
 
 @layer components {
   body {
-    @apply text-main_orange bg-dark_blue font-main_font;
+    @apply text-white bg-dark_blue font-main_font;
   }
 
   .sections {
-    @apply pt-20 min-h-screen
+    @apply pt-20 min-h-screen;
   }
 
   .nav-large {
-    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-dark_grey;
+    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-light_blue;
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 bg-dark_blue shadow-2xl z-10;
+    @apply fixed right-0 w-full h-16 bg-light_blue shadow-2xl z-10;
   }
 
   .topbar-icon {
-    @apply text-lightest_blue  hover:cursor-pointer hover:text-light_grey  
+    @apply text-light_grey  hover:cursor-pointer hover:text-blue 
     transition-all duration-200 ease-linear;
   }
 
   .icon-container {
-    @apply flex flex-col text-lightest_blue hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col text-white hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
   }
 
   .icon-container-md {
-    @apply flex flex-col w-20 text-center text-lightest_blue hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col w-20 text-center text-white hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
   }
 
   .sidebar-icon {
@@ -39,7 +39,7 @@
   }
 
   .icon-active {
-    @apply text-light_grey transition-all duration-200 ease-linear;
+    @apply text-blue transition-all duration-200 ease-linear;
   }
 
   .icon-active-md {
@@ -47,7 +47,7 @@
   }
 
   .mobile-nav-active {
-    @apply font-bold text-main_orange;
+    @apply font-bold text-blue;
   }
 
   .project-container {
@@ -56,27 +56,32 @@
 
   .project-card {
     @apply flex flex-col p-3 relative -top-10 left-20 h-fit text-center
-     bg-lighter_blue text-lightest_grey text-xl transition ease-in-out duration-500;
+     bg-lighter_blue text-light_grey text-xl transition ease-in-out duration-500;
   }
 
   .github {
-    @apply hover:text-light_grey text-lightest_blue hover:cursor-pointer hover:scale-110
+    @apply hover:text-slate-600 text-white hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .linkedin {
-    @apply hover:text-linkedIn_color text-lightest_blue hover:cursor-pointer hover:scale-110
+    @apply hover:text-linkedIn_color text-white hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .stackof {
-    @apply hover:text-stackOF_color text-lightest_blue  hover:cursor-pointer hover:scale-110
+    @apply hover:text-stackOF_color text-white  hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .resume-btn {
-    @apply border border-main_orange px-2 py-1 font-bold  hover:bg-main_orange hover:text-dark_grey transition-all duration-200 ease-linear active:scale-75;
+    @apply border border-blue  px-2 py-1 font-bold  hover:bg-blue text-blue hover:text-light_blue transition-all duration-200 ease-linear active:scale-75;
   }
+}
+
+.light-icons {
+  filter: invert(99%) sepia(1%) saturate(10%) hue-rotate(10deg) brightness(105%)
+    contrast(100%);
 }
 
 .title-text {
@@ -89,8 +94,8 @@
   line-height: 1.4;
 }
 
-@media only screen and (max-width: 650px){
-  .title-text{
+@media only screen and (max-width: 650px) {
+  .title-text {
     font-size: calc(1.5rem + 2vw);
   }
 }
@@ -116,26 +121,22 @@ body {
 }
 
 .link-item {
-  box-shadow: inset 0 0 0 0 #33b6ae;
-  color: #33b6ae;
+  box-shadow: inset 0 0 0 0 #7dd8eb;
+  color: #7dd8eb;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .link-item:hover {
-  box-shadow: inset 100px 0 0 0 #33b6ae;
+  box-shadow: inset 100px 0 0 0 #7dd8eb;
   color: #565656;
 }
 
 .nav-active-link {
-  box-shadow: inset 100px 0 0 0 #33b6ae;
+  box-shadow: inset 100px 0 0 0 #7dd8eb;
   border-radius: 25%;
   color: #565656;
-}
-
-.devhangout {
-  font-family: "VT323";
 }
 
 .project-title {
@@ -143,11 +144,7 @@ body {
   font-weight: 400;
   line-height: 48px;
   text-align: center;
-  color: #33b6ae;
-}
-
-.tester {
-  background-color: #565656;
+  color: #7dd8eb;
 }
 
 .message-placeholder {
@@ -166,7 +163,7 @@ textarea {
   visibility: hidden;
   font-size: 1rem;
   font-weight: 700;
-  color: #33b6ae;
+  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -184,7 +181,7 @@ textarea {
   visibility: visible;
   font-size: 1rem;
   font-weight: 700;
-  color: #33b6ae;
+  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -196,7 +193,7 @@ textarea {
   visibility: hidden;
   font-size: 1rem;
   font-weight: 700;
-  color: #33b6ae;
+  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -212,7 +209,7 @@ textarea {
   visibility: visible;
   font-size: 1rem;
   font-weight: 700;
-  color: #33b6ae;
+  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -239,4 +236,33 @@ textarea {
   .responsive-nav {
     margin-top: 1rem;
   }
+}
+
+.Container {
+  overflow: hidden;
+  display: flex;
+  height: 500px;
+  width: 550px;
+}
+
+.Container div {
+  height: 400px;
+  min-width: 150px;
+  margin-left: 100px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+
+.Container div {
+  height: 400px;
+  min-width: 150px;
+  margin-left: 50px;
+  animation: slide 30s linear infinite;
 }
