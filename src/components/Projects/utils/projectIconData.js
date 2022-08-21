@@ -1,4 +1,4 @@
-import apolloImage from "./apollo_icon.svg";
+import apolloImage from "./images/apollo_icon.svg";
 // import mongooseImage from "./mongoose_image.png";
 export const devHangOutIcons = [
   {

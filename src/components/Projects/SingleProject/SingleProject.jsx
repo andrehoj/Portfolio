@@ -1,5 +1,5 @@
 import React from "react";
-import TechIcons from "../techicons";
+import TechIcons from "./TechIcons/TechIcons";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { animated, useSpring } from "react-spring";
@@ -23,7 +23,7 @@ export default function SingleProject({ project }) {
           <img
             src={require(`${project.img}`)}
             alt=""
-            className="rounded-t-lg filter brightness-50 group-hover:brightness-100 hover:cursor-pointer hover:filter-none transition-all duration-200"
+            className="rounded-t-lg filter brightness-50 group-hover:brightness-100  hover:filter-none transition-all duration-200"
             s
           />
         </div>

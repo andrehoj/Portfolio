@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { LightModeContext } from "../../utils/LightModeContext";
-import Navicons from "../Navicons";
-import Socials from "../Socials";
+import Navicons from ".//Navicons/NavIcons";
+import Socials from "./Socials/Socials";
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";

@@ -1,10 +1,8 @@
 import React from "react";
-import SingleProject from "../SingleProject";
-import { projectData } from "../../utils/projectData";
+import SingleProject from "./SingleProject/SingleProject";
+import { projectData } from "./utils/projectData";
 
-
-export default function Project({ innerRef, biggerThan750 }) {
- 
+export default function ProjectContainer({ innerRef, biggerThan750 }) {
   return (
     <section id="Projects" className="sections" ref={innerRef}>
       <div

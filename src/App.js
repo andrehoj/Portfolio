@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import { useInView } from "react-intersection-observer";
 import { LightModeProvider } from "./utils/LightModeContext";
-import Nav from "./components/nav";
-import Contact from "./components/contact";
-import About from "./components/about";
-import Projects from "./components/projects";
-import Home from "./components/home";
+import Nav from "./components/Nav/Nav";
+import Contact from "./components/Contact/Contact";
+import About from "./components/About/About";
+import Projects from "./components/Projects/ProjectContainer";
+import Home from "./components/Home/Home";
 
 export default function App() {
   const biggerThan1000 = useMediaPredicate("(min-width: 1000px)");

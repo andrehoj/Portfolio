@@ -1,5 +1,5 @@
 import React from "react";
-import Skills from "../Skills/Skills";
+import Skills from "./Skills/Skills";
 
 export default function about({ innerRef, biggerThan750 }) {
   return (
