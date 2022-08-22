@@ -2,19 +2,15 @@ import React from "react";
 import TechIcons from "./TechIcons/TechIcons";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
-import { animated, useSpring } from "react-spring";
+
 
 export default function SingleProject({ project }) {
   const { ref, inView } = useInView();
 
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    delay: 1000,
-  });
+  
 
   return (
-    <animated.div className="max-w-xl group " ref={ref} style={props}>
+    <div className="max-w-xl" ref={ref}>
       <div className="project-container mx-5">
         <h1 className={`font-${project.font} project-title text-center my-4`}>
           {project.title}
@@ -23,7 +19,7 @@ export default function SingleProject({ project }) {
           <img
             src={require(`${project.img}`)}
             alt=""
-            className="rounded-t-lg filter brightness-50 group-hover:brightness-100  hover:filter-none transition-all duration-200"
+            className="rounded-t-lg filter transition-all duration-200"
             s
           />
         </div>
@@ -46,22 +42,22 @@ export default function SingleProject({ project }) {
             <a
               href={`${project.repo}`}
               target="_blank"
-              className="flex flex-col justify-center text-blue items-center  hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150"
+              className="flex flex-col justify-center text-blue items-center hover:cursor-pointer  hover:brightness-75 duration-150  group"
             >
-              <FaGithubAlt size={"24"} />
+              <FaGithubAlt size={"24"} className='group-hover:-translate-y-1 duration-150' />
               <p>Code</p>
             </a>
             <a
               href={`${project.link}`}
               target="_blank"
-              className="flex flex-col justify-center text-blue items-center hover:cursor-pointer hover:scale-110 hover:brightness-75 duration-150"
+              className="flex flex-col justify-center text-blue items-center hover:cursor-pointer  hover:brightness-75 duration-150  group"
             >
-              <FaRocket size={"24"} />
+              <FaRocket size={"24"} className='group-hover:-translate-y-1 duration-150' />
               <p>App</p>
             </a>
           </div>
         </div>
       </div>
-    </animated.div>
+    </div>
   );
 }

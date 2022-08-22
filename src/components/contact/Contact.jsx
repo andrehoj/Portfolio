@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
-import { FcCheckmark } from "react-icons/fc";
+import {motion} from "framer-motion"
 
-export default function Contact({ biggerThan1000, innerRef, biggerThan750 }) {
+export default function Contact({ biggerThan1000,  biggerThan750 }) {
   const [formState, setFormState] = useState({
     name: "",
     from_email: "",
@@ -59,7 +59,9 @@ export default function Contact({ biggerThan1000, innerRef, biggerThan750 }) {
   };
 
   return (
-    <section id="Contact" className="sections" ref={innerRef}>
+    <motion.section id="Contact" className="sections" initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}>
       <div
         className={` ${
           biggerThan750 ? "ml-20" : "m-auto text-center items-center"
@@ -120,6 +122,6 @@ export default function Contact({ biggerThan1000, innerRef, biggerThan750 }) {
           </div>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }

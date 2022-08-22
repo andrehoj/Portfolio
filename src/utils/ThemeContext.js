@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 
-const LightModeContext = createContext();
+const ThemeContext = createContext();
 
 function LightModeProvider(props){
   const [lightMode, setLightMode] = useState(false);
@@ -11,11 +11,11 @@ function LightModeProvider(props){
 
   return (
     <div>
-      <LightModeContext.Provider value={{ lightMode, toggleLightMode }}>
+      <ThemeContext.Provider value={{ lightMode, toggleLightMode }}>
         {props.children}
-      </LightModeContext.Provider>
+      </ThemeContext.Provider>
     </div>
   );
 }
 
-export { LightModeContext, LightModeProvider };
+export { ThemeContext, LightModeProvider };

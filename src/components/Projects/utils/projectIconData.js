@@ -13,7 +13,7 @@ export const devHangOutIcons = [
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
-    name: "Jquery",
+    name: "jQuery",
     color: "",
   },
   {
@@ -76,7 +76,7 @@ export const stopShopIcons = [
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-    name: "Tailwind",
+    name: "Tailwind CSS",
     color: "",
   },
   {
@@ -127,6 +127,6 @@ export const BudgetTrackerIcons = [
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    name: "Javascript",
+    name: "JavaScript",
   },
 ];

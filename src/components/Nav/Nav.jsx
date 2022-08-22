@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { LightModeContext } from "../../utils/LightModeContext";
 import Navicons from ".//Navicons/NavIcons";
 import Socials from "./Socials/Socials";
 import { GoPerson } from "react-icons/go";
@@ -8,9 +7,16 @@ import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
 import Hamburger from "hamburger-react";
 import { useContext } from "react";
+import { ActiveSectionContext } from "../../utils/ActiveSectionContext";
 
-export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
-  const { lightMode, toggleLightMode } = useContext(LightModeContext);
+
+export default function Nav({
+  biggerThan1000,
+  biggerThan750,
+  activeElement,
+  setActiveElement,
+}) {
+  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
 
   const [isOpen, setOpen] = useState(false);
 
@@ -21,10 +27,10 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
   }, [activeElement]);
 
   const sideBarIcons = [
-    { Icon: ImHome, name: "Home", delayTime: 200 },
-    { Icon: GoPerson, name: "About", delayTime: 400 },
-    { Icon: GiHammerNails, name: "Projects", delayTime: 600 },
-    { Icon: GrMail, name: "Contact", delayTime: 800 },
+    { Icon: ImHome, name: "Home" },
+    { Icon: GoPerson, name: "About" },
+    { Icon: GiHammerNails, name: "Projects" },
+    { Icon: GrMail, name: "Contact" },
   ];
 
   if (biggerThan1000) {
@@ -39,7 +45,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
                 activeNav={activeNav}
                 biggerThan1000={biggerThan1000}
                 biggerThan750={biggerThan750}
-                delayTime={IconObj.delayTime}
+                setActiveElement={setActiveElement}
               />
             ))}
           </div>
@@ -60,6 +66,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
                 activeElement={activeElement}
                 biggerThan1000={biggerThan1000}
                 biggerThan750={biggerThan750}
+                setActiveElement={setActiveElement}
               />
             ))}
           </div>
@@ -93,6 +100,7 @@ export default function Nav({ biggerThan1000, biggerThan750, activeElement }) {
             biggerThan1000={biggerThan1000}
             biggerThan750={biggerThan750}
             setOpen={setOpen}
+            setActiveElement={setActiveElement}
           />
         ))}
       </div>

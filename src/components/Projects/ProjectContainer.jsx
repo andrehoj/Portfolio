@@ -1,10 +1,17 @@
 import React from "react";
 import SingleProject from "./SingleProject/SingleProject";
 import { projectData } from "./utils/projectData";
+import { motion } from "framer-motion";
 
-export default function ProjectContainer({ innerRef, biggerThan750 }) {
+export default function ProjectContainer({ biggerThan750 }) {
   return (
-    <section id="Projects" className="sections" ref={innerRef}>
+    <motion.section
+      id="Projects"
+      className="sections mb-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div
         className={`${
           biggerThan750 ? "ml-20 " : "text-center max-w-fit mx-auto "
@@ -17,6 +24,6 @@ export default function ProjectContainer({ innerRef, biggerThan750 }) {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -1,12 +1,19 @@
 import React from "react";
 import Skills from "./Skills/Skills";
+import { motion } from "framer-motion";
 
-export default function about({ innerRef, biggerThan750 }) {
+export default function about({ biggerThan750 }) {
   return (
-    <section id="About" className="sections" ref={innerRef}>
+    <motion.section
+      id="About"
+      className="sections"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div
         className={`${
-          biggerThan750 ? "ml-20 mr-8 max-w-2xl" : "mx-8 m-auto text-center"
+          biggerThan750 ? "ml-20 mr-8 max-w-2xl" : "mx-6 m-auto text-center"
         } flex flex-col gap-5 `}
       >
         <p className="title-text">About me</p>
@@ -22,6 +29,6 @@ export default function about({ innerRef, biggerThan750 }) {
         </p>
       </div>
       <Skills />
-    </section>
+    </motion.section>
   );
 }

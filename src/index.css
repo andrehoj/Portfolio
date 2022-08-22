@@ -22,7 +22,7 @@
   }
 
   .topbar-icon {
-    @apply text-light_grey  hover:cursor-pointer hover:text-blue 
+    @apply text-light_grey  hover:cursor-pointer
     transition-all duration-200 ease-linear;
   }
 
@@ -60,17 +60,17 @@
   }
 
   .github {
-    @apply hover:text-slate-600 text-white hover:cursor-pointer hover:scale-110
+    @apply text-white hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .linkedin {
-    @apply hover:text-linkedIn_color text-white hover:cursor-pointer hover:scale-110
+    @apply text-linkedIn_color  hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .stackof {
-    @apply hover:text-stackOF_color text-white  hover:cursor-pointer hover:scale-110
+    @apply text-stackOF_color   hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
@@ -265,4 +265,26 @@ textarea {
   min-width: 150px;
   margin-left: 50px;
   animation: slide 30s linear infinite;
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #15202b;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7dd8eb;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7dd8eb;
 }
