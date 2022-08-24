@@ -8,7 +8,7 @@ import {
 export const projectData = [
   {
     title: "Developer Hangout",
-    font: "font_dev",
+    font: "font-dev",
     img: "./images/dev-hangout-image.png",
     link: "https://developer-hangout-657.herokuapp.com/",
     repo: "https://github.com/AgentA12/Dev_Hangout",

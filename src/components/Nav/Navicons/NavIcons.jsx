@@ -29,20 +29,22 @@ export default function Navicons({
     );
   }
   return (
-    <Link to={`${IconObj.name}`}>
-      <div className="flex justify-center p-3 bg-back shadow-2xl">
+    <Link
+      onClick={() => {
+        setOpen(false);
+        setActiveElement(IconObj.name);
+      }}
+      to={`${IconObj.name}`}
+    >
+      <div className="flex justify-center p-3 hover:text-light_grey">
         <div
-          onClick={() => {
-            setOpen(false);
-            setActiveElement(IconObj.name);
-          }}
           className={` ${
             biggerThan1000 ? "icon-container" : "icon-container-md"
           } 
         `}
         >
           <span
-            className={`hover:text-main_orange  font-bold ${
+            className={`font-bold ${
               activeNav === IconObj.name && "mobile-nav-active"
             }`}
           >

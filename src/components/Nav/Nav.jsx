@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Navicons from ".//Navicons/NavIcons";
 import Socials from "./Socials/Socials";
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
+import { BsSun, BsMoon } from "react-icons/bs";
 import Hamburger from "hamburger-react";
-import { useContext } from "react";
-import { ActiveSectionContext } from "../../utils/ActiveSectionContext";
-
+import useDarkMode from "../../hooks/useDarkMode";
 
 export default function Nav({
   biggerThan1000,
@@ -16,11 +15,11 @@ export default function Nav({
   activeElement,
   setActiveElement,
 }) {
-  const [activeSection, setActiveSection] = useContext(ActiveSectionContext);
-
   const [isOpen, setOpen] = useState(false);
 
   const [activeNav, setActiveNav] = useState("Home");
+
+  const [colorTheme, setTheme] = useDarkMode();
 
   useEffect(() => {
     setActiveNav(activeElement);
@@ -38,6 +37,22 @@ export default function Nav({
       <div className="nav-large">
         <nav className="h-full flex flex-col items-center justify-between">
           <div className="responsive-nav flex flex-col items-center h-fit gap-4 shrink">
+            {colorTheme === "light" ? (
+              <BsMoon
+                id=""
+                className=" theme-toggle"
+                size={30}
+                onClick={() => setTheme("light")}
+              />
+            ) : (
+              <BsSun
+                id=""
+                className="theme-toggle"
+                size={30}
+                onClick={() => setTheme("dark")}
+              />
+            )}
+
             {sideBarIcons.map((IconObj) => (
               <Navicons
                 IconObj={IconObj}
@@ -58,6 +73,21 @@ export default function Nav({
       <div className="nav-small">
         <nav className="flex h-full justify-end items-center gap-24 mr-6">
           <div className="flex gap-2 ">
+            {colorTheme === "light" ? (
+              <BsMoon
+                id=""
+                className="m-0 theme-toggle"
+                size={30}
+                onClick={() => setTheme("light")}
+              />
+            ) : (
+              <BsSun
+                id=""
+                className="theme-toggle"
+                size={30}
+                onClick={() => setTheme("dark")}
+              />
+            )}
             {sideBarIcons.map((IconObj) => (
               <Navicons
                 IconObj={IconObj}
@@ -76,7 +106,7 @@ export default function Nav({
     );
   }
   return (
-    <div className="nav-small ">
+    <div className="nav-small">
       <div className="h-full flex items-center justify-between mx-3">
         <Socials />
         <Hamburger
@@ -89,7 +119,7 @@ export default function Nav({
       <div
         className={`${
           !isOpen && "opacity-0 invisible"
-        }  w-full h-fit border-t border-white  bg-light_blue group transition-all duration-200 ease-in`}
+        }  w-full h-fit border-t bg-white dark:border-white  dark:bg-light_blue group transition-all duration-200 ease-in`}
       >
         {sideBarIcons.map((IconObj) => (
           <Navicons

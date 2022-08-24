@@ -24,7 +24,7 @@ export default function about({ biggerThan750 }) {
           web.
         </p>
         <p>
-          Fell free to contact me whether its about a project, job opportunity
+          Feel free to contact me whether its about a project, job opportunity
           or if you have any questions.
         </p>
       </div>

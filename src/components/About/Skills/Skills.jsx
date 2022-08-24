@@ -3,7 +3,7 @@ import React from "react";
 export default function Skills() {
   return (
     <div className="hidden md:block ml-20 mt-20 mr-8 max-w-2xl">
-      <div className="Container">
+      <div className="slider-container">
         <div className="">
           {" "}
           <img
@@ -15,7 +15,7 @@ export default function Skills() {
         </div>
         <div className="">
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
             alt=""
             height={"100px"}
             width={"100px"}
@@ -23,7 +23,7 @@ export default function Skills() {
         </div>
         <div className="">
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
             alt=""
             height={"100px"}
             width={"100px"}
@@ -61,7 +61,7 @@ export default function Skills() {
             alt=""
             height={"100px"}
             width={"100px"}
-            className="light-icons"
+            className="dark:light-icons"
           />
         </div>
         <div className="">
@@ -71,7 +71,7 @@ export default function Skills() {
             alt=""
             height={"100px"}
             width={"100px"}
-            className="light-icons"
+            className="dark:light-icons"
           />
         </div>
       </div>

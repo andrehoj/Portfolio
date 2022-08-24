@@ -1,43 +1,52 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
 
 export default function Home({ biggerThan750, biggerThan1000 }) {
   return (
-    <motion.section
-      id="Home"
-      className="sections"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <section id="Home" className="sections">
       <div
         className={`${
-          biggerThan750 ? "ml-20 mr-8 max-w-fit" : "mx-6 text-center"
+          biggerThan750 ? "ml-20 mr-8 max-w-fit" : "mx-6 text-center "
         }   `}
       >
-        <h1 className="title-text text-white  flex flex-col ">
-          <div className="">Hi</div>
+        <h1 className="title-text flex flex-col ">
+          <div>Hi</div>
           <div
             className={`${
               !biggerThan750 && "justify-center"
             } flex gap-3  flex-wrap`}
           >
-            <div className="">I'm a</div>
-            <motion.div className="text-blue font-bold">
-              Web Developer
-            </motion.div>
+            <div>I'm a</div>
+            <div className="text-light_theme_blue dark:text-dark_theme_cyan font-bold whitespace-pre">
+              {letters.map((letter, i) => (
+                <motion.div
+                  className="inline-block"
+                  key={i}
+                  initial={{ opacity: 0, y: -600 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ type: "spring", duration: 0.5, delay: i * 0.1 }}
+                >
+                  {letter}
+                </motion.div>
+              ))}
+            </div>
           </div>
           And my name's Andrew.
           <p className="text-text_color text-lg mt-3">
             Full Stack JavaScript Developer
           </p>
         </h1>
-        <button
-          className={`text-blue border-blue border justify-center mt-5 mr-2 px-3 py-1 bg-third hover:bg-blue hover:text-dark_blue  transition-all duration-200 ease-linear tracking-widest font-bold active:scale-75 btns`}
-        >
-          Contact Me
-        </button>
+        <Link to="/Contact">
+          <button
+            className="mt-2 custom-btn"
+          >
+            Contact Me
+          </button>
+        </Link>
       </div>
-    </motion.section>
+    </section>
   );
 }

@@ -2,9 +2,9 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 
-export default function Contact({ biggerThan1000,  biggerThan750 }) {
+export default function Contact({ biggerThan1000, biggerThan750 }) {
   const [formState, setFormState] = useState({
     name: "",
     from_email: "",
@@ -59,9 +59,13 @@ export default function Contact({ biggerThan1000,  biggerThan750 }) {
   };
 
   return (
-    <motion.section id="Contact" className="sections" initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}>
+    <motion.section
+      id="Contact"
+      className="sections"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div
         className={` ${
           biggerThan750 ? "ml-20" : "m-auto text-center items-center"
@@ -83,7 +87,7 @@ export default function Contact({ biggerThan1000,  biggerThan750 }) {
             type="text"
             name="name"
             placeholder="Name"
-            className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none"
+            className="p-3 pl-6 contact-form"
             onBlur={handleChange}
           />
           <input
@@ -91,13 +95,13 @@ export default function Contact({ biggerThan1000,  biggerThan750 }) {
             type="email"
             name="user_email"
             placeholder="Email"
-            className="bg-slate-600 p-3 pl-6 border-none focus:border-none outline-none "
+            className="p-3 pl-6 contact-form"
             onBlur={handleChange}
           />
           <textarea
             required
             name="message"
-            className="bg-slate-600  p-3 pl-6 h-40 border-none focus:border-none outline-none "
+            className="p-3 pl-6 h-40 contact-form"
             placeholder="Message"
             resize="none"
             onBlur={handleChange}
@@ -108,14 +112,14 @@ export default function Contact({ biggerThan1000,  biggerThan750 }) {
             }   flex align-center `}
           >
             {errorMessage && (
-              <div className="inline whitespace-nowrap text-xl transition-all duration-100">
+              <div className="inline whitespace-nowrap text-md sm:text-xl transition-all duration-100">
                 {capitalizeFirstLetter(errorMessage)}
               </div>
             )}
 
             <button
               // disabled when an email is successfully sent, can bots click the send btn?
-              className={` text-blue border-blue border justify-center mr-2 px-3 py-1 bg-third hover:bg-blue hover:text-dark_blue  transition-all duration-200 ease-linear tracking-widest font-bold active:scale-75 btns`}
+              className="custom-btn px-3"
             >
               SEND
             </button>

@@ -6,12 +6,15 @@ module.exports = {
     fontFamily: { main_font: "Taviraj", font_dev: "VT323" },
     extend: {
       colors: {
-        dark_blue: "#15202B",
-        light_blue: "#192734",
-        grey: "#22303C",
-        white: "#FFFFFF",
-        blue: "#7DD8EB",
-        light_grey: "#8899A6",
+        main_white: "#FFFFFF",
+        main_black: "#181818",
+        light_theme_blue: "#2337D3",
+        dark_theme_cyan: "#7DD8EB",
+        nav_bar_bg: "#121212",
+        dark_theme_elevated_2: "#404040",
+        dark_theme_elevated_3: "#282828",
+        secondary_text: "#B3B3B3",
+        theme_pink: "#FF45DE",
         github_color: "#1b1f23",
         linkedIn_color: "#0077B5",
         stackOF_color: "#f18d3c",
@@ -20,6 +23,13 @@ module.exports = {
   },
   plugins: [require("flowbite/plugin")],
 };
+
+// text_white: "#ffffff",
+// dark_black: "1e1e1e",
+// lighter_black: "#252526",
+// lightest_black: "#2d2d30",
+// grey: "#3e3e42",
+// blue: "007acc",
 
 // black: "#121212",
 // light_black: "#181818",
