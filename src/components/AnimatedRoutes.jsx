@@ -16,14 +16,22 @@ export default function AnimatedRoutes() {
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route
-          path="/Portfolio"
+          path="/"
           element={
             <Home
               biggerThan1000={biggerThan1000}
               biggerThan750={biggerThan750}
             />
           }
-        />
+        /><Route
+        path="/Portfolio"
+        element={
+          <Home
+            biggerThan1000={biggerThan1000}
+            biggerThan750={biggerThan750}
+          />
+        }
+      />
         <Route
           path="/Home"
           element={

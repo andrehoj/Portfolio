@@ -3,6 +3,7 @@ import {
   findYourEstateIcons,
   stopShopIcons,
   BudgetTrackerIcons,
+  gymTrackerIcons
 } from "./projectIconData";
 
 export const projectData = [
@@ -14,18 +15,7 @@ export const projectData = [
     repo: "https://github.com/AgentA12/Dev_Hangout",
     icons: devHangOutIcons,
     description:
-      "A 'dev' themed chatting app where users can create an account, edit their settings and chat with others through dms or rooms.",
-  },
-
-  {
-    title: "Find Your Estate",
-    font: "",
-    link: "https://agenta12.github.io/Find_An_Estate/",
-    repo: "https://github.com/AgentA12/Find_An_Estate",
-    img: "./images/find-your-estate-1.png",
-    icons: findYourEstateIcons,
-    description:
-      "A real estate application where users can search for properties.",
+      "A 'dev' themed chatting application where users can get help from other developers when they get stuck. Users can create an account, edit their settings and chat with others through direct messages or language based rooms.",
   },
 
   {
@@ -36,7 +26,29 @@ export const projectData = [
     img: "./images/Stop_Shop_image.png",
     icons: stopShopIcons,
     description:
-      "A full stack app that allows users to shop online for products.",
+      "An Ecommerce full stack app that allows users to shop online for a variety of products. ",
+  },
+
+  {
+    title: "Gym Tracker",
+    font: "",
+    link: "",
+    repo: "https://github.com/AgentA12/gym_tracker",
+    img: "./images/gym_tracker.png",
+    icons: gymTrackerIcons,
+    description:
+      "Gym tracker is an fitness tracker application I made to help me keep track of my workouts. Most fitness apps have to many features I dont use so I wanted something simple and easy.",
+  },
+
+  {
+    title: "Find Your Estate",
+    font: "",
+    link: "https://agenta12.github.io/Find_An_Estate/",
+    repo: "https://github.com/AgentA12/Find_An_Estate",
+    img: "./images/find-your-estate-1.png",
+    icons: findYourEstateIcons,
+    description:
+      "A real estate application where users can search for properties in the UAE area. Users can filter their search by Max and Min price, number of rooms and baths and either for rent or sale.",
   },
 
   {
@@ -44,7 +56,7 @@ export const projectData = [
     font: "",
     link: "https://guarded-chamber-91643.herokuapp.com/",
     repo: "https://github.com/AgentA12/Budget_tracker",
-    img: "./images/Budget_tracker.image.png",
+    img: "./images/Budget_tracker.png",
     icons: BudgetTrackerIcons,
     description: "A progressive web app where users can track their budget",
   },

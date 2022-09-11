@@ -3,6 +3,14 @@ import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
 import { motion } from "framer-motion";
+import { IoMdCopy } from "react-icons/io";
+import { Tooltip } from "@material-tailwind/react";
+
+const copyEmail = (
+  <span class="ml-2 inline-flex no-underline shadow-lg dark:bg-dark_theme_elevated_3 border border-light_theme_blue dark:border-dark_theme_cyan text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
+    <IoMdCopy /> Copy
+  </span>
+);
 
 export default function Contact({ biggerThan1000, biggerThan750 }) {
   const [formState, setFormState] = useState({
@@ -37,7 +45,7 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(form.current);
     if (!errorMessage) {
       emailjs
         .sendForm(
@@ -58,14 +66,12 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
     }
   };
 
+  function handleCopy({ target }) {
+    document.execCommand(target.innerText);
+  }
+
   return (
-    <motion.section
-      id="Contact"
-      className="sections"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <motion.section id="Contact" className="sections">
       <div
         className={` ${
           biggerThan750 ? "ml-20" : "m-auto text-center items-center"
@@ -74,15 +80,79 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
         <h2 className="title-text">Contact me</h2>
         <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           I would love to hear from you. Shoot me a message and I will get back
-          to you as soon as I can.
+          to you as soon as I can. You can also email me at{" "}
+          <Tooltip
+            data-tooltip-target="tooltip-right"
+            data-tooltip-placement="right"
+            content={"copy"}
+            className="bg-black text-white dark:bg-main_white dark:text-main_black rounded-md "
+          >
+            <span
+              className="underline text-light_theme_blue dark:text-dark_theme_cyan cursor-pointer"
+              onClick={handleCopy}
+            >
+              andrewhowran@gmail.com
+            </span>
+          </Tooltip>
         </p>
         <form
           ref={form}
           onSubmit={sendEmail}
           action=""
-          className="flex flex-col w-10/12 gap-3  "
+          className="flex flex-col w-10/12 gap-3 text-start"
         >
-          <input
+          <div className="relative z-0 mb-6 w-full group">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              placeholder=" "
+              required
+              onBlur={handleChange}
+            />
+            <label
+              htmlFor="name"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue  dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Name
+            </label>
+          </div>
+          <div className="relative z-0 mb-6 w-full group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              placeholder=" "
+              required
+              onBlur={handleChange}
+            />
+            <label
+              htmlFor="floating_email"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Email
+            </label>
+          </div>
+          <div className="relative z-0 mb-6 w-full group">
+            <input
+              type="text"
+              name="message"
+              id=""
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              placeholder=" "
+              required
+              onBlur={handleChange}
+            />
+            <label
+              htmlFor="message"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+            >
+              Message
+            </label>
+          </div>
+          {/* <input
             required
             type="text"
             name="name"
@@ -105,7 +175,7 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
             placeholder="Message"
             resize="none"
             onBlur={handleChange}
-          ></textarea>
+          ></textarea> */}
           <div
             className={`${
               !errorMessage ? "justify-end" : "justify-between "

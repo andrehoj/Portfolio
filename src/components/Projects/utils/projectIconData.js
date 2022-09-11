@@ -1,41 +1,49 @@
-import apolloImage from "./images/apollo_icon.svg";
-// import mongooseImage from "./mongoose_image.png";
+import chartjs from "./images/10342521.png";
+import {
+  SiHandlebarsdotjs,
+  SiExpress,
+  SiSocketdotio,
+  SiApollographql,
+} from "react-icons/si";
+
 export const devHangOutIcons = [
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/handlebars/handlebars-original.svg",
-    name: "HandleBars",
-    color: "#F0772B",
+    isIcon: true,
+    name: "Handlebars",
+    link: (
+      <SiHandlebarsdotjs
+        color="#F0772B"
+        size={30}
+        data-tooltip-target={"Handlebars"}
+      />
+    ),
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     name: "Bootstrap",
-    color: "",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
     name: "jQuery",
-    color: "",
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    isIcon: true,
+    link: <SiExpress size={30} />,
     name: "Express",
-    color: "#FFFFFF",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    name: "Mysql",
-    color: "",
+    name: "MySQL",
   },
 
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
     name: "Sequelize",
-    color: "",
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
-    name: "Socket.io",
-    color: "#FFFFFF",
+    isIcon: true,
+    link: <SiSocketdotio size={30} />,
+    name: "Socket io",
   },
 ];
 
@@ -43,56 +51,45 @@ export const findYourEstateIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
-    color: "",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
-    name: "Material ui",
-    color: "",
+    name: "Material UI",
   },
   {
     link: "https://www.vectorlogo.zone/logos/rapidapi/rapidapi-icon.svg",
     name: "Rapid Api",
-    color: "",
   },
 ];
 
 export const stopShopIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
-    name: "Graphql",
-    color: "",
+    name: "GraphQL",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    name: "Mongodb",
-    color: "",
+    name: "MongoDB",
   },
 
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
-    color: "",
   },
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     name: "Tailwind CSS",
-    color: "",
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    isIcon: true,
+    link: <SiExpress size={30} />,
     name: "Express",
-    color: "#FFFFFF",
   },
   {
-    link: apolloImage,
+    isIcon: true,
+    link: <SiApollographql size={30} />,
     name: "Apollo",
-    color: "#FFFFFF",
   },
-  // {
-  //   link: mongooseImage,
-  //   name: "Mongoose",
-  // }
 ];
 
 export const portfolioIcons = [
@@ -109,12 +106,12 @@ export const portfolioIcons = [
 export const BudgetTrackerIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    name: "Mongodb",
+    name: "MongoDB",
   },
   {
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    isIcon: true,
+    link: <SiExpress size={30} />,
     name: "Express",
-    color: "#FFFFFF",
   },
 
   {
@@ -128,5 +125,54 @@ export const BudgetTrackerIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     name: "JavaScript",
+  },
+
+  {
+    link: chartjs,
+    name: "Chart.js",
+  },
+];
+
+export const gymTrackerIcons = [
+  {
+    link: "",
+    name: "React",
+  },
+  {
+    link: "",
+    name: "Tailwind",
+  },
+  {
+    link: "",
+    name: "Chartjs",
+  },
+  {
+    link: "",
+    name: "Jest",
+  },
+  {
+    link: "",
+    name: "JWT",
+  },
+
+  {
+    link: "",
+    name: "Apollo",
+  },
+  {
+    link: "",
+    name: "GraphQL",
+  },
+  {
+    link: "",
+    name: "MongoDB",
+  },
+  {
+    link: "",
+    name: "Express",
+  },
+  {
+    link: "",
+    name: "Mongoose",
   },
 ];

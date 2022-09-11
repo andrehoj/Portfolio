@@ -10,7 +10,7 @@
   }
 
   .theme-toggle {
-    @apply cursor-pointer text-theme_pink my-12;
+    @apply cursor-pointer text-theme_pink my-6;
   }
 
   .sections {
@@ -18,20 +18,15 @@
   }
 
   .nav-large {
-    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-main_white dark:bg-nav_bar_bg;
+    @apply h-screen fixed top-0 left-0 w-24 shadow-2xl bg-main_white dark:bg-nav_bar_bg;
   }
 
   .nav-small {
     @apply fixed right-0 w-full h-16 bg-main_white dark:bg-nav_bar_bg shadow-lg z-10;
   }
 
-  .topbar-icon {
-    @apply dark:text-dark_theme_elevated_2  hover:cursor-pointer
-    transition-all duration-200 ease-linear;
-  }
-
   .icon-container {
-    @apply flex flex-col text-main_black dark:text-main_white hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col text-main_black dark:text-main_white hover:cursor-pointer transition-all duration-100 ease-linear;
   }
 
   .icon-container-md {
@@ -47,24 +42,15 @@
   }
 
   .icon-active-md {
-    @apply text-dark_theme_elevated_2 transition-all duration-200 ease-linear;
+    @apply text-light_theme_blue dark:text-dark_theme_cyan  transition-all duration-200 ease-linear;
   }
 
   .mobile-nav-active {
     @apply font-bold text-light_theme_blue  dark:text-dark_theme_cyan;
   }
 
-  .project-container {
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .project-card {
-    @apply flex flex-col p-3 relative -top-10 left-20 h-fit text-center
-     bg-lighter_blue  dark:text- text-xl transition ease-in-out duration-500;
-  }
-
-  .contact-form{
-    @apply border border-light_theme_blue dark:border-dark_theme_cyan focus:border-light_theme_blue dark:focus:border-dark_theme_cyan dark:bg-main_black
+  .contact-form {
+    @apply outline-none focus:outline-none border-light_theme_blue dark:border-b-dark_theme_cyan focus:border-light_theme_blue dark:focus:border-dark_theme_cyan dark:bg-main_black;
   }
 
   .custom-btn {
@@ -89,6 +75,22 @@
   .resume-btn {
     @apply border border-light_theme_blue dark:border-dark_theme_cyan  px-2 py-1 font-bold  hover:bg-light_theme_blue dark:hover:bg-dark_theme_cyan text-light_theme_blue dark:text-dark_theme_cyan hover:text-main_white dark:hover:text-main_black transition-all duration-200 ease-linear active:scale-75;
   }
+}
+
+.skill-icons {
+  /* filter: invert(86%) sepia(47%) saturate(699%) hue-rotate(84deg)
+    brightness(99%) contrast(91%); */
+  width: 95px;
+  font-size: 14px;
+  font-family: "Source Code Pro";
+}
+
+.project-details-container {
+  min-height: 375px;
+}
+
+.project-details-content {
+  max-width: 75%;
 }
 
 .font-dev {
@@ -136,19 +138,6 @@ body {
   }
 }
 
-.nav-active-link {
-  box-shadow: inset 100px 0 0 0 #7dd8eb;
-  border-radius: 25%;
-  color: #565656;
-}
-
-.project-title {
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 48px;
-  text-align: center;
-}
-
 .message-placeholder {
   height: 200px;
   padding: 20px;
@@ -185,7 +174,7 @@ textarea {
   transition: all ease-in-out 0.3s;
 }
 
-.icon-container-md::after {
+/* .icon-container-md::after {
   height: 0;
   position: relative;
   top: -30px;
@@ -205,11 +194,12 @@ textarea {
 .icon-active-md::after {
   position: relative;
   opacity: 1;
+  color: #ffffff;
   visibility: visible;
   font-size: 1rem;
   font-weight: 700;
   transition: all ease-in-out 0.3s;
-}
+} */
 
 .home::after {
   content: "Home";
@@ -262,11 +252,33 @@ textarea {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #196cd7;
+  background: #34f1aa;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #196cd7;
+  background: #34f1aa;
+}
+
+a.effect-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
