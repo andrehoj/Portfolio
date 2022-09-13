@@ -11,7 +11,7 @@ export default function Navicons({
 
   let activeNav = pathname.replace("/", "");
 
-  if (!activeNav) activeNav = "Home";
+  if (!activeNav || activeNav === "Portfolio") activeNav = "Home";
 
   if (biggerThan750) {
     return (
