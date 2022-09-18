@@ -17,7 +17,7 @@ export default function Navicons({
     return (
       <Link to={`${IconObj.name}`}>
         <div
-          className={`group after:contents-[${IconObj.name}] ${
+          className={`group ${
             biggerThan1000 ? "icon-container" : "icon-container-md"
           } ${IconObj.name.toLowerCase()} ${
             activeNav === `${IconObj.name}` &&

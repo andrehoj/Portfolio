@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 
 const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
 
-export default function Home({ biggerThan750 }) {
+export default function Home({ biggerThan750, biggerThan1000 }) {
   return (
     <section id="Home" className="sections">
       <div
         className={`${
-          biggerThan750 ? "ml-20 mr-8 max-w-fit" : "mx-6 text-center "
+          biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "mx-6 text-center "
         }`}
       >
         <h1 className="title-text flex flex-col ">
           <div>Hi</div>
           <div
             className={`${
-              !biggerThan750 && "justify-center"
+              !biggerThan1000 && "justify-center"
             } flex gap-3  flex-wrap`}
           >
             <div>I'm a</div>

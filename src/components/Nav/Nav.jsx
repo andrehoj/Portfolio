@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navicons from ".//Navicons/NavIcons";
 import Socials from "./Socials/Socials";
 import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
-
 import Hamburger from "hamburger-react";
 
 export default function Nav({ biggerThan1000, biggerThan750 }) {
@@ -59,11 +58,13 @@ export default function Nav({ biggerThan1000, biggerThan750 }) {
     <div className="nav-small">
       <div className="h-full flex items-center justify-between mx-3">
         <Socials />
+
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
-          duration={0.6}
+          duration={0.3}
           label="Show menu"
+          className="bg-light_theme_blue dark:text-dark_theme_cyan"
         />
       </div>
       <div

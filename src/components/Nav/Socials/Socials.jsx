@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import {
   BsGithub,
   BsLinkedin,
@@ -21,14 +21,14 @@ export default function Socials({ biggerThan1000 }) {
             <BsMoon
               id=""
               className="theme-toggle"
-              size={26}
+              size={50}
               onClick={() => setTheme("light")}
             />
           ) : (
             <BsSun
               id=""
               className="theme-toggle"
-              size={26}
+              size={50}
               onClick={() => setTheme("dark")}
             />
           )}
@@ -36,44 +36,50 @@ export default function Socials({ biggerThan1000 }) {
             <span>Resume</span>
           </a>
         </div>
-        <a
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
           href="https://github.com/AgentA12"
           target={"blank"}
-          className="self-center place-self-center justify-self-center github"
+          className="self-center place-self-center justify-self-center "
         >
           <BsGithub size="26" className="mb-4" />
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
           href="https://www.linkedin.com/in/andrew-howran-01470222a/"
           target={"blank"}
           className="self-center place-self-center justify-self-center"
         >
           <BsLinkedin size="26" className="mb-4 sidebar-icon linkedin" />
-        </a>
-        <a
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
           href="https://stackoverflow.com/users/17832653/andrew-h"
           target={"blank"}
           className="self-center place-self-center justify-self-center"
         >
           <BsStackOverflow size="26" className="sidebar-icon stackof" />
-        </a>
+        </motion.a>
       </div>
     );
   }
   return (
-    <div className="flex items-center gap-4 justify-around">
+    <div className="flex items-center gap-4 justify-around ml-2">
       {colorTheme === "light" ? (
         <BsMoon
           id=""
           className=" theme-toggle"
-          size={26}
+          size={45}
           onClick={() => setTheme("light")}
         />
       ) : (
         <BsSun
           id=""
           className="theme-toggle"
-          size={26}
+          size={45}
           onClick={() => setTheme("dark")}
         />
       )}
@@ -85,21 +91,30 @@ export default function Socials({ biggerThan1000 }) {
         <span>Resume</span>
         <BsDownload size={16} />
       </a>
-      <a href="https://github.com/AgentA12" target={"blank"}>
+      <motion.a
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+        href="https://github.com/AgentA12"
+        target={"blank"}
+      >
         <BsGithub size="20" className=" github" />
-      </a>
-      <a
+      </motion.a>
+      <motion.a
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
         href="https://www.linkedin.com/in/andrew-howran-01470222a/"
         target={"blank"}
       >
         <BsLinkedin size="20" className=" linkedin" />
-      </a>
-      <a
+      </motion.a>
+      <motion.a
+        whileHover={{ scale: 1.2 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
         href="https://stackoverflow.com/users/17832653/andrew-h"
         target={"blank"}
       >
         <BsStackOverflow size="20" className=" stackof" />
-      </a>
+      </motion.a>
     </div>
   );
 }

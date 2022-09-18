@@ -71,8 +71,11 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
   }
 
   return (
-    <motion.section id="Contact" className="sections">
-      <div
+    <section id="Contact" className="sections">
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
         className={` ${
           biggerThan750 ? "ml-20" : "m-auto text-center items-center"
         } max-w-2xl flex flex-col gap-5`}
@@ -81,18 +84,14 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
         <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           I would love to hear from you. Shoot me a message and I will get back
           to you as soon as I can. You can also email me at{" "}
-          <Tooltip
-            data-tooltip-target="tooltip-right"
-            data-tooltip-placement="right"
-            content={"copy"}
-            className="bg-black text-white dark:bg-main_white dark:text-main_black rounded-md "
-          >
-            <span
+          <Tooltip content={"Mailto"} placement="right">
+            <a
+              href="mailto:andrewhowran@gmail.com"
               className="underline text-light_theme_blue dark:text-dark_theme_cyan cursor-pointer"
-              onClick={handleCopy}
+              target={"_blank"}
             >
               andrewhowran@gmail.com
-            </span>
+            </a>
           </Tooltip>
         </p>
         <form
@@ -152,30 +151,7 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
               Message
             </label>
           </div>
-          {/* <input
-            required
-            type="text"
-            name="name"
-            placeholder="Name"
-            className="p-3 pl-6 contact-form"
-            onBlur={handleChange}
-          />
-          <input
-            required
-            type="email"
-            name="user_email"
-            placeholder="Email"
-            className="p-3 pl-6 contact-form"
-            onBlur={handleChange}
-          />
-          <textarea
-            required
-            name="message"
-            className="p-3 pl-6 h-40 contact-form"
-            placeholder="Message"
-            resize="none"
-            onBlur={handleChange}
-          ></textarea> */}
+
           <div
             className={`${
               !errorMessage ? "justify-end" : "justify-between "
@@ -187,15 +163,10 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
               </div>
             )}
 
-            <button
-              // disabled when an email is successfully sent, can bots click the send btn?
-              className="custom-btn px-3"
-            >
-              SEND
-            </button>
+            <button className="custom-btn px-3">SEND</button>
           </div>
         </form>
-      </div>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 }

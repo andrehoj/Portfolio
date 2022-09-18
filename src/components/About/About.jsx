@@ -1,17 +1,20 @@
-import React from "react";
 import Skills from "./Skills/Skills";
+import { motion } from "framer-motion";
 
 export default function about({ biggerThan750 }) {
   return (
     <section id="About" className="sections">
-      <div
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
         className={`${
           biggerThan750 ? "ml-20 mr-8 max-w-2xl" : "mx-6 m-auto text-center"
-        } flex flex-col gap-5 `}
+        } flex flex-col gap-5`}
       >
-        <p className="title-text">About me</p>
+        <p className="title-text">About Me</p>
         <p>
-          Hi! My name is Andrew Howran and I'm an enthusiasti Web Developer who
+          Hi! My name is Andrew Howran and I'm an enthusiastic Web Developer who
           loves to solve problems using all kinds of web technologies. Im always
           learning and adapting to the constant changing environment that is the
           web.
@@ -21,8 +24,8 @@ export default function about({ biggerThan750 }) {
           or if you have any questions.
         </p>
         <Skills />
-      </div>
-     
+      </motion.div>
     </section>
   );
 }
+
