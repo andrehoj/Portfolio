@@ -13,6 +13,8 @@ import Resume from "./Resume.pdf";
 export default function Socials({ biggerThan1000 }) {
   const [colorTheme, setTheme] = useDarkMode();
 
+  console.log(colorTheme)
+
   if (biggerThan1000) {
     return (
       <div className="flex flex-col gap-2 justify-self-end">

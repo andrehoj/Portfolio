@@ -1,16 +1,9 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { validateEmail } from "../../utils/helpers.js";
 import { capitalizeFirstLetter } from "../../utils/helpers.js";
 import { motion } from "framer-motion";
-import { IoMdCopy } from "react-icons/io";
 import { Tooltip } from "@material-tailwind/react";
-
-const copyEmail = (
-  <span class="ml-2 inline-flex no-underline shadow-lg dark:bg-dark_theme_elevated_3 border border-light_theme_blue dark:border-dark_theme_cyan text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
-    <IoMdCopy /> Copy
-  </span>
-);
 
 export default function Contact({ biggerThan1000, biggerThan750 }) {
   const [formState, setFormState] = useState({
@@ -84,7 +77,15 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
         <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
           I would love to hear from you. Shoot me a message and I will get back
           to you as soon as I can. You can also email me at{" "}
-          <Tooltip content={"Mailto"} placement="right">
+          <Tooltip
+            animate={{
+              mount: { scale: 1, x: 0 },
+              unmount: { scale: 0, x: -30 },
+            }}
+            content={"Mailto"}
+            placement="right-start"
+            className="bg-sla shadow-light_theme_blue text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
+          >
             <a
               href="mailto:andrewhowran@gmail.com"
               className="underline text-light_theme_blue dark:text-dark_theme_cyan cursor-pointer"

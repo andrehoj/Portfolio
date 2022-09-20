@@ -86,25 +86,3 @@ export default function Nav({ biggerThan1000, biggerThan750 }) {
   );
 }
 
-//hiding nav bar on scroll down
-// const [show, setShow] = useState(true);
-
-// let lastScroll = window.scrollY;
-
-// const controllNav = () => {
-//   if (lastScroll < window.scrollY) {
-//     setShow(false);
-//   } else {
-//     setShow(true);
-//   }
-//   lastScroll = window.scrollY;
-// };
-
-// useEffect(() => {
-//   window.addEventListener("scroll", controllNav);
-//   return () => {
-//     window.removeEventListener("scroll", controllNav);
-//   };
-// });
-
-//${!show && "opacity-0 invisible"}
