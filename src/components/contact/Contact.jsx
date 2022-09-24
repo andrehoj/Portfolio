@@ -5,7 +5,7 @@ import { capitalizeFirstLetter } from "../../utils/helpers.js";
 import { motion } from "framer-motion";
 import { Tooltip } from "@material-tailwind/react";
 
-export default function Contact({ biggerThan1000, biggerThan750 }) {
+export default function Contact({ biggerThan1000 }) {
   const [formState, setFormState] = useState({
     name: "",
     from_email: "",
@@ -59,10 +59,6 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
     }
   };
 
-  function handleCopy({ target }) {
-    document.execCommand(target.innerText);
-  }
-
   return (
     <section id="Contact" className="sections">
       <motion.div
@@ -70,7 +66,7 @@ export default function Contact({ biggerThan1000, biggerThan750 }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className={` ${
-          biggerThan750 ? "ml-20" : "m-auto text-center items-center"
+          biggerThan1000 ? "ml-20" : "m-auto text-center items-center"
         } max-w-2xl flex flex-col gap-5`}
       >
         <h2 className="title-text">Contact me</h2>

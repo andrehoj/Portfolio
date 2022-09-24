@@ -1,7 +1,7 @@
 import Skills from "./Skills/Skills";
 import { motion } from "framer-motion";
 
-export default function about({ biggerThan750 }) {
+export default function about({ biggerThan1000 }) {
   return (
     <section id="About" className="sections">
       <motion.div
@@ -9,7 +9,7 @@ export default function about({ biggerThan750 }) {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
         className={`${
-          biggerThan750 ? "ml-20 mr-8 max-w-2xl" : "mx-6 m-auto text-center"
+          biggerThan1000 ? "ml-20 mr-8 max-w-2xl" : "mx-4 text-center"
         } flex flex-col gap-5`}
       >
         <p className="title-text">About Me</p>
@@ -28,4 +28,3 @@ export default function about({ biggerThan750 }) {
     </section>
   );
 }
-

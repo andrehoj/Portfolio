@@ -14,7 +14,7 @@
   }
 
   .sections {
-    @apply pt-20 min-h-screen;
+    @apply pt-20 min-h-screen lg:pl-20 md:text-center lg:text-left mx-4 lg:mx-0;
   }
 
   .nav-large {
@@ -30,7 +30,7 @@
   }
 
   .icon-container-md {
-    @apply flex flex-col w-20 text-center text-main_black dark:text-main_white hover:cursor-pointer ;
+    @apply flex flex-col w-20 text-center text-main_black dark:text-main_white hover:cursor-pointer;
   }
 
   .sidebar-icon {
@@ -85,10 +85,6 @@ textarea {
   resize: none;
 }
 
-body {
-  padding-left: 6rem;
-}
-
 button {
   border-style: outset !important;
 }
@@ -124,12 +120,6 @@ button {
 @media only screen and (max-width: 650px) {
   .title-text {
     font-size: calc(1.5rem + 2vw);
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  body {
-    padding: 0;
   }
 }
 

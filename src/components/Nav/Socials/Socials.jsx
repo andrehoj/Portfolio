@@ -13,12 +13,10 @@ import Resume from "./Resume.pdf";
 export default function Socials({ biggerThan1000 }) {
   const [colorTheme, setTheme] = useDarkMode();
 
-  console.log(colorTheme)
-
   if (biggerThan1000) {
     return (
-      <div className="flex flex-col gap-2 justify-self-end">
-        <div className=" mb-6 flex flex-col items-center">
+      <div className={`flex flex-col gap-2 justify-self-end`}>
+        <div className="mb-6 flex flex-col items-center">
           {colorTheme === "light" ? (
             <BsMoon
               id=""
@@ -69,7 +67,7 @@ export default function Socials({ biggerThan1000 }) {
     );
   }
   return (
-    <div className="flex items-center gap-4 justify-around ml-2">
+    <div className={"flex justify-center items-center gap-2"}>
       {colorTheme === "light" ? (
         <BsMoon
           id=""

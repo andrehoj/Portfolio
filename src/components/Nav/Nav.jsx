@@ -7,7 +7,7 @@ import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
 import Hamburger from "hamburger-react";
 
-export default function Nav({ biggerThan1000, biggerThan750 }) {
+export default function Nav({ biggerThan1000, biggerThan750, biggerThan400 }) {
   const [isOpen, setOpen] = useState(false);
 
   const sideBarIcons = [
@@ -57,8 +57,6 @@ export default function Nav({ biggerThan1000, biggerThan750 }) {
   return (
     <div className="nav-small">
       <div className="h-full flex items-center justify-between mx-3">
-        <Socials />
-
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
@@ -70,7 +68,7 @@ export default function Nav({ biggerThan1000, biggerThan750 }) {
       <div
         className={`${
           !isOpen && "opacity-0 invisible"
-        }  w-full h-fit border-t bg-main_white dark:bg-main_black dark:text-main_white transition-all duration-200 ease-in`}
+        }  w-full h-fit border-y dark:border-dark_theme_cyan border-light_theme_blue bg-main_white dark:bg-main_black dark:text-main_white transition-all duration-200 ease-in`}
       >
         {sideBarIcons.map((IconObj) => (
           <Navicons
@@ -78,11 +76,12 @@ export default function Nav({ biggerThan1000, biggerThan750 }) {
             key={IconObj.name}
             biggerThan1000={biggerThan1000}
             biggerThan750={biggerThan750}
+            biggerThan400={biggerThan400}
             setOpen={setOpen}
           />
         ))}
+        <Socials biggerThan400={biggerThan400} />
       </div>
     </div>
   );
 }
-

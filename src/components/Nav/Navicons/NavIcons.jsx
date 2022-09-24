@@ -39,7 +39,7 @@ export default function Navicons({
       }}
       to={`${IconObj.name}`}
     >
-      <div className="flex justify-center p-3 group-hover:text-light_theme_blue dark:group-hover:text-dark_theme_cyan ">
+      <div className="flex justify-center p-3">
         <div
           className={` ${
             biggerThan1000 ? "icon-container" : "icon-container-md"

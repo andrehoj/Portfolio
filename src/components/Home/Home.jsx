@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
 
-export default function Home({ biggerThan750, biggerThan1000 }) {
+export default function Home({ biggerThan1000 }) {
   return (
     <section id="Home" className="sections">
       <div
         className={`${
-          biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "mx-6 text-center "
+          biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "text-center"
         }`}
       >
         <h1 className="title-text flex flex-col ">
@@ -40,11 +40,7 @@ export default function Home({ biggerThan750, biggerThan1000 }) {
           </p>
         </h1>
         <Link to="/Contact">
-          <button
-            className="mt-2 custom-btn"
-          >
-            Contact Me
-          </button>
+          <button className="mt-2 custom-btn">Contact Me</button>
         </Link>
       </div>
     </section>
