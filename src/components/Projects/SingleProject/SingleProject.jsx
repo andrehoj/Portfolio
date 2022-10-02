@@ -2,6 +2,8 @@ import TechIcons from "./TechIcons/TechIcons";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useRef, useEffect } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 export default function SingleProject({ project }) {
   const projectRef = useRef(null);
@@ -116,13 +118,32 @@ export default function SingleProject({ project }) {
 
       <motion.div
         animate={projectImageAnimation}
-        className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2"
+        className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10"
       >
-        <img
+        {/* <img
           src={require(`${project.img}`)}
           alt="project cover"
           className="rounded-lg shadow-lg mb-5 lg:mb-0"
-        />
+        /> */}
+
+        <Carousel
+          autoPlay={true}
+          infiniteLoop={true}
+          interval={5000}
+          showIndicators={false}
+          showThumbs={false}
+          showStatus={false}
+          animationHandler={"fade"}
+        >
+          {project.imgs.map((img) => (
+            <div key={img} className="shadow">
+              <img
+                className="rounded-lg  mb-5 lg:mb-0"
+                src={require(`${img}`)}
+              />
+            </div>
+          ))}
+        </Carousel>
       </motion.div>
     </div>
   );

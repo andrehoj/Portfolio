@@ -18,11 +18,11 @@
   }
 
   .nav-large {
-    @apply z-10 h-screen fixed top-0 left-0 w-24 shadow-2xl bg-main_white dark:bg-nav_bar_bg;
+    @apply z-30 h-screen fixed top-0 left-0 w-24 shadow-2xl bg-main_white dark:bg-nav_bar_bg;
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 bg-main_white dark:bg-nav_bar_bg shadow-lg z-10;
+    @apply fixed right-0 w-full h-16 bg-main_white dark:bg-nav_bar_bg shadow-lg z-30;
   }
 
   .icon-container {
