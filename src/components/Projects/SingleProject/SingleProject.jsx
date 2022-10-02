@@ -1,5 +1,5 @@
 import TechIcons from "./TechIcons/TechIcons";
-import { motion, useInView, useAnimation, animate } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 

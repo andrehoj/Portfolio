@@ -49,7 +49,7 @@ export default function Nav({ biggerThan1000, biggerThan750, biggerThan400 }) {
               />
             ))}
           </div>
-          <Socials />
+          <Socials biggerThan1000={biggerThan1000}/>
         </nav>
       </div>
     );

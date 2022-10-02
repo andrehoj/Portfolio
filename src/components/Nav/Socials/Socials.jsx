@@ -15,7 +15,7 @@ export default function Socials({ biggerThan1000 }) {
 
   if (biggerThan1000) {
     return (
-      <div className={`flex flex-col gap-2 justify-self-end`}>
+      <div className={` flex flex-col gap-2 justify-self-end`}>
         <div className="mb-6 flex flex-col items-center">
           {colorTheme === "light" ? (
             <BsMoon
@@ -71,7 +71,7 @@ export default function Socials({ biggerThan1000 }) {
       {colorTheme === "light" ? (
         <BsMoon
           id=""
-          className=" theme-toggle"
+          className="theme-toggle"
           size={45}
           onClick={() => setTheme("light")}
         />

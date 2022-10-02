@@ -10,7 +10,7 @@
   }
 
   .theme-toggle {
-    @apply cursor-pointer text-light_theme_blue dark:text-dark_theme_cyan my-6 p-3 rounded-lg hover:shadow-md hover:shadow-slate-400 dark:hover:bg-dark_theme_elevated_3 dark:hover:shadow-none;
+    @apply cursor-pointer text-light_theme_blue dark:text-dark_theme_cyan my-2 lg:my-6 p-3 rounded-lg hover:shadow-md hover:shadow-slate-400 dark:hover:bg-dark_theme_elevated_3 dark:hover:shadow-none;
   }
 
   .sections {
