@@ -6,32 +6,31 @@
 
 @layer components {
   body {
-    @apply text-white bg-dark_blue font-main_font;
+    @apply text-main_black bg-main_white dark:bg-main_black dark:text-main_white font-main_font;
+  }
+
+  .theme-toggle {
+    @apply cursor-pointer text-light_theme_blue dark:text-dark_theme_cyan my-2 lg:my-6 p-3 rounded-lg hover:shadow-md hover:shadow-slate-400 dark:hover:bg-dark_theme_elevated_3 dark:hover:shadow-none;
   }
 
   .sections {
-    @apply pt-20 min-h-screen;
+    @apply pt-20 min-h-screen lg:pl-20 md:text-center lg:text-left mx-4 lg:mx-0;
   }
 
   .nav-large {
-    @apply h-screen fixed top-0 left-0 w-24 shadow-lg bg-light_blue;
+    @apply z-30 h-screen fixed top-0 left-0 w-24 shadow-2xl bg-main_white dark:bg-nav_bar_bg;
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 bg-light_blue shadow-2xl z-10;
-  }
-
-  .topbar-icon {
-    @apply text-light_grey  hover:cursor-pointer hover:text-blue 
-    transition-all duration-200 ease-linear;
+    @apply fixed right-0 w-full h-16 bg-main_white dark:bg-nav_bar_bg shadow-lg z-30;
   }
 
   .icon-container {
-    @apply flex flex-col text-white hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col text-main_black dark:text-main_white hover:cursor-pointer;
   }
 
   .icon-container-md {
-    @apply flex flex-col w-20 text-center text-white hover:text-light_grey  hover:cursor-pointer transition-all duration-200 ease-linear;
+    @apply flex flex-col w-20 text-center text-main_black dark:text-main_white hover:cursor-pointer;
   }
 
   .sidebar-icon {
@@ -39,49 +38,73 @@
   }
 
   .icon-active {
-    @apply text-blue transition-all duration-200 ease-linear;
+    @apply text-light_theme_blue dark:text-dark_theme_cyan;
   }
 
   .icon-active-md {
-    @apply text-light_grey transition-all duration-200 ease-linear;
+    @apply text-light_theme_blue dark:text-dark_theme_cyan;
   }
 
   .mobile-nav-active {
-    @apply font-bold text-blue;
+    @apply font-bold text-light_theme_blue  dark:text-dark_theme_cyan;
   }
 
-  .project-container {
-    @apply flex flex-col items-center justify-center;
+  .contact-form {
+    @apply outline-none focus:outline-none border-light_theme_blue dark:border-b-dark_theme_cyan focus:border-light_theme_blue dark:focus:border-dark_theme_cyan dark:bg-main_black;
   }
 
-  .project-card {
-    @apply flex flex-col p-3 relative -top-10 left-20 h-fit text-center
-     bg-lighter_blue text-light_grey text-xl transition ease-in-out duration-500;
+  .custom-btn {
+    @apply border border-light_theme_blue dark:border-dark_theme_cyan  px-2 py-1 font-bold  hover:bg-light_theme_blue dark:hover:bg-dark_theme_cyan text-light_theme_blue dark:text-dark_theme_cyan hover:text-main_white dark:hover:text-main_black transition-all duration-200 ease-linear active:scale-75;
   }
 
   .github {
-    @apply hover:text-slate-600 text-white hover:cursor-pointer hover:scale-110
+    @apply hover:cursor-pointer hover:scale-110
     transition-all ease-in duration-100;
   }
 
   .linkedin {
-    @apply hover:text-linkedIn_color text-white hover:cursor-pointer hover:scale-110
-    transition-all ease-in duration-100;
+    @apply text-linkedIn_color;
   }
 
   .stackof {
-    @apply hover:text-stackOF_color text-white  hover:cursor-pointer hover:scale-110
-    transition-all ease-in duration-100;
+    @apply text-stackOF_color;
   }
 
   .resume-btn {
-    @apply border border-blue  px-2 py-1 font-bold  hover:bg-blue text-blue hover:text-light_blue transition-all duration-200 ease-linear active:scale-75;
+    @apply border border-light_theme_blue dark:border-dark_theme_cyan  px-2 py-1 font-bold  hover:bg-light_theme_blue dark:hover:bg-dark_theme_cyan text-light_theme_blue dark:text-dark_theme_cyan hover:text-main_white dark:hover:text-main_black transition-all duration-200 ease-linear active:scale-75;
   }
 }
 
-.light-icons {
-  filter: invert(99%) sepia(1%) saturate(10%) hue-rotate(10deg) brightness(105%)
-    contrast(100%);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  border-style: outset !important;
+}
+
+.skill-icons {
+  width: 95px;
+  font-size: 14px;
+  font-family: "Source Code Pro";
+}
+
+.project-details-container {
+  min-height: 375px;
+}
+
+.project-details-content {
+  max-width: 75%;
+}
+
+.font-dev {
+  font-family: "VT323";
 }
 
 .title-text {
@@ -100,60 +123,9 @@
   }
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.btns {
-  border-style: outset;
-}
-
-body {
-  padding-left: 6rem;
-}
-
-@media screen and (max-width: 1000px) {
-  body {
-    padding: 0;
-  }
-}
-
-.link-item {
-  box-shadow: inset 0 0 0 0 #7dd8eb;
-  color: #7dd8eb;
-  margin: 0 -0.25rem;
-  padding: 0 0.25rem;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.link-item:hover {
-  box-shadow: inset 100px 0 0 0 #7dd8eb;
-  color: #565656;
-}
-
-.nav-active-link {
-  box-shadow: inset 100px 0 0 0 #7dd8eb;
-  border-radius: 25%;
-  color: #565656;
-}
-
-.project-title {
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 48px;
-  text-align: center;
-  color: #7dd8eb;
-}
-
 .message-placeholder {
   height: 200px;
   padding: 20px;
-}
-
-textarea {
-  resize: none;
 }
 
 .icon-container::after {
@@ -163,7 +135,6 @@ textarea {
   visibility: hidden;
   font-size: 1rem;
   font-weight: 700;
-  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -181,35 +152,6 @@ textarea {
   visibility: visible;
   font-size: 1rem;
   font-weight: 700;
-  color: #7dd8eb;
-  transition: all ease-in-out 0.3s;
-}
-
-.icon-container-md::after {
-  height: 0;
-  position: relative;
-  top: -30px;
-  opacity: 0;
-  visibility: hidden;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #7dd8eb;
-  transition: all ease-in-out 0.3s;
-}
-
-.icon-container-md:hover::after {
-  opacity: 1;
-  visibility: visible;
-  cursor: pointer;
-}
-
-.icon-active-md::after {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #7dd8eb;
   transition: all ease-in-out 0.3s;
 }
 
@@ -228,41 +170,24 @@ textarea {
   content: "Contact";
 }
 
-.responsive-nav {
-  margin-top: 6rem;
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-@media only screen and (max-height: 680px) {
-  .responsive-nav {
-    margin-top: 1rem;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: #565656;
 }
 
-.Container {
-  overflow: hidden;
-  display: flex;
-  height: 500px;
-  width: 550px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 10px;
 }
 
-.Container div {
-  height: 400px;
-  min-width: 150px;
-  margin-left: 100px;
-}
-
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1500px, 0, 0); /* The image width */
-  }
-}
-
-.Container div {
-  height: 400px;
-  min-width: 150px;
-  margin-left: 50px;
-  animation: slide 30s linear infinite;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
 }
