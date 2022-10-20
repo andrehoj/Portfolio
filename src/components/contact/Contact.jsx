@@ -64,7 +64,7 @@ export default function Contact({ biggerThan1000 }) {
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
+        transition={{ duration: 0.5 }}
         className={` ${
           biggerThan1000 ? "ml-20" : "m-auto text-center items-center"
         } max-w-2xl flex flex-col gap-5`}
@@ -79,8 +79,8 @@ export default function Contact({ biggerThan1000 }) {
               unmount: { scale: 0, x: -30 },
             }}
             content={"Mailto"}
-            placement="right-start"
-            className="bg-sla shadow-light_theme_blue text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
+            placement="right-top"
+            className="shadow-main_black shadow-md text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
           >
             <a
               href="mailto:andrewhowran@gmail.com"
@@ -101,7 +101,7 @@ export default function Contact({ biggerThan1000 }) {
             <motion.input
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
+              transition={{  duration: 0.5 }}
               type="text"
               name="name"
               id="name"
@@ -121,7 +121,7 @@ export default function Contact({ biggerThan1000 }) {
             <motion.input
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               type="email"
               name="email"
               id="email"
@@ -141,7 +141,7 @@ export default function Contact({ biggerThan1000 }) {
             <motion.input
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.1, duration: 0.5 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
               type="text"
               name="message"
               id=""
@@ -172,7 +172,7 @@ export default function Contact({ biggerThan1000 }) {
             <motion.button
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5, duration: 0.1 }}
+              transition={{ delay: .8, duration: 0.1 }}
               className="custom-btn px-3"
             >
               SEND
