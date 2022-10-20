@@ -120,12 +120,6 @@ export default function SingleProject({ project }) {
         animate={projectImageAnimation}
         className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10"
       >
-        {/* <img
-          src={require(`${project.img}`)}
-          alt="project cover"
-          className="rounded-lg shadow-lg mb-5 lg:mb-0"
-        /> */}
-
         <Carousel
           autoPlay={true}
           infiniteLoop={true}
@@ -138,7 +132,7 @@ export default function SingleProject({ project }) {
           {project.imgs.map((img) => (
             <div key={img} className="shadow">
               <img
-                className="rounded-lg  mb-5 lg:mb-0"
+                className="rounded-lg mb-5 lg:mb-0"
                 src={require(`${img}`)}
               />
             </div>

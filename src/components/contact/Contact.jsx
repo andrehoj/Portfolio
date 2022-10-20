@@ -79,8 +79,8 @@ export default function Contact({ biggerThan1000 }) {
               unmount: { scale: 0, x: -30 },
             }}
             content={"Mailto"}
-            placement="right-start"
-            className="bg-slate-300 shadow-light_theme_blue text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
+            placement="right-top"
+            className="shadow-main_black shadow-md text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
           >
             <a
               href="mailto:andrewhowran@gmail.com"

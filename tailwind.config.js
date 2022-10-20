@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         main_white: "#FFFFFF",
         main_black: "#191919",
-        light_theme_blue: "#44CEB7",
+        light_theme_blue: "#62a59e",
         dark_theme_cyan: "#38FFDD",
         nav_bar_bg: "#121212",
         dark_theme_elevated_2: "#404040",
