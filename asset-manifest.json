@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.d49da636.css",
-    "main.js": "/static/js/main.6a69e23a.js",
+    "main.css": "/static/css/main.32faca42.css",
+    "main.js": "/static/js/main.1cde6a3c.js",
+    "static/media/dev-hangout-image-2.png": "/static/media/dev-hangout-image-2.f9b00f8175f2263d3fd5.png",
     "static/media/key-shop.png": "/static/media/key-shop.830d024512e240b62842.png",
+    "static/media/stop-shop-image-2.png": "/static/media/stop-shop-image-2.9ee22490d3be0286ca20.png",
     "static/media/find-your-estate-1.png": "/static/media/find-your-estate-1.352b60901d25c5a9bfd8.png",
-    "static/media/Stop_Shop_image.png": "/static/media/Stop_Shop_image.440c9daeff4c2fb6df6c.png",
-    "static/media/dev-hangout-image.png": "/static/media/dev-hangout-image.f7260587deaaeb31d431.png",
-    "static/media/Budget_tracker.image.png": "/static/media/Budget_tracker.image.4211ac6ebefb45ff42b1.png",
-    "static/media/Resume.pdf": "/static/media/Resume.2dad5b2756ad2f7cc500.pdf",
-    "static/media/apollo_icon.svg": "/static/media/apollo_icon.332430b02499427fd106c782a184a34f.svg",
+    "static/media/stop-shop-image-1.png": "/static/media/stop-shop-image-1.440c9daeff4c2fb6df6c.png",
+    "static/media/find-your-estate-2.png": "/static/media/find-your-estate-2.349c2e64d7f6e95edc18.png",
+    "static/media/find-your-estate-3.png": "/static/media/find-your-estate-3.349c2e64d7f6e95edc18.png",
+    "static/media/stop-shop-image-3.png": "/static/media/stop-shop-image-3.41c9e8386edc5c32cccc.png",
+    "static/media/dev-hangout-image-1.png": "/static/media/dev-hangout-image-1.67423a7dc6ddcacd5628.png",
+    "static/media/Budget_tracker.png": "/static/media/Budget_tracker.0dce26348feacbf82fea.png",
+    "static/media/stop-shop-image-4.png": "/static/media/stop-shop-image-4.8762dad50438071c30bd.png",
+    "static/media/dev-hangout-image-3.png": "/static/media/dev-hangout-image-3.0dfa761c17c2b2f111cd.png",
+    "static/media/gym_tracker.png": "/static/media/gym_tracker.6fab61d0a904e3740912.png",
+    "static/media/Resume.pdf": "/static/media/Resume.2325386ab0b2cb7e3e51.pdf",
+    "static/media/10342521.png": "/static/media/10342521.0c9ed1dc264924fd7b5c.png",
     "index.html": "/index.html",
-    "main.d49da636.css.map": "/static/css/main.d49da636.css.map",
-    "main.6a69e23a.js.map": "/static/js/main.6a69e23a.js.map"
+    "main.32faca42.css.map": "/static/css/main.32faca42.css.map",
+    "main.1cde6a3c.js.map": "/static/js/main.1cde6a3c.js.map"
   },
   "entrypoints": [
-    "static/css/main.d49da636.css",
-    "static/js/main.6a69e23a.js"
+    "static/css/main.32faca42.css",
+    "static/js/main.1cde6a3c.js"
   ]
 }
