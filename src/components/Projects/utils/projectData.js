@@ -43,7 +43,7 @@ export const projectData = [
     font: "",
     link: "",
     repo: "https://github.com/AgentA12/gym_tracker",
-    imgs: ["./images/gym_tracker.png"],
+    imgs: ["./images/gym_tracker.png", "./images/gym_tracker-2.png"],
     icons: gymTrackerIcons,
     description:
       "Gym tracker is an fitness tracker application I made to help me keep track of my workouts. Most fitness apps have to many features I dont use so I wanted something simple and easy.",

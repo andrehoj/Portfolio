@@ -144,14 +144,6 @@ export const gymTrackerIcons = [
   },
   {
     link: "",
-    name: "Chartjs",
-  },
-  {
-    link: "",
-    name: "Jest",
-  },
-  {
-    link: "",
     name: "JWT",
   },
 

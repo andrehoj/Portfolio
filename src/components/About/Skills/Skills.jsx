@@ -4,7 +4,14 @@ import { motion } from "framer-motion";
 export default function Skills() {
   return (
     <>
-      <p className="text-5xl mt-10">My Skills</p>
+      <motion.p
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 1 }}
+        className="text-5xl mt-10"
+      >
+        My Skills
+      </motion.p>
       <div className="flex flex-wrap justify-center gap-10 mb-10">
         {skillData.map((skill, i) => (
           <motion.div
@@ -16,7 +23,16 @@ export default function Skills() {
             {skill.isIcon ? (
               skill.image
             ) : (
-              <img className="w-8" src={`${skill.image}`} />
+              <motion.img
+                // whileHover={{
+                //   rotate: 22,
+                //   type: "spring",
+                //   stiffness: 400,
+                //   damping: 10,
+                // }}
+                className="w-8"
+                src={`${skill.image}`}
+              />
             )}
             <p>{skill.name}</p>
           </motion.div>
