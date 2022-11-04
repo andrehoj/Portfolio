@@ -1,16 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Canvas from "./Canvas";
 
 const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
+const iconColor = "";
+const bgColor = "";
 
 export default function Home({ biggerThan1000 }) {
   return (
     <section id="Home" className="sections">
       <div
-        className={`${
-          biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "text-center"
-        }`}
+        className={`${biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "text-center"}`}
       >
         <h1 className="title-text flex flex-col ">
           <div>Hi</div>
@@ -42,6 +43,10 @@ export default function Home({ biggerThan1000 }) {
         <Link to="/Contact">
           <button className="mt-2 custom-btn">Contact Me</button>
         </Link>
+      </div>
+
+      <div className="lg:mt-5">
+        <Canvas bgColor={bgColor} iconColor={iconColor} />
       </div>
     </section>
   );
