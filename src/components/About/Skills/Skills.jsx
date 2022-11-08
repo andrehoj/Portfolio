@@ -1,6 +1,13 @@
 import { skillData } from "./utils/skillsData";
 import { motion } from "framer-motion";
 
+// whileHover={{
+//   rotate: 22,
+//   type: "spring",
+//   stiffness: 400,
+//   damping: 10,
+// }}
+
 export default function Skills() {
   return (
     <>
@@ -15,6 +22,7 @@ export default function Skills() {
       <div className="flex flex-wrap justify-center gap-10 mb-10">
         {skillData.map((skill, i) => (
           <motion.div
+            key={skill.name}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.1 }}
@@ -23,16 +31,7 @@ export default function Skills() {
             {skill.isIcon ? (
               skill.image
             ) : (
-              <motion.img
-                // whileHover={{
-                //   rotate: 22,
-                //   type: "spring",
-                //   stiffness: 400,
-                //   damping: 10,
-                // }}
-                className="w-8"
-                src={`${skill.image}`}
-              />
+              <motion.img className="w-8" src={`${skill.image}`} />
             )}
             <p>{skill.name}</p>
           </motion.div>

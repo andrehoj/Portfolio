@@ -54,7 +54,7 @@ export default function Contact({ biggerThan1000 }) {
           }
         })
         .catch((error) => {
-          errorMessage("Something went wrong. You can reach me on linkedIn.");
+          errorMessage("Something went wrong. You can reach me at andrewhowran@gmail.com");
         });
     }
   };
@@ -75,11 +75,11 @@ export default function Contact({ biggerThan1000 }) {
           to you as soon as I can. You can also email me at{" "}
           <Tooltip
             animate={{
-              mount: { scale: 1, x: 0 },
-              unmount: { scale: 0, x: -30 },
+              mount: { scale: 1, y: 0 },
+              unmount: { scale: 0, y: -10 },
             }}
             content={"Mailto"}
-            placement="right-top"
+            placement="bottom-end"
             className="shadow-main_black shadow-md text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
           >
             <a

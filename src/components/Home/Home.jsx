@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 import Canvas from "./Canvas";
 
 const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
-const iconColor = "";
+const iconColor = "#4284f5";
 const bgColor = "";
 
-export default function Home({ biggerThan1000 }) {
+export default function Home({ biggerThan1000, biggerThan750 }) {
   return (
     <section id="Home" className="sections">
       <div
@@ -40,13 +40,10 @@ export default function Home({ biggerThan1000 }) {
             Full Stack JavaScript Developer
           </p>
         </h1>
-        <Link to="/Contact">
-          <button className="mt-2 custom-btn">Contact Me</button>
+        <Link className="flex justify-center lg:justify-start" to="/Contact">
+          <button className="mt-2 block custom-btn">Contact Me</button>
         </Link>
-      </div>
-
-      <div className="lg:mt-5">
-        <Canvas bgColor={bgColor} iconColor={iconColor} />
+        <Canvas bgColor={bgColor} iconColor={iconColor} biggerThan750={biggerThan750} />
       </div>
     </section>
   );
