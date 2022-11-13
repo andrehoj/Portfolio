@@ -1,15 +1,17 @@
 import ParticleImage, { Vector, forces } from "react-particle-image";
 import codeImage from "./codeicon.png";
-import {useMediaPredicate } from "react-media-hook"
+import { useMediaPredicate } from "react-media-hook";
 
-function motionForce(x, y, ParticleForce) {
+function motionForce(x, y) {
   return forces.disturbance(x, y, 5);
 }
 
 export default function Canvas({ bgColor, biggerThan750 }) {
   const biggerThan450 = useMediaPredicate("(min-width: 450px)");
 
-  let color = "#38FFDD";
+  const theme = localStorage.getItem("theme");
+
+  let color = theme === "light" ? "#4284f5" : "#38FFDD";
   const width = biggerThan750 ? 700 : biggerThan450 ? 400 : 200;
   const height = biggerThan750 ? 450 : biggerThan450 ? 300 : 175;
 
@@ -40,7 +42,7 @@ export default function Canvas({ bgColor, biggerThan750 }) {
       src={codeImage}
       width={width}
       height={height}
-      scale={biggerThan750 ? 1 : biggerThan450 ? 0.5 : .3}
+      scale={biggerThan750 ? 1 : biggerThan450 ? 0.5 : 0.3}
       entropy={30}
       maxParticles={4000}
       particleOptions={particleOptions}
