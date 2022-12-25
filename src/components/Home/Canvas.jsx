@@ -6,15 +6,8 @@ function motionForce(x, y) {
   return forces.disturbance(x, y, 5);
 }
 
-export default function Canvas({ bgColor, biggerThan750 }) {
+export default function Canvas({ bgColor, biggerThan750, theme }) {
   const biggerThan450 = useMediaPredicate("(min-width: 450px)");
-
-  const theme = localStorage.getItem("theme");
-
-  let color = theme === "light" ? "#4284f5" : "#38FFDD";
-  const width = biggerThan750 ? 700 : biggerThan450 ? 400 : 200;
-  const height = biggerThan750 ? 450 : biggerThan450 ? 300 : 175;
-
   const particleOptions = {
     filter: ({ x, y, image }) => {
       // Get pixel
@@ -22,7 +15,7 @@ export default function Canvas({ bgColor, biggerThan750 }) {
       // Make a particle for this pixel if blue > 50 (range 0-255)
       return pixel.b > 50;
     },
-    color: ({ x, y, image }) => color,
+    color: ({ x, y, image }) => "#38FFDD",
     radius: () => Math.random() * 1.5 + 0.5,
     mass: () => 40,
     friction: () => 0.15,
@@ -34,6 +27,9 @@ export default function Canvas({ bgColor, biggerThan750 }) {
     },
   };
 
+  const width = biggerThan750 ? 700 : biggerThan450 ? 400 : 200;
+  const height = biggerThan750 ? 450 : biggerThan450 ? 300 : 175;
+
   return (
     <ParticleImage
       className="inline"
@@ -43,8 +39,8 @@ export default function Canvas({ bgColor, biggerThan750 }) {
       width={width}
       height={height}
       scale={biggerThan750 ? 1 : biggerThan450 ? 0.5 : 0.3}
-      entropy={30}
-      maxParticles={4000}
+      entropy={10}
+      maxParticles={2000}
       particleOptions={particleOptions}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}

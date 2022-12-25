@@ -19,16 +19,11 @@ export default function ProjectContainer({ biggerThan1000 }) {
         >
           Some Projects I've built
         </motion.h2>
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="grid grid-cols-1 gap-36"
-        >
+        <div className="grid grid-cols-1 gap-36">
           {projectData.map((project) => (
             <SingleProject project={project} key={project.title} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

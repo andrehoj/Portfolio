@@ -55,8 +55,7 @@ export default function SingleProject({ project }) {
 
   return (
     <div
-      className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-7xl
-    "
+      className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-7xl"
     >
       <motion.div
         animate={projectAnimation}

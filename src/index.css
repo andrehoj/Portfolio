@@ -6,7 +6,7 @@
 
 @layer components {
   body {
-    @apply text-main_black bg-main_white dark:bg-main_black dark:text-main_white font-main_font;
+    @apply text-main_black bg-main_white dark:bg-main_black dark:text-main_white font-main_font lg:overflow-x-hidden;
   }
 
   .theme-toggle {

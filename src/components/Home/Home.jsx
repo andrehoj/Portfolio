@@ -1,13 +1,15 @@
-import React from "react";
+import { useContext } from "react";
+import { themeContext } from "../AnimatedRoutes";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Canvas from "./Canvas";
 
 const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
-const iconColor = "#4284f5";
 const bgColor = "";
 
 export default function Home({ biggerThan1000, biggerThan750 }) {
+  const theme = useContext(themeContext);
+
   return (
     <section id="Home" className="sections">
       <div
@@ -43,7 +45,7 @@ export default function Home({ biggerThan1000, biggerThan750 }) {
         <Link className="flex justify-center lg:justify-start" to="/Contact">
           <button className="mt-2 block custom-btn">Contact Me</button>
         </Link>
-        <Canvas bgColor={bgColor} iconColor={iconColor} biggerThan750={biggerThan750} />
+        <Canvas bgColor={bgColor} biggerThan750={biggerThan750} theme={theme} />
       </div>
     </section>
   );
