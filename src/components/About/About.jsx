@@ -24,7 +24,7 @@ export default function about({ biggerThan1000 }) {
         >
           Hi! My name is Andrew Howran and I'm an enthusiastic Web Developer who
           loves to solve problems using all kinds of web technologies. Some of
-          my hobbies include reading, exercising and coding. Im always learning
+          my hobbies include reading, exercising and coding. I'm always learning
           and adapting to the constant changing environment that is the web.
         </motion.p>
         <motion.p

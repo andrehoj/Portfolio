@@ -23,7 +23,7 @@ export default function Home({ biggerThan1000, biggerThan750 }) {
             } flex gap-3  flex-wrap`}
           >
             <div>I'm a</div>
-            <div className="text-light_theme_blue dark:text-dark_theme_cyan font-bold whitespace-pre">
+            <div className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 whitespace-pre">
               {letters.map((letter, i) => (
                 <motion.div
                   className="inline-block"

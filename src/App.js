@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { useMediaPredicate } from "react-media-hook";
 import Nav from "./components/Nav/Nav";
 import AnimatedRoutes from "./components/AnimatedRoutes";
-import { createContext, useState } from "react";
+import { createContext } from "react";
 import useDarkMode from "./hooks/useDarkMode";
 
 export const ThemeContext = createContext();
