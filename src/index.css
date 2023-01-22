@@ -3,34 +3,31 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Taviraj:ital,wght@0,200;0,400;0,600;1,300;1,600&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap");
 
 @layer components {
   body {
-    @apply text-main_black bg-main_white dark:bg-main_black dark:text-main_white font-main_font lg:overflow-x-hidden;
-  }
-
-  .theme-toggle {
-    @apply cursor-pointer text-light_theme_blue dark:text-dark_theme_cyan my-2 lg:my-6 p-3 rounded-lg hover:shadow-md hover:shadow-slate-400 dark:hover:bg-dark_theme_elevated_3 dark:hover:shadow-none;
+    @apply text-main_white bg-main_black font-main_font lg:overflow-x-hidden;
   }
 
   .sections {
-    @apply pt-20 min-h-screen lg:pl-20 md:text-center lg:text-left mx-4 lg:mx-0;
+    @apply lg:ml-52 pt-20 min-h-screen  md:text-center lg:text-left mx-4 lg:mx-0;
   }
 
   .nav-large {
-    @apply z-30 h-screen fixed top-0 left-0 w-24 shadow-2xl bg-main_white dark:bg-nav_bar_bg;
+    @apply z-30 h-screen fixed top-0 left-0 w-24 shadow-2xl;
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 bg-main_white dark:bg-nav_bar_bg shadow-lg z-30;
+    @apply fixed right-0 w-full h-16 z-30;
   }
 
   .icon-container {
-    @apply flex flex-col text-main_black dark:text-main_white hover:cursor-pointer;
+    @apply flex flex-col hover:cursor-pointer;
   }
 
   .icon-container-md {
-    @apply flex flex-col w-20 text-center text-main_black dark:text-main_white hover:cursor-pointer;
+    @apply flex flex-col w-20 text-center hover:cursor-pointer;
   }
 
   .sidebar-icon {
@@ -38,23 +35,23 @@
   }
 
   .icon-active {
-    @apply text-light_theme_blue dark:text-dark_theme_cyan;
+    @apply text-main_white;
   }
 
   .icon-active-md {
-    @apply text-light_theme_blue dark:text-dark_theme_cyan;
+    @apply text-main_white;
   }
 
   .mobile-nav-active {
-    @apply font-bold text-light_theme_blue  dark:text-dark_theme_cyan;
+    @apply font-bold text-main_white;
   }
 
   .contact-form {
-    @apply outline-none focus:outline-none border-light_theme_blue dark:border-b-dark_theme_cyan focus:border-light_theme_blue dark:focus:border-dark_theme_cyan dark:bg-main_black;
+    @apply outline-none focus:outline-none border-main_white dark:border-b-dark_theme_cyan focus:border-main_white dark:focus:border-dark_theme_cyan dark:bg-main_black;
   }
 
   .custom-btn {
-    @apply border border-light_theme_blue dark:border-dark_theme_cyan  px-2 py-1 font-bold  hover:bg-light_theme_blue dark:hover:bg-dark_theme_cyan text-light_theme_blue dark:text-dark_theme_cyan hover:text-main_white dark:hover:text-main_black transition-all duration-200 ease-linear active:scale-75;
+    @apply border px-2 py-1 hover:bg-main_white hover:text-main_black transition-all duration-200 ease-linear active:scale-75 inline;
   }
 
   .github {
@@ -71,14 +68,52 @@
   }
 
   .resume-btn {
-    @apply border border-light_theme_blue dark:border-dark_theme_cyan  px-2 py-1 font-bold  hover:bg-light_theme_blue dark:hover:bg-dark_theme_cyan text-light_theme_blue dark:text-dark_theme_cyan hover:text-main_white dark:hover:text-main_black transition-all duration-200 ease-linear active:scale-75;
+    @apply border border-text_secondary text-text_secondary px-2 py-1 font-semibold hover:text-main_black hover:bg-text_secondary transition-all duration-200 ease-linear active:scale-75;
   }
+
+  .heading-line {
+    @apply text-8xl font-black subpixel-antialiased;
+  }
+}
+
+.gradient-title-about {
+  background-image: linear-gradient(to left, #ed8936, #ed64a6);
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-title-projects {
+  background-image: linear-gradient(to left, #38b2ac, #0bc5ea);
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-title-contact {
+  background-image: linear-gradient(to left, #ecc94b, #48bb78);
+  color: transparent;
+  background-clip: text;
+}
+
+.bg_custom {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #272727,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #272727,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 textarea {

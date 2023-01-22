@@ -15,7 +15,7 @@ export default function Canvas({ bgColor, biggerThan750, theme }) {
       // Make a particle for this pixel if blue > 50 (range 0-255)
       return pixel.b > 50;
     },
-    color: ({ x, y, image }) => "#38FFDD",
+    color: ({ x, y, image }) => "#FFFFFF",
     radius: () => Math.random() * 1.5 + 0.5,
     mass: () => 40,
     friction: () => 0.15,
@@ -32,15 +32,15 @@ export default function Canvas({ bgColor, biggerThan750, theme }) {
 
   return (
     <ParticleImage
-      className="inline"
+      className="block"
       creationDuration={2500}
       backgroundColor={bgColor}
       src={codeImage}
       width={width}
       height={height}
       scale={biggerThan750 ? 1 : biggerThan450 ? 0.5 : 0.3}
-      entropy={10}
-      maxParticles={2000}
+      entropy={20}
+      maxParticles={4000}
       particleOptions={particleOptions}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}

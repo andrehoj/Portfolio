@@ -1,51 +1,40 @@
-import { useContext } from "react";
-import { themeContext } from "../AnimatedRoutes";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Canvas from "./Canvas";
+import "../../gradient-animation.css";
 
-const letters = ["W", "e", "b ", "D", "e", "v", "e", "l", "o", "p", "e", "r"];
-const bgColor = "";
-
-export default function Home({ biggerThan1000, biggerThan750 }) {
-  const theme = useContext(themeContext);
-
+export default function Home() {
   return (
-    <section id="Home" className="sections">
-      <div
-        className={`${biggerThan1000 ? "ml-20 mr-8 max-w-fit" : "text-center"}`}
-      >
-        <h1 className="title-text flex flex-col ">
-          <div>Hi</div>
-          <div
-            className={`${
-              !biggerThan1000 && "justify-center"
-            } flex gap-3  flex-wrap`}
-          >
-            <div>I'm a</div>
-            <div className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 whitespace-pre">
-              {letters.map((letter, i) => (
-                <motion.div
-                  className="inline-block"
-                  key={i}
-                  initial={{ opacity: 0, y: -600 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ type: "spring", duration: 0.5, delay: i * 0.1 }}
-                >
-                  {letter}
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          And my name's Andrew.
-          <p className="text-text_color text-lg mt-3">
-            Full Stack JavaScript Developer
-          </p>
-        </h1>
-        <Link className="flex justify-center lg:justify-start" to="/Contact">
-          <button className="mt-2 block custom-btn">Contact Me</button>
+    <section id="Home" className=" sections text-center lg:text-left ">
+      <h1 className="text-6xl font-extralight mr-20">
+        <p>Hi,</p>
+        <span>I'm </span>
+        <span className="heading-line heading-line-first">
+          <span className="heading-line-gradient">Andrew</span>
+        </span>
+        ,{" "}
+        <p>
+          <span>a </span>
+          <span className="heading-line heading-line-second">
+            <span className="heading-line-gradient">Software</span>
+          </span>{" "}
+          <span className="heading-line heading-line-third">
+            <span className="heading-line-gradient">Developer</span>{" "}
+          </span>
+        </p>{" "}
+        <p>
+          based in <span> Ottawa, Ontario.</span>
+        </p>
+        <p className="font-light text-lg my-2">
+          <span className="text-js_color">JavaScript</span> Developer
+        </p>
+      </h1>
+
+      <div className="flex flex-col items-center lg:items-start mr-20">
+        <Link className="" to="/Contact">
+          <button className="mt-2 custom-btn">Contact Me</button>
         </Link>
-        <Canvas bgColor={bgColor} biggerThan750={biggerThan750} theme={theme} />
+
+        <Canvas bgColor={""} />
       </div>
     </section>
   );

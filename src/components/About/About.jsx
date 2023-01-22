@@ -13,7 +13,7 @@ export default function about({ biggerThan1000 }) {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="title-text"
+          className="font-black text-7xl gradient-title-about"
         >
           About Me
         </motion.p>
@@ -21,6 +21,7 @@ export default function about({ biggerThan1000 }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
+          className="text-text_secondary"
         >
           Hi! My name is Andrew Howran and I'm an enthusiastic Web Developer who
           loves to solve problems using all kinds of web technologies. Some of
@@ -31,6 +32,8 @@ export default function about({ biggerThan1000 }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
+          className="text-text_secondary"
+
         >
           Feel free to contact me whether its about a project, job opportunity
           or if you have any questions.

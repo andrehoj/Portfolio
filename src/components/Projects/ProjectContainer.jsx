@@ -15,9 +15,9 @@ export default function ProjectContainer({ biggerThan1000 }) {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="title-text mb-5"
+          className="font-black text-7xl mb-5 gradient-title-projects h-28"
         >
-          Some Projects I've built
+          Projects I've built
         </motion.h2>
         <div className="grid grid-cols-1 gap-36">
           {projectData.map((project) => (

@@ -54,7 +54,9 @@ export default function Contact({ biggerThan1000 }) {
           }
         })
         .catch((error) => {
-          errorMessage("Something went wrong. You can reach me at andrewhowran@gmail.com");
+          errorMessage(
+            "Something went wrong. You can reach me at andrewhowran@gmail.com"
+          );
         });
     }
   };
@@ -69,10 +71,11 @@ export default function Contact({ biggerThan1000 }) {
           biggerThan1000 ? "ml-20" : "m-auto text-center items-center"
         } max-w-2xl flex flex-col gap-5`}
       >
-        <h2 className="title-text">Contact me</h2>
-        <p className={` ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
-          I would love to hear from you. Shoot me a message and I will get back
-          to you as soon as I can. You can also email me at{" "}
+        <h2 className="font-black text-7xl mb-5 gradient-title-contact">
+          Contact me
+        </h2>
+        <p className={`text-text_secondary ${!biggerThan1000 ? "w-10/12" : "w-full"}`}>
+          If your interested in chatting you can reach me at{"   "}
           <Tooltip
             animate={{
               mount: { scale: 1, y: 0 },
@@ -80,14 +83,14 @@ export default function Contact({ biggerThan1000 }) {
             }}
             content={"Mailto"}
             placement="bottom-end"
-            className="shadow-main_black shadow-md text-light_theme_blue dark:text-dark_theme_cyan  dark:bg-dark_theme_elevated_2"
+            className="shadow-main_black shadow-md"
           >
             <a
               href="mailto:andrewhowran@gmail.com"
-              className="underline text-light_theme_blue dark:text-dark_theme_cyan cursor-pointer"
+              className="underline text-main_white cursor-pointer"
               target={"_blank"}
             >
-              andrewhowran@gmail.com
+               andrewhowran@gmail.com
             </a>
           </Tooltip>
         </p>
@@ -101,18 +104,18 @@ export default function Contact({ biggerThan1000 }) {
             <motion.input
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{  duration: 0.5 }}
+              transition={{ duration: 0.5 }}
               type="text"
               name="name"
               id="name"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-green-500  peer"
               placeholder=" "
               required
               onBlur={handleChange}
             />
             <label
               htmlFor="name"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue  dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500  dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Name
             </label>
@@ -125,14 +128,14 @@ export default function Contact({ biggerThan1000 }) {
               type="email"
               name="email"
               id="email"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-green-500  peer"
               placeholder=" "
               required
               onBlur={handleChange}
             />
             <label
               htmlFor="floating_email"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Email
             </label>
@@ -145,14 +148,14 @@ export default function Contact({ biggerThan1000 }) {
               type="text"
               name="message"
               id=""
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-light_theme_blue dark:focus:border-dark_theme_cyan peer"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-main_white dark:border-gray-600  focus:outline-none focus:ring-0 focus:border-green-500  peer"
               placeholder=" "
               required
               onBlur={handleChange}
             />
             <label
               htmlFor="message"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-light_theme_blue dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 dark:peer-focus:text-dark_theme_cyan peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
             >
               Message
             </label>
@@ -172,7 +175,7 @@ export default function Contact({ biggerThan1000 }) {
             <motion.button
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: .8, duration: 0.1 }}
+              transition={{ delay: 0.8, duration: 0.1 }}
               className="custom-btn px-3"
             >
               SEND

@@ -59,7 +59,7 @@ export default function SingleProject({ project }) {
     >
       <motion.div
         animate={projectAnimation}
-        className="order-2 lg:order-1 project-details-container px-8 py-5 dark:bg-dark_theme_elevated_3 rounded-lg shadow-2xl"
+        className="order-2 lg:order-1 project-details-container px-8 py-5 border border-gray-700 rounded-lg shadow-2xl"
       >
         <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
           <div className="flex flex-col gap-7 lg:gap-3">
@@ -67,7 +67,7 @@ export default function SingleProject({ project }) {
               {project.title}
             </h1>
 
-            <p className="project-description">{project.description}</p>
+            <p className="project-description text-text_secondary">{project.description}</p>
 
             <div className="mb-2">
               <p className="text-xl font-bold mb-2" ref={projectRef}>
@@ -91,7 +91,7 @@ export default function SingleProject({ project }) {
             <a
               href={`${project.repo}`}
               target="_blank"
-              className="flex flex-col justify-center text-light_theme_blue dark:text-dark_theme_cyan items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
+              className="flex flex-col justify-center  items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
             >
               <FaGithubAlt
                 size={"24"}
@@ -103,7 +103,7 @@ export default function SingleProject({ project }) {
             <a
               href={`${project.link}`}
               target="_blank"
-              className="flex flex-col justify-center text-light_theme_blue dark:text-dark_theme_cyan items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
+              className="flex flex-col justify-center  items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
             >
               <FaRocket
                 size={"24"}
