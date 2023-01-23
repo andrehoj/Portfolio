@@ -11,7 +11,7 @@
   }
 
   .sections {
-    @apply lg:ml-44 pt-24 min-h-screen text-center lg:text-left mx-5;
+    @apply lg:ml-32 pt-24 min-h-screen text-center lg:text-left mx-5;
   }
 
   .nav-large {

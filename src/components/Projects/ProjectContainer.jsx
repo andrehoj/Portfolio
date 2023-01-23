@@ -3,19 +3,15 @@ import SingleProject from "./SingleProject/SingleProject";
 import { projectData } from "./utils/projectData";
 import { motion } from "framer-motion";
 
-export default function ProjectContainer({ biggerThan1000 }) {
+export default function ProjectContainer() {
   return (
     <section id="Projects" className="sections mb-12">
-      <div
-        className={`${
-          biggerThan1000 ? "ml-20" : "text-center max-w-fit mx-auto"
-        } `}
-      >
+      <div className="text-center lg:text-left max-w-fit">
         <motion.h2
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-black text-7xl mb-5 gradient-title-projects h-28"
+          className="font-black text-5xl xsm:text-7xl mb-10 gradient-title-projects h-auto lg:h-24"
         >
           Projects I've built
         </motion.h2>

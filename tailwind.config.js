@@ -8,6 +8,8 @@ module.exports = {
 
       sm: "640px",
 
+      xmd: "665px",
+
       md: "768px",
 
       lg: "1024px",
@@ -23,7 +25,7 @@ module.exports = {
         main_black: "#121212",
         text_secondary: "#888888",
         light_theme_blue: "#4284f5",
-        dark_theme_cyan: "#38FFDD",
+        cyan: "#0bc5ea",
         nav_bar_bg: "#121212",
         dark_theme_elevated_2: "#191919",
         dark_theme_elevated_3: "#232323",

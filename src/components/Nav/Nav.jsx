@@ -3,20 +3,12 @@ import { GoPerson } from "react-icons/go";
 import { ImHome } from "react-icons/im";
 import { GrMail } from "react-icons/gr";
 import { GiHammerNails } from "react-icons/gi";
-import{ Cross as Hamburger} from "hamburger-react";
+import { Cross as Hamburger } from "hamburger-react";
 import Navicons from ".//Navicons/NavIcons";
 import Socials from "./Socials/Socials";
 
 export default function Nav({ biggerThan1000, biggerThan750, biggerThan400 }) {
   const [isOpen, setOpen] = useState(false);
-
-  // const navItems = ["Home", "About me", "Projects", "Contact"];
-
-  // {navItems.map((item) => (
-  //   <li className="cursor-pointer hover:text-main_white">
-  //     {item}
-  //   </li>
-  // ))}
 
   const sideBarIcons = [
     { Icon: ImHome, name: "Home" },
@@ -27,7 +19,7 @@ export default function Nav({ biggerThan1000, biggerThan750, biggerThan400 }) {
 
   if (biggerThan750) {
     return (
-      <div className="nav-small w-fit text-text_secondary text-light text-lg">
+      <div className="nav-small w-fit text-text_secondary text-light text-lg backdrop-blur-3xl ">
         <nav className="flex h-full justify-end items-center gap-24 border-b border-gray-700 pl-8">
           <div className="flex gap-5">
             {sideBarIcons.map((IconObj) => (

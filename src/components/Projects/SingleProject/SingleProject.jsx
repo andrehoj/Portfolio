@@ -2,8 +2,6 @@ import TechIcons from "./TechIcons/TechIcons";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useRef, useEffect } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 
 export default function SingleProject({ project }) {
   const projectRef = useRef(null);
@@ -54,9 +52,7 @@ export default function SingleProject({ project }) {
   }, [isProjectInView]);
 
   return (
-    <div
-      className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-7xl"
-    >
+    <div className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-full">
       <motion.div
         animate={projectAnimation}
         className="order-2 lg:order-1 project-details-container px-8 py-5 border border-gray-700 rounded-lg shadow-2xl"
@@ -67,7 +63,9 @@ export default function SingleProject({ project }) {
               {project.title}
             </h1>
 
-            <p className="project-description text-text_secondary">{project.description}</p>
+            <p className="project-description text-text_secondary">
+              {project.description}
+            </p>
 
             <div className="mb-2">
               <p className="text-xl font-bold mb-2" ref={projectRef}>
@@ -87,7 +85,7 @@ export default function SingleProject({ project }) {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start justify-self-end gap-8">
+          <div className="flex justify-center lg:justify-start justify-self-end gap-8 text-cyan">
             <a
               href={`${project.repo}`}
               target="_blank"
@@ -119,24 +117,12 @@ export default function SingleProject({ project }) {
         animate={projectImageAnimation}
         className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10"
       >
-        <Carousel
-          autoPlay={true}
-          infiniteLoop={true}
-          interval={5000}
-          showIndicators={false}
-          showThumbs={false}
-          showStatus={false}
-          animationHandler={"fade"}
-        >
-          {project.imgs.map((img) => (
-            <div key={img} className="shadow">
-              <img
-                className="rounded-lg mb-5 lg:mb-0"
-                src={require(`${img}`)}
-              />
-            </div>
-          ))}
-        </Carousel>
+        <div className="shadow">
+          <img
+            className="rounded-lg mb-5 lg:mb-0"
+            src={require(`${project.img}`)}
+          />
+        </div>
       </motion.div>
     </div>
   );

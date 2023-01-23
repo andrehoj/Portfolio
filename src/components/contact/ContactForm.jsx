@@ -64,7 +64,7 @@ export default function ContactForm({}) {
       ref={form}
       onSubmit={sendEmail}
       action=""
-      className="flex flex-col w-10/12 gap-3 text-start"
+      className="flex flex-col w-auto lg:w-10/12 gap-3 text-start"
     >
       <div className="relative z-0 mb-6 w-full group">
         <motion.input

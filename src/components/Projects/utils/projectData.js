@@ -10,11 +10,9 @@ export const projectData = [
   {
     title: "Developer Hangout",
     font: "font-dev",
-    imgs: [
-      "./images/dev-hangout-image-1.png",
-      "./images/dev-hangout-image-2.png",
-      "./images/dev-hangout-image-3.png",
-    ],
+    img: "./images/dev-hangout-image-1.png",
+    // "./images/dev-hangout-image-2.png",
+    // "./images/dev-hangout-image-3.png",
     link: "https://developer-hangout-657.herokuapp.com/",
     repo: "https://github.com/AgentA12/Dev_Hangout",
     icons: devHangOutIcons,
@@ -27,12 +25,10 @@ export const projectData = [
     font: "",
     link: "https://stop-shop123.herokuapp.com/",
     repo: "https://github.com/AgentA12/Stop_Shop",
-    imgs: [
-      "./images/stop-shop-image-1.png",
-      "./images/stop-shop-image-2.png",
-      "./images/stop-shop-image-3.png",
-      "./images/stop-shop-image-4.png",
-    ],
+    img: "./images/stop-shop-image-1.png",
+    // "./images/stop-shop-image-2.png",
+    // "./images/stop-shop-image-3.png",
+    // "./images/stop-shop-image-4.png",
     icons: stopShopIcons,
     description:
       "An Ecommerce full stack app that allows users to shop online for a variety of products. ",
@@ -43,7 +39,8 @@ export const projectData = [
     font: "",
     link: "",
     repo: "https://github.com/AgentA12/gym_tracker",
-    imgs: ["./images/gym_tracker.png", "./images/gym_tracker-2.png"],
+    img: "./images/gym_tracker.png",
+    //  "./images/gym_tracker-2.png"
     icons: gymTrackerIcons,
     description:
       "Gym tracker is an fitness tracker application I made to help me keep track of my workouts. Most fitness apps have to many features I dont use so I wanted something simple and easy.",
@@ -54,10 +51,9 @@ export const projectData = [
     font: "",
     link: "https://agenta12.github.io/Find_An_Estate/",
     repo: "https://github.com/AgentA12/Find_An_Estate",
-    imgs: [
-      "./images/find-your-estate-1.png",
-      "./images/find-your-estate-2.png",
-    ],
+    img: "./images/find-your-estate-1.png",
+    // "./images/find-your-estate-2.png",
+
     icons: findYourEstateIcons,
     description:
       "A real estate application where users can search for properties in the UAE area. Users can filter their search by Max and Min price, number of rooms and baths and either for rent or sale.",
@@ -68,7 +64,7 @@ export const projectData = [
     font: "",
     link: "https://guarded-chamber-91643.herokuapp.com/",
     repo: "https://github.com/AgentA12/Budget_tracker",
-    imgs: ["./images/Budget_tracker.png"],
+    img: "./images/Budget_tracker.png",
     icons: BudgetTrackerIcons,
     description: "A progressive web app where users can track their budget",
   },
