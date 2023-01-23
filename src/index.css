@@ -7,7 +7,7 @@
 
 @layer components {
   body {
-    @apply text-main_white bg-main_black font-main_font lg:overflow-x-hidden subpixel-antialiased ;
+    @apply text-main_white bg-main_black font-main_font lg:overflow-x-hidden subpixel-antialiased;
   }
 
   .sections {
@@ -73,6 +73,25 @@
 
   .heading-line {
     @apply text-4xl xsm:text-6xl md:text-8xl font-black subpixel-antialiased;
+  }
+}
+
+.float_shape {
+  float: right;
+  shape-outside: circle(50%);
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 450px) {
+  .float_shape {
+    float: none;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    shape-outside: none;
+    margin: auto;
   }
 }
 
