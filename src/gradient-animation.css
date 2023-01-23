@@ -60,7 +60,7 @@
 }
 
 .heading-line-first::before {
-  content: "Andrew";
+  content: "Andrew.";
 }
 
 .heading-line-second::before {
