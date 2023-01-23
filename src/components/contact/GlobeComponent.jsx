@@ -10,18 +10,20 @@ export default function GlobeComponent() {
   const gData = [...Array(N).keys()].map(() => ({
     lat: 45.424721,
     lng: -75.695,
-    size:40,
-    color: [ "#56D82D"]
+    size: 40,
+    color: ["#56D82D"],
+
+    pointOfView() {
+      return { lat: 45, lng: -75, altitude: 2 };
+    },
   }));
   return (
     <Globe
       globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-      labelsData={[
-        {
-          htmlLat: 45,
-          htmlLng: 75,
-        },
-      ]}
+      enablePointerInteraction={false}
+      pointOfView={() => {
+        return { lat: 45, lng: -75, altitude: 2.5 };
+      }}
       width={650}
       height={800}
       backgroundColor={"#121212"}
