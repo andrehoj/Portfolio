@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
-import { Tooltip } from "@material-tailwind/react";
 import GlobeComponent from "./GlobeComponent.jsx";
 import ContactForm from "./ContactForm.jsx";
 
-export default function Contact({}) {
+export default function Contact() {
   return (
     <section id="Contact" className="sections flex flex-wrap xl:flex-nowrap justify-center xl:justify-start">
       <motion.div
@@ -19,7 +18,7 @@ export default function Contact({}) {
           If your interested in chatting you can reach me at{" "}
           <a
             href="mailto:andrewhowran@gmail.com"
-            className="underline text-main_white cursor-pointer font-semibold inline-block"
+            className="underline text-main_white cursor-pointer font-light block"
             target={"_blank"}
           >
             andrewhowran@gmail.com

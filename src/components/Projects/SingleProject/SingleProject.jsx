@@ -54,6 +54,7 @@ export default function SingleProject({ project }) {
   return (
     <div className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-full">
       <motion.div
+      
         animate={projectAnimation}
         className="order-2 lg:order-1 project-details-container px-8 py-5 border border-gray-700 rounded-lg shadow-2xl"
       >

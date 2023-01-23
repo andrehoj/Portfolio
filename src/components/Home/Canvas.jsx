@@ -6,8 +6,9 @@ function motionForce(x, y) {
   return forces.disturbance(x, y, 5);
 }
 
-export default function Canvas({ bgColor, biggerThan750 }) {
+export default function Canvas({ bgColor }) {
   const biggerThan450 = useMediaPredicate("(min-width: 450px)");
+
   const particleOptions = {
     filter: ({ x, y, image }) => {
       // Get pixel
@@ -27,8 +28,8 @@ export default function Canvas({ bgColor, biggerThan750 }) {
     },
   };
 
-  const width = biggerThan750 ? 700 : biggerThan450 ? 400 : 200;
-  const height = biggerThan750 ? 450 : biggerThan450 ? 300 : 175;
+  const width = biggerThan450 ? 400 : 200;
+  const height = biggerThan450 ? 300 : 175;
 
   return (
     <ParticleImage
@@ -38,7 +39,7 @@ export default function Canvas({ bgColor, biggerThan750 }) {
       src={codeImage}
       width={width}
       height={height}
-      scale={biggerThan750 ? 1 : biggerThan450 ? 0.5 : 0.3}
+      scale={biggerThan450 ? 0.5 : 0.3}
       entropy={20}
       maxParticles={3000}
       particleOptions={particleOptions}

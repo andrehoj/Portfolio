@@ -2,10 +2,10 @@ import Skills from "./Skills/Skills";
 import { motion } from "framer-motion";
 import Person from "./image_of_me.jpg";
 
-export default function about({ biggerThan1000 }) {
+export default function about() {
   return (
     <section id="About" className="sections ">
-      <div className={`${biggerThan1000 ? "mr-8 max-w-screen-sm": "max-w-xl m-auto"} `}>
+      <div className= "lg:mr-8 lg:mx-0 lg:max-w-screen-sm max-w-xl m-auto">
         <motion.p
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -43,7 +43,7 @@ export default function about({ biggerThan1000 }) {
           or if you have any questions.
         </motion.p>
       </div>
-      <Skills biggerThan1000={biggerThan1000} />
+      <Skills  />
     </section>
   );
 }

@@ -54,6 +54,7 @@ module.exports = {
         npm_color: "#c13534",
         heroku_color: "#531EA9",
         railway_color: "#FFFFFF",
+        contact_gradient: "#48bb78"
       },
     },
   },

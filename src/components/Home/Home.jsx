@@ -8,8 +8,13 @@ export default function Home() {
       <h1 className="relative text-4xl sm:text-6xl font-light">
         <p>Hi,</p>
         <span>I'm </span>
-        <span className="heading-line heading-line-first">
-          <span className="heading-line-gradient">Andrew.</span>
+        <span  className="heading-line heading-line-first">
+          <span
+           
+            className="heading-line-gradient"
+          >
+            Andrew.
+          </span>
         </span>{" "}
         <p>
           <span>A </span>

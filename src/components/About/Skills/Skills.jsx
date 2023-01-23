@@ -1,9 +1,9 @@
 import { skillData } from "./utils/skillsData";
 import { motion } from "framer-motion";
 
-export default function Skills({ biggerThan1000 }) {
+export default function Skills({  }) {
   return (
-    <div className={`${biggerThan1000 && "w-9/12"} `}>
+    <div className={`lg:w-9/12`}>
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

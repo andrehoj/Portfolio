@@ -11,8 +11,6 @@ export default function GlobeComponent() {
   const window = useWindowSize();
 
   useEffect(() => {
-    console.log(globeEl.current);
-
     globeEl.current.controls().autoRotate = true;
     globeEl.current.controls().autoRotateSpeed = 0.08;
     globeEl.current.pointOfView({ lat: 45.424721, lng: -75.695 });

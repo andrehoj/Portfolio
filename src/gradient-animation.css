@@ -41,7 +41,7 @@
 
 /* move this from .heading-line-second */
 .heading-line-second > .heading-line-gradient {
-  background-image: linear-gradient(to left, #38b2ac, #0bc5ea);
+  background-image: linear-gradient(to left, #8360c3, #2ebf91);
 }
 
 /* move this from .heading-line-third */
@@ -174,15 +174,15 @@
 
 .heading-line-first > .heading-line-gradient {
   /* ... */
-  animation: first_heading_gradient 8s infinite;
+  animation: first_heading_gradient 15s infinite;
 }
 
 .heading-line-second > .heading-line-gradient {
   /* ... */
-  animation: second_heading_gradient 8s infinite;
+  animation: second_heading_gradient 15s infinite;
 }
 
 .heading-line-third > .heading-line-gradient {
   /* ... */
-  animation: third_heading_gradient 8s infinite;
+  animation: third_heading_gradient 15s infinite;
 }
