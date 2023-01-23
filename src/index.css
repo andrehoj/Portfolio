@@ -7,11 +7,11 @@
 
 @layer components {
   body {
-    @apply text-main_white bg-main_black font-main_font lg:overflow-x-hidden;
+    @apply text-main_white bg-main_black font-main_font lg:overflow-x-hidden subpixel-antialiased ;
   }
 
   .sections {
-    @apply lg:ml-52 pt-20 min-h-screen  md:text-center lg:text-left mx-4 lg:mx-0;
+    @apply lg:ml-44 pt-24 min-h-screen text-center lg:text-left mx-5;
   }
 
   .nav-large {
@@ -72,7 +72,7 @@
   }
 
   .heading-line {
-    @apply text-8xl font-black subpixel-antialiased;
+    @apply text-4xl xsm:text-6xl md:text-8xl font-black subpixel-antialiased;
   }
 }
 

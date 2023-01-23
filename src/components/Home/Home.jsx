@@ -4,8 +4,8 @@ import "../../gradient-animation.css";
 
 export default function Home() {
   return (
-    <section id="Home" className=" sections text-center lg:text-left ">
-      <h1 className="relative text-6xl font-light mr-20">
+    <section id="Home" className="sections">
+      <h1 className="relative text-4xl sm:text-6xl font-light">
         <p>Hi,</p>
         <span>I'm </span>
         <span className="heading-line heading-line-first">
@@ -18,12 +18,12 @@ export default function Home() {
           </span>{" "}
           <span className="heading-line heading-line-third">
             <span className="heading-line-gradient">Developer</span>{" "}
-            <div className="absolute -top-40 -right-96">
-              <Canvas bgColor={""} />{" "}
+            <div className="hidden lg:block lg:absolute lg:-top-40 lg:-right-96">
+              <Canvas bgColor={""} />
             </div>
           </span>
-        </p>{" "}
-        <p>
+        </p>
+        <p className="mt-2">
           based in <span> Ottawa, Ontario.</span>
         </p>
         <p className="font-light text-lg my-2">
@@ -31,10 +31,14 @@ export default function Home() {
         </p>
       </h1>
 
-      <div className="flex flex-col items-center lg:items-start mr-20">
+      <div className="flex flex-col items-center lg:items-start ">
         <Link className="" to="/Contact">
           <button className="mt-2 custom-btn">Contact Me</button>
         </Link>
+      </div>
+
+      <div className="lg:hidden flex justify-center">
+        <Canvas bgColor={""} />
       </div>
     </section>
   );
