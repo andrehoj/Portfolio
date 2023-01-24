@@ -10,15 +10,16 @@ export default function Tabs({ tab, setOpen }) {
   return (
     <div className="flex justify-center p-3 bg-main_black">
       <Link
-        className=""
         onClick={() => {
           setOpen(false);
         }}
-        to={`${tab}`}
+        to={`/${tab}`}
       >
         <div className="icon-container-md">
           <span
-            className={`font-light hover:text-main_white ${activeNav === tab && "mobile-nav-active"}`}
+            className={`font-light hover:text-main_white ${
+              activeNav === tab && "mobile-nav-active"
+            }`}
           >
             {tab}
           </span>
