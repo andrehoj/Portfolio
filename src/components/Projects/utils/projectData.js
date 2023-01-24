@@ -4,6 +4,7 @@ import {
   stopShopIcons,
   BudgetTrackerIcons,
   gymTrackerIcons,
+  portfolioIcons,
 } from "./projectIconData";
 
 export const projectData = [
@@ -60,15 +61,22 @@ export const projectData = [
   },
 
   {
+    title: "My Portfolio",
+    font: "",
+    link: "https://andrewhowran.dev",
+    repo: "https://github.com/AgentA12/Portfolio",
+    img: "./images/Portfolio.png",
+    icons: portfolioIcons,
+    description: "This portfolio! I had lots of fun making this with framer motion and cool react libraries.",
+  },
+
+  {
     title: "Budget Tracker",
     font: "",
     link: "https://guarded-chamber-91643.herokuapp.com/",
     repo: "https://github.com/AgentA12/Budget_tracker",
     img: "./images/Budget_tracker.png",
     icons: BudgetTrackerIcons,
-    description: "A progressive web app where users can track their budget",
+    description: "A progressive web app where users can track their budget.",
   },
 ];
-
-//mongodb+srv://agentA-auth:SecretPass12@cluster0.ol1krts.mongodb.net/?retryWrites=true&w=majority
-//mongodb+srv://agenta12:SecretPass12@cluster0.ydjhepw.mongodb.net/?retryWrites=true&w=majority

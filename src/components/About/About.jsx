@@ -5,7 +5,7 @@ import Person from "./image_of_me.jpg";
 export default function about() {
   return (
     <section id="About" className="sections ">
-      <div className= "lg:mr-8 lg:mx-0 lg:max-w-screen-sm max-w-xl m-auto">
+      <div className="lg:mr-8 lg:mx-0 lg:max-w-screen-sm max-w-xl m-auto">
         <motion.p
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -43,7 +43,7 @@ export default function about() {
           or if you have any questions.
         </motion.p>
       </div>
-      <Skills  />
+      <Skills />
     </section>
   );
 }

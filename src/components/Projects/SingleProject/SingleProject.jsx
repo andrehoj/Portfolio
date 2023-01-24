@@ -54,15 +54,12 @@ export default function SingleProject({ project }) {
   return (
     <div className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-full">
       <motion.div
-      
         animate={projectAnimation}
         className="order-2 lg:order-1 project-details-container px-8 py-5 border border-gray-700 rounded-lg shadow-2xl"
       >
         <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
-          <div className="flex flex-col gap-7 lg:gap-3">
-            <h1 className={`${project.font} text-3xl font-bold`}>
-              {project.title}
-            </h1>
+          <div className="flex flex-col gap-7 lg:gap-3 lg:w-11/12">
+            <h1 className={`text-3xl sm:text-4xl font-black`}>{project.title}</h1>
 
             <p className="project-description text-text_secondary">
               {project.description}
@@ -73,7 +70,7 @@ export default function SingleProject({ project }) {
                 Built with
               </p>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-5">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-5 ">
                 {project.icons.map((iconObj) => (
                   <TechIcons
                     icon={iconObj.name}
@@ -118,9 +115,9 @@ export default function SingleProject({ project }) {
         animate={projectImageAnimation}
         className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10"
       >
-        <div className="shadow">
+        <div className="shadow-2xl shadow-dark_theme_elevated_3">
           <img
-            className="rounded-lg mb-5 lg:mb-0"
+            className="rounded-xl mb-5 lg:mb-0"
             src={require(`${project.img}`)}
           />
         </div>

@@ -19,7 +19,7 @@
   }
 
   .nav-small {
-    @apply fixed right-0 w-full h-16 z-30;
+    @apply fixed top-0 right-0 w-full z-30;
   }
 
   .icon-container {

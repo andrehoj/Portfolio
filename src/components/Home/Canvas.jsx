@@ -28,8 +28,8 @@ export default function Canvas({ bgColor }) {
     },
   };
 
-  const width = biggerThan450 ? 400 : 200;
-  const height = biggerThan450 ? 300 : 175;
+  const width = biggerThan450 ? 385 : 200;
+  const height = biggerThan450 ? 280 : 175;
 
   return (
     <ParticleImage
@@ -39,7 +39,7 @@ export default function Canvas({ bgColor }) {
       src={codeImage}
       width={width}
       height={height}
-      scale={biggerThan450 ? 0.5 : 0.3}
+      scale={biggerThan450 ? 0.48 : 0.3}
       entropy={20}
       maxParticles={3000}
       particleOptions={particleOptions}

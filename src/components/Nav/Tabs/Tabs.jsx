@@ -18,7 +18,7 @@ export default function Tabs({ tab, setOpen }) {
       >
         <div className="icon-container-md">
           <span
-            className={`font-light ${activeNav === tab && "mobile-nav-active"}`}
+            className={`font-light hover:text-main_white ${activeNav === tab && "mobile-nav-active"}`}
           >
             {tab}
           </span>

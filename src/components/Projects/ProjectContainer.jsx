@@ -11,11 +11,11 @@ export default function ProjectContainer() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-black text-5xl xsm:text-7xl mb-10 gradient-title-projects h-auto lg:h-24"
+          className="font-black text-5xl xsm:text-7xl gradient-title-projects h-auto sm:h-36"
         >
           Projects I've built
         </motion.h2>
-        <div className="grid grid-cols-1 gap-36">
+        <div className="grid grid-cols-1 gap-36 mt-5">
           {projectData.map((project) => (
             <SingleProject project={project} key={project.title} />
           ))}

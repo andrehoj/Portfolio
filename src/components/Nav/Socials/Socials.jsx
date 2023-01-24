@@ -9,15 +9,15 @@ import Resume from "./Resume.pdf";
 
 export default function Socials() {
   return (
-    <div className={"flex justify-center items-center mr-6 gap-2 py-4"}>
-      <a
+    <div className={"flex justify-center items-center md:mr-6 gap-2 p-4 md:p-3"}>
+      {/* <a
         href={Resume}
         className={"flex items-center gap-1 mr-2 text-sm text-light resume-btn"}
         download
       >
         <span>Resume</span>
         <BsDownload size={16} />
-      </a>
+      </a> */}
       <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
