@@ -76,6 +76,13 @@
   }
 }
 
+body {
+  background: #121212;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #1E1E1E, #121212);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #1E1E1E, #121212); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
 .float_shape {
   float: right;
   shape-outside: circle(50%);

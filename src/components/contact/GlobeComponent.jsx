@@ -34,7 +34,7 @@ export default function GlobeComponent() {
       }}
       width={775}
       height={window.width * 0.5}
-      backgroundColor={"#121212"}
+      backgroundColor={"rgba(0,0,0,0)"}
       animateIn={true}
       htmlElementsData={gData}
       htmlElement={(d) => {

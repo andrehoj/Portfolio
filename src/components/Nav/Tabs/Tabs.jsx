@@ -8,7 +8,7 @@ export default function Tabs({ tab, setOpen }) {
   if (!activeNav) activeNav = "Home";
 
   return (
-    <div className="flex justify-center p-3 bg-main_black">
+    <div className="flex justify-center p-3">
       <Link
         onClick={() => {
           setOpen(false);
