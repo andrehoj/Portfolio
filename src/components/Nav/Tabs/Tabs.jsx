@@ -13,7 +13,7 @@ export default function Tabs({ tab, setOpen }) {
         onClick={() => {
           setOpen(false);
         }}
-        to={`/${tab}`}
+        to={`${tab}`}
       >
         <div className="icon-container-md">
           <span

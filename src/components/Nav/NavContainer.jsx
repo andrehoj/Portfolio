@@ -10,7 +10,7 @@ export default function NavContainer() {
   return (
     // large nav
     <nav>
-      <div className="hidden md:block nav-small w-fit text-text_secondary text-light text-lg backdrop-blur-2xl bg-transparent  shadow-xl ">
+      <div className="hidden md:block nav-small w-fit text-text_secondary text-light text-lg md:backdrop-blur-2xl md:bg-transparent  shadow-xl ">
         <div className="flex h-full justify-end items-center gap-24 border-b border-gray-700 pl-8">
           <div className="flex gap-1">
             {tabs.map((tab) => (
@@ -33,7 +33,7 @@ export default function NavContainer() {
         <div
           className={`${
             !isOpen && "opacity-0 invisible pointer-events-none"
-          }  w-full h-fit text-text_secondary transition-all duration-200 ease-in border-b border-gray-600`}
+          }  w-full h-fit text-text_secondary transition-all duration-200 ease-in border-b border-gray-600 bg-main_black`}
         >
           {tabs.map((tab) => (
             <Tabs tab={tab} key={tab} setOpen={setOpen} />
