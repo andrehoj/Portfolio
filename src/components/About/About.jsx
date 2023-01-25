@@ -28,8 +28,8 @@ export default function about() {
           className="text-text_secondary my-5"
         >
           Hi! My name is Andrew Howran and I'm an enthusiastic Web Developer who
-          loves to solve problems using all kinds of web technologies. Some of
-          my hobbies include reading, exercising and coding. I'm always learning
+          loves to solve problems using all kinds of web technologies and is oppsessed with learning new ones! Some of
+          my hobbies include reading, weight lifting, film and of course coding. I'm always learning
           and adapting to the constant changing environment that is the web.
         </motion.p>
 

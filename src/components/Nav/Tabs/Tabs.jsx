@@ -8,23 +8,16 @@ export default function Tabs({ tab, setOpen }) {
   if (!activeNav) activeNav = "Home";
 
   return (
-    <div className="flex justify-center p-3">
-      <Link
-        onClick={() => {
-          setOpen(false);
-        }}
-        to={`${tab}`}
-      >
-        <div className="icon-container-md">
-          <span
-            className={`font-light hover:text-main_white ${
-              activeNav === tab && "mobile-nav-active"
-            }`}
-          >
-            {tab}
-          </span>
-        </div>
-      </Link>
-    </div>
+    <Link
+      className={`p-1 font-light hover:text-main_white ${
+        activeNav === tab && "mobile-nav-active"
+      }`}
+      onClick={() => {
+        setOpen(false);
+      }}
+      to={`${tab}`}
+    >
+      <span>{tab}</span>
+    </Link>
   );
 }

@@ -5,11 +5,12 @@ import {
   BsStackOverflow,
   BsDownload,
 } from "react-icons/bs";
-import Resume from "./Resume.pdf";
+
+// import Resume from "./Resume.pdf";
 
 export default function Socials() {
   return (
-    <div className={"flex justify-center items-center md:mr-6 gap-2 p-4 md:p-3"}>
+    <div className={"flex justify-center items-center gap-2 p-4 md:p-3"}>
       {/* <a
         href={Resume}
         className={"flex items-center gap-1 mr-2 text-sm text-light resume-btn"}

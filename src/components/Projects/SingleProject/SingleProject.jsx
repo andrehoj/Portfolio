@@ -59,7 +59,7 @@ export default function SingleProject({ project }) {
       >
         <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
           <div className="flex flex-col gap-7 lg:gap-3 lg:w-11/12">
-            <h1 className={`text-3xl sm:text-4xl font-black`}>{project.title}</h1>
+            <h1 className={`text-3xl sm:text-4xl font-black text-theme_purple`}>{project.title}</h1>
 
             <p className="project-description text-text_secondary">
               {project.description}
@@ -83,7 +83,7 @@ export default function SingleProject({ project }) {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start justify-self-end gap-8 text-cyan">
+          <div className="flex justify-center lg:justify-start justify-self-end gap-8 text-theme_cyan">
             <a
               href={`${project.repo}`}
               target="_blank"

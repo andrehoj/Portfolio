@@ -1,14 +1,15 @@
 import { skillData } from "./utils/skillsData";
 import { motion } from "framer-motion";
+import { Bars } from "react-loading-icons";
 
-export default function Skills({  }) {
+export default function Skills({}) {
   return (
     <div className={`lg:w-9/12`}>
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 1 }}
-        className="text-4xl font-light clear-both my-5"
+        className="text-4xl font-light clear-both my-5 text-theme_pink"
       >
         Skills and Tools
       </motion.p>

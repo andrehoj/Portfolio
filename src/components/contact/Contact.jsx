@@ -15,7 +15,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
         className={"w-9/12 xl:w-6/12"}
       >
-        <h2 className="font-black text-5xl sm:text-7xl mb-5 gradient-title-contact">
+        <h2 className="font-black text-5xl sm:text-7xl mb-5 gradient-title-contact  w-fit">
           Contact me
         </h2>
         <p className={`text-text_secondary text-lg`}>
@@ -24,7 +24,7 @@ export default function Contact() {
 
         <a
           href="mailto:andrewhowran@gmail.com"
-          className="underline text-main_white text-base font-light block cursor-pointer"
+          className="underline text-theme_yellow text-base font-light block cursor-pointer "
           target={"_blank"}
         >
           andrewhowran@gmail.com

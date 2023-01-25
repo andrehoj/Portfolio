@@ -14,12 +14,8 @@
     @apply lg:ml-32 pt-24 min-h-screen text-center lg:text-left mx-5;
   }
 
-  .nav-large {
-    @apply z-30 h-screen fixed top-0 left-0 w-24 shadow-2xl;
-  }
-
   .nav-small {
-    @apply fixed top-0 right-0 w-full z-30;
+    @apply fixed top-0 right-0 w-full z-30 flex flex-col items-center justify-between gap-4 mx-3;
   }
 
   .icon-container {
@@ -51,7 +47,11 @@
   }
 
   .custom-btn {
-    @apply border px-2 py-1 hover:bg-main_white hover:text-main_black transition-all duration-200 ease-linear active:scale-75 inline;
+    @apply border border-theme_green text-theme_green px-2 py-1 hover:bg-theme_green hover:text-main_black transition-all duration-200 ease-linear active:scale-75 inline;
+  }
+
+  .custom-btn-contact {
+    @apply border border-main_white text-main_white px-2 py-1 hover:bg-main_white hover:text-main_black transition-all duration-200 ease-linear active:scale-75 inline;
   }
 
   .github {
@@ -77,10 +77,17 @@
 }
 
 body {
-  background: #121212;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #1E1E1E, #121212);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #1E1E1E, #121212); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #121212; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #262626,
+    #121212
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #262626,
+    #121212
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .float_shape {

@@ -27,13 +27,6 @@ export const skillData = [
 
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
-    color: "shadow-ts_color",
-    name: "TypeScript",
-  },
-
-  {
-    image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     color: "shadow-react_color",
     name: "React",
@@ -136,4 +129,44 @@ export const skillData = [
     name: "Railway",
     color: "shadow-railway_color",
   },
+
+  // {
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  //   name: "python",
+  //   color: "shadow-py_color",
+  //   learning: true,
+  // },
+
+  // {
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg",
+  //   name: "Svelte",
+  //   color: "shadow-svelte_color",
+  //   learning: true,
+  // },
+
+  // {
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  //   name: "Docker",
+  //   color: "shadow-docker_color",
+  //   learning: true,
+  // },
+
+  // {
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg",
+  //   name: "Webpack",
+  //   color: "shadow-webpack_color",
+  //   learning: true,
+  // },
+
+  // {
+  //   image:
+  //     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
+  //   color: "shadow-ts_color",
+  //   name: "TypeScript",
+  //   learning: true,
+ // },
 ];
