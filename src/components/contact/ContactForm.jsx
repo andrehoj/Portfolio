@@ -77,10 +77,10 @@ export default function ContactForm({}) {
     <form
       ref={form}
       onSubmit={sendEmail}
-      action=""
-      className=" mt-5 flex flex-col w-auto lg:w-10/12 gap-3 text-start"
+     
+      className="mt-5 flex flex-col  2xl:w-10/12 gap-3 text-start"
     >
-      <div className="relative z-0 mb-6 w-full group">
+      <div className="relative z-10 mb-6 w-full group">
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}

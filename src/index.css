@@ -74,6 +74,7 @@
   .heading-line {
     @apply text-4xl xsm:text-6xl md:text-8xl font-black subpixel-antialiased;
   }
+
 }
 
 body {
@@ -88,6 +89,11 @@ body {
     #262626,
     #121212
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.mobile-globe-position {
+    top: 500px
 }
 
 .float_shape {

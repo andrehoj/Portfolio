@@ -32,8 +32,8 @@ export default function GlobeComponent() {
       pointOfView={() => {
         return { lat: 45, lng: -75, altitude: 2.5 };
       }}
-      width={775}
-      height={window.width * 0.5}
+      width={750}
+      height={window.width * 0.48}
       backgroundColor={"rgba(0,0,0,0)"}
       animateIn={true}
       htmlElementsData={gData}

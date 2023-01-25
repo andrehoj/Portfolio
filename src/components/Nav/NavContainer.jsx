@@ -9,34 +9,32 @@ export default function NavContainer() {
 
   return (
     <>
-      <nav className="hidden w-fit fixed top-0 right-0 backdrop-blur-xl shadow-2xl shadow-main_black z-30 md:flex items-center justify-end px-10 py-3 gap-8 text-text_secondary border-b border-gray-700">
-        {tabs.map((tab) => (
-          <Tabs tab={tab} key={tab} setOpen={setOpen} />
-        ))}
-        <Socials />
-
-        <div
-          className={`${
-            !isOpen && "h-10"
-          } nav-small text-secondary_text md:hidden`}
-        >
+      <nav
+        className={`${
+          isOpen ? "w-full h-fit pt-5 py-3 px-10" : "h-0 p-0 md:h-auto md:py-3 md:px-10"
+        } fixed md:w-fit md:flex md:top-0 md:right-0 z-20 text-secondary_text bg-opacity-70 bg-main_black backdrop-blur-lg border-b border-gray-700`}
+      >
+        <div className="absolute top-5 left-5 md:hidden">
           <Hamburger
             toggled={isOpen}
             toggle={setOpen}
             duration={0.3}
             label="Show menu"
           />
+        </div>
 
-          <div
-            className={`${
-              !isOpen && "opacity-0 invisible pointer-events-none"
-            } w-full h-fit text-text_secondary transition-all duration-200 ease-in border-b border-gray-600 bg-main_black`}
-          >
-            {tabs.map((tab) => (
-              <Tabs tab={tab} key={tab} setOpen={setOpen} />
-            ))}
-            <Socials />
-          </div>
+        <div
+          className={`${
+            isOpen
+              ? "opacity-100 visible pointer-events-auto"
+              : "opacity-0 invisible pointer-events-none"
+          }  flex flex-col md:flex-row items-center gap-3 md:opacity-100 md:visible md:pointer-events-auto`}
+        >
+          {tabs.map((tab) => (
+            <Tabs tab={tab} key={tab} setOpen={setOpen} />
+          ))}
+
+          <Socials />
         </div>
       </nav>
     </>

@@ -59,7 +59,7 @@ export default function SingleProject({ project }) {
       >
         <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
           <div className="flex flex-col gap-7 lg:gap-3 lg:w-11/12">
-            <h1 className={`text-3xl sm:text-4xl font-black text-theme_purple`}>{project.title}</h1>
+            <h1 className={`text-2xl sm:text-4xl font-black text-theme_purple`}>{project.title}</h1>
 
             <p className="project-description text-text_secondary">
               {project.description}

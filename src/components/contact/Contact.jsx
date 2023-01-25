@@ -3,23 +3,23 @@ import GlobeComponent from "./GlobeComponent.jsx";
 import ContactForm from "./ContactForm.jsx";
 
 export default function Contact() {
-  document.addEventListener("click", (e) => console.log(e.target));
   return (
     <section
       id="Contact"
-      className="sections flex flex-wrap xl:flex-nowrap justify-center xl:justify-start"
+      className="relative sections flex justify-center 2xl:justify-start items-center z-10 w-full text-center 2xl:text-left 2xl:ml-32 m-0"
     >
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className={"w-9/12 xl:w-6/12"}
+        className={"w-9/12 2xl:w-7/12 self-start"}
       >
-        <h2 className="font-black text-5xl sm:text-7xl mb-5 gradient-title-contact  w-fit">
+        <h2 className="font-black text-5xl sm:text-7xl gradient-title-contact  w-fit m-auto 2xl:m-0">
           Contact me
         </h2>
-        <p className={`text-text_secondary text-lg`}>
-          If your interested in chatting you can reach me at{" "}
+
+        <p className={`text-text_secondary text-lg mt-5`}>
+          If your interested in chatting you can reach me here{" "}
         </p>
 
         <a
@@ -33,7 +33,7 @@ export default function Contact() {
         <ContactForm />
       </motion.div>
 
-      <div className="pointer-events-none">
+      <div className="hidden xsm:block  pointer-events-none absolute mobile-globe-position  md:top-96 2xl:top-auto  2xl:right-40 z-0 opacity-40">
         <GlobeComponent />
       </div>
     </section>
