@@ -1,6 +1,5 @@
 import Skills from "./Skills/Skills";
 import { motion } from "framer-motion";
-import Person from "./image_of_me.jpeg";
 
 export default function about() {
   return (
@@ -15,12 +14,6 @@ export default function about() {
           About Me
         </motion.p>
 
-        {/* <img
-          className="float_shape rounded-full image_shadow float-none"
-          src={Person}
-          alt="image of myself"
-        /> */}
-
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,9 +21,10 @@ export default function about() {
           className="text-text_secondary my-5"
         >
           Hi! My name is Andrew Howran and I'm an enthusiastic Web Developer who
-          loves to solve problems using all kinds of web technologies and is oppsessed with learning new ones! Some of
-          my hobbies include reading, weight lifting, film and of course coding. I'm always learning
-          and adapting to the constant changing environment that is the web.
+          loves to solve problems using all kinds of web technologies and is
+          oppsessed with learning new ones! Some of my hobbies include reading,
+          weight lifting, film and of course coding. I'm always learning and
+          adapting to the constant changing environment that is the web.
         </motion.p>
 
         <motion.p
