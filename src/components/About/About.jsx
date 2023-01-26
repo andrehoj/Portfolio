@@ -1,6 +1,6 @@
 import Skills from "./Skills/Skills";
 import { motion } from "framer-motion";
-import Person from "./image_of_me.jpg";
+import Person from "./image_of_me.jpeg";
 
 export default function about() {
   return (
@@ -15,11 +15,11 @@ export default function about() {
           About Me
         </motion.p>
 
-        <img
+        {/* <img
           className="float_shape rounded-full image_shadow float-none"
           src={Person}
           alt="image of myself"
-        />
+        /> */}
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
