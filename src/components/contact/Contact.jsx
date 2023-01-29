@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="Contact"
-      className="relative sections flex justify-center 2xl:justify-start items-center z-10 w-full text-center 2xl:text-left 2xl:ml-32 m-0"
+      className="relative sections contact-section flex justify-center 2xl:justify-start items-center z-10 w-full text-center 2xl:text-left 2xl:ml-32 m-0"
     >
       <motion.div
         initial={{ opacity: 0, x: -100 }}
@@ -33,7 +33,7 @@ export default function Contact() {
         <ContactForm />
       </motion.div>
 
-      <div className="hidden xsm:block  pointer-events-none absolute mobile-globe-position  md:top-96 2xl:top-auto  2xl:right-40 z-0 opacity-40">
+      <div className="hidden xsm:block  pointer-events-none absolute mobile-globe-position md:top-96 2xl:top-auto  2xl:right-40 z-0 opacity-20 2xl:opacity-80">
         <GlobeComponent />
       </div>
     </section>

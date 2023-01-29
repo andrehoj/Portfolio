@@ -18,6 +18,10 @@
     @apply fixed top-0 right-0 w-full z-30 flex flex-col items-center justify-between gap-4 mx-3;
   }
 
+  .contact-section {
+    @apply overflow-y-hidden
+  }
+
   .icon-container {
     @apply flex flex-col hover:cursor-pointer;
   }
@@ -74,7 +78,17 @@
   .heading-line {
     @apply text-4xl xsm:text-6xl md:text-8xl font-black subpixel-antialiased;
   }
+}
 
+.btn-gradient-1 {
+  background-color: linear-gradient(to left, #ed8936, #ed64a6);
+}
+
+.btn-gradient-2 {
+  background-color: linear-gradient(to left, #8360c3, #2ebf91);
+}
+.btn-gradient-3 {
+  background-color: linear-gradient(to left, #ecc94b, #48bb78);
 }
 
 body {
@@ -91,9 +105,8 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 .mobile-globe-position {
-    top: 500px
+  top: 500px;
 }
 
 .float_shape {

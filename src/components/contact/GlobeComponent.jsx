@@ -24,6 +24,7 @@ export default function GlobeComponent() {
     size: 40,
     color: ["#56D82D"],
   }));
+  
   return (
     <Globe
       ref={globeEl}

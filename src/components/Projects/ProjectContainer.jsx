@@ -11,7 +11,7 @@ export default function ProjectContainer() {
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-black text-5xl xsm:text-7xl gradient-title-projects h-auto sm:h-36 w-fit"
+          className="font-black text-5xl xsm:text-7xl gradient-title-projects h-auto sm:h-36 w-fit mx-auto lg:mx-0"
         >
           Projects I've built
         </motion.h2>

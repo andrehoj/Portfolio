@@ -31,6 +31,17 @@ export const devHangOutIcons = [
     link: <SiExpress size={30} />,
     name: "Express",
   },
+
+  {
+    name: "Sessions/Cookies",
+  },
+
+  {
+    isIcon: true,
+    link: <SiSocketdotio size={30} />,
+    name: "Socket io",
+  },
+
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     name: "MySQL",
@@ -39,11 +50,6 @@ export const devHangOutIcons = [
   {
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
     name: "Sequelize",
-  },
-  {
-    isIcon: true,
-    link: <SiSocketdotio size={30} />,
-    name: "Socket io",
   },
 ];
 
@@ -138,13 +144,14 @@ export const gymTrackerIcons = [
     link: "",
     name: "React",
   },
+
+  {
+    name: "Mantine UI",
+  },
+
   {
     link: "",
     name: "Tailwind",
-  },
-  {
-    link: "",
-    name: "JWT",
   },
 
   {
@@ -155,6 +162,12 @@ export const gymTrackerIcons = [
     link: "",
     name: "GraphQL",
   },
+
+  {
+    link: "",
+    name: "JWT",
+  },
+
   {
     link: "",
     name: "MongoDB",
@@ -167,4 +180,20 @@ export const gymTrackerIcons = [
     link: "",
     name: "Mongoose",
   },
+];
+
+export 
+const dataStructureVisualizerIcons = [
+  {
+    name: "React",
+    link: "",
+  },
+  {
+    name: "TypeScript",
+    link: "",
+  },
+
+  {
+    name: "Styled Components"
+  }
 ];

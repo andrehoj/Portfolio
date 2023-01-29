@@ -1,26 +1,21 @@
 import { Link } from "react-router-dom";
 import Canvas from "./Canvas";
+import { motion } from "framer-motion";
 import "../../gradient-animation.css";
 
 export default function Home() {
   return (
     <section id="Home" className="sections relative">
-
       <h1 className="text-4xl sm:text-6xl font-thin">
         <p>Hi,</p>
         <span>I'm </span>
-        <span  className="heading-line heading-line-first">
-          <span
-           
-            className="heading-line-gradient  w-fit"
-          >
-            Andrew.
-          </span>
+        <span className="heading-line heading-line-first">
+          <span className="heading-line-gradient  w-fit">Andrew.</span>
         </span>{" "}
         <p className="lg:mr-80">
           <span>A </span>
           <span className="heading-line heading-line-second">
-            <span className="heading-line-gradient  w-fit">Software</span>
+            <span className="heading-line-gradient  w-fit">Web</span>
           </span>{" "}
           <span className="heading-line heading-line-third">
             <span className="heading-line-gradient  w-fit">Developer</span>{" "}
