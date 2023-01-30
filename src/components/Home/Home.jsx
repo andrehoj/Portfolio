@@ -19,7 +19,7 @@ export default function Home() {
           </span>{" "}
           <span className="heading-line heading-line-third">
             <span className="heading-line-gradient  w-fit">Developer</span>{" "}
-            <div className="hidden lg:block lg:absolute lg:-top-40 lg:-right-3/4 ">
+            <div className="hidden lg:block lg:absolute lg:-top-40 -right-96 ">
               <Canvas bgColor={""} />
             </div>
           </span>

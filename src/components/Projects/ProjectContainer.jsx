@@ -13,13 +13,18 @@ export default function ProjectContainer() {
           transition={{ duration: 0.7 }}
           className="font-black text-5xl xsm:text-7xl gradient-title-projects h-auto sm:h-36 w-fit mx-auto lg:mx-0"
         >
-          Projects I've built
+          Some Projects I've built
         </motion.h2>
-        <div className="grid grid-cols-1 gap-36 mt-5">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 gap-36 mt-5"
+        >
           {projectData.map((project) => (
             <SingleProject project={project} key={project.title} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

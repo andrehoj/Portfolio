@@ -41,16 +41,16 @@ export const skillData = [
 
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
-    color: "shadow-bootstrap_color",
-    name: "Bootstrap",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+    color: "shadow-tailwind_color",
+    name: "Tailwind",
   },
 
   {
     image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-    color: "shadow-tailwind_color",
-    name: "Tailwind",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    color: "shadow-bootstrap_color",
+    name: "Bootstrap",
   },
 
   {
@@ -82,13 +82,6 @@ export const skillData = [
   },
 
   {
-    isIcon: true,
-    image: <TbApi size={30} />,
-    color: "shadow-restAPI_color",
-    name: "REST API",
-  },
-
-  {
     image:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
     color: "shadow-graphQL_color",
@@ -116,12 +109,6 @@ export const skillData = [
     name: "npm",
   },
 
-  {
-    image:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-plain.svg",
-    color: "shadow-heroku_color",
-    name: "Heroku",
-  },
   {
     isIcon: true,
 
@@ -168,5 +155,5 @@ export const skillData = [
   //   color: "shadow-ts_color",
   //   name: "TypeScript",
   //   learning: true,
- // },
+  // },
 ];

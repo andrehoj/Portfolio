@@ -29,8 +29,12 @@ export default function Tabs({ tab, setOpen }) {
       ) : null}
 
       <Link
-        className={`p-1 font-light hover:text-main_white ${
-          activeNav === tab && "mobile-nav-active"
+        className={`p-1 text-gray-400 text-md  ${
+          activeNav === tab && activeNav === "Home" && "home-active-nav"
+        }  ${activeNav === tab && activeNav === "About" && "about-active-nav"} ${
+          activeNav === tab && activeNav === "Projects" && "projects-active-nav"
+        } ${
+          activeNav === tab && activeNav === "Contact" && "contact-active-nav"
         }`}
         onClick={() => {
           setOpen(false);

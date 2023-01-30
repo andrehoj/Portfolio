@@ -63,6 +63,7 @@ module.exports = {
         webpack_color: " #1C78C0",
         docker_color: "#019BC6",
         contact_gradient: "#48bb78",
+        img_gradient: "#ed8936"
       },
     },
   },

@@ -7,7 +7,7 @@ export default function SingleProject({ project }) {
   const projectRef = useRef(null);
 
   const isProjectInView = useInView(projectRef, {
-    threshold: 0.9,
+    threshold: 0.8,
   });
 
   const projectAnimation = useAnimation();

@@ -3,7 +3,7 @@ import codeImage from "./codeicon.png";
 import { useMediaPredicate } from "react-media-hook";
 
 function motionForce(x, y) {
-  return forces.disturbance(x, y, 5);
+  return forces.disturbance(x, y, 25);
 }
 
 export default function Canvas({ bgColor }) {
@@ -28,20 +28,20 @@ export default function Canvas({ bgColor }) {
     },
   };
 
-  const width = biggerThan450 ? 385 : 200;
-  const height = biggerThan450 ? 280 : 175;
+  const width = biggerThan450 ? 435 : 270;
+  const height = biggerThan450 ? 320 : 265;
 
   return (
     <ParticleImage
       className="block"
-      creationDuration={2000}
+      creationDuration={1000}
       backgroundColor={bgColor}
       src={codeImage}
       width={width}
       height={height}
-      scale={biggerThan450 ? 0.48 : 0.3}
-      entropy={20}
-      maxParticles={3000}
+      scale={biggerThan450 ? 0.50 : 0.27}
+      entropy={5}
+      maxParticles={1500}
       particleOptions={particleOptions}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
