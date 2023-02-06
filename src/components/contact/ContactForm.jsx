@@ -77,7 +77,7 @@ export default function ContactForm({}) {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="mt-5 flex flex-col md:w-9/12  2xl:w-7/12 gap-3 text-start 2xl:mx-0 mx-auto"
+      className="mt-5 flex flex-col md:w-9/12  2xl:w-8/12 gap-3 text-start 2xl:mx-0 mx-auto"
     >
       <div className="relative z-10 mb-6 w-full group">
         <motion.input

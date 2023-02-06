@@ -182,8 +182,7 @@ export const gymTrackerIcons = [
   },
 ];
 
-export 
-const dataStructureVisualizerIcons = [
+export const dataStructureVisualizerIcons = [
   {
     name: "React",
     link: "",
@@ -194,6 +193,13 @@ const dataStructureVisualizerIcons = [
   },
 
   {
-    name: "Styled Components"
-  }
+    name: "Styled Components",
+  },
+];
+
+export const WordsIcons = [
+  { name: "Vite", link: "" },
+  { name: "TypeScript", link: "" },
+  { name: "React", link: "" },
+  { name: "Daisy ui", link: "" },
 ];

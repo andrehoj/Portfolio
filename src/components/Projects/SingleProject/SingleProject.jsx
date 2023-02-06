@@ -7,7 +7,7 @@ export default function SingleProject({ project }) {
   const projectRef = useRef(null);
 
   const isProjectInView = useInView(projectRef, {
-    threshold: 0.8,
+    threshold: 0.3,
   });
 
   const projectAnimation = useAnimation();
@@ -19,9 +19,9 @@ export default function SingleProject({ project }) {
         x: 0,
         opacity: 1,
         transition: {
-          type: "tween",
-          duration: 0.5,
-          bounce: 0.3,
+          type: "spring",
+          duration: 0.3,
+          bounce: 0.1,
           delay: 0.1,
         },
       });
@@ -30,9 +30,9 @@ export default function SingleProject({ project }) {
         x: 0,
         opacity: 1,
         transition: {
-          type: "tween",
-          duration: 0.5,
-          bounce: 0.3,
+          type: "spring",
+          duration: 0.3,
+          bounce: 0.1,
           delay: 0.1,
         },
       });
@@ -55,18 +55,17 @@ export default function SingleProject({ project }) {
     <div className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-full">
       <motion.div
         animate={projectAnimation}
-        className="order-2 lg:order-1 project-details-container px-8 py-5 border border-gray-700 rounded-lg shadow-2xl"
+        className="order-2 lg:order-1 md:min-w-[375px] px-8 py-5 rounded-lg shadow-sm shadow-theme_purple h-fit"
       >
         <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
           <div className="flex flex-col gap-7 lg:gap-3 lg:w-11/12">
-            <h1 className={`text-2xl sm:text-4xl font-black text-theme_purple`}>
+            <h1 className={`text-2xl sm:text-4xl font-black text-theme_purple font-main_font`}>
               {project.title}
             </h1>
 
-            <p className="project-description text-text_secondary">
+            <p className="font-text_secondary text-text_secondary font-semibold">
               {project.description}
             </p>
-
             <div className="mb-2">
               {project.icons.length ? (
                 <p className="text-xl font-bold mb-2" ref={projectRef}>
@@ -117,11 +116,11 @@ export default function SingleProject({ project }) {
 
       <motion.div
         animate={projectImageAnimation}
-        className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10"
+        className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10 "
       >
-        <div className="shadow-2xl shadow-dark_theme_elevated_3">
+        <div className="bg-theme_purple rounded-xl ">
           <img
-            className="rounded-xl mb-5 lg:mb-0"
+            className="rounded-xl test mb-5 lg:mb-0 transition-all duration-150 cursor-pointer "
             src={project.img && require(`${project.img}`)}
           />
         </div>

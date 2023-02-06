@@ -27,6 +27,7 @@ export default function GlobeComponent() {
   
   return (
     <Globe
+    waitForGlobeReady={true}
       ref={globeEl}
       globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
       enablePointerInteraction={false}

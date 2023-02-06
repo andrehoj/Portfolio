@@ -8,13 +8,11 @@ export default function Contact() {
       id="Contact"
       className="relative sections contact-section flex justify-center 2xl:justify-start items-center z-10 text-center 2xl:text-left 2xl:ml-32 m-0 overflow-x-hidden"
     >
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+       
         className={"w-9/12 2xl:w-7/12 self-start"}
       >
-        <h2 className="font-black text-5xl sm:text-7xl gradient-title-contact  w-fit m-auto 2xl:m-0">
+        <h2 className="font-black text-5xl sm:text-7xl gradient-title-contact  w-fit m-auto 2xl:m-0 font-main_font">
           Contact me
         </h2>
 
@@ -31,9 +29,9 @@ export default function Contact() {
         </a>
 
         <ContactForm />
-      </motion.div>
+      </div>
 
-      <div className="hidden min-w-fit xsm:block pointer-events-none absolute md:top-96 2xl:top-auto  2xl:right-40 z-0 opacity-20 2xl:opacity-80">
+      <div className="hidden min-w-fit xsm:block pointer-events-none absolute md:top-60 2xl:top-auto  2xl:right-40 z-0 opacity-20 2xl:opacity-80">
         <GlobeComponent />
       </div>
     </section>

@@ -1,4 +1,3 @@
-import { data } from "autoprefixer";
 import {
   devHangOutIcons,
   findYourEstateIcons,
@@ -6,6 +5,7 @@ import {
   dataStructureVisualizerIcons,
   gymTrackerIcons,
   portfolioIcons,
+  WordsIcons,
 } from "./projectIconData";
 
 export const projectData = [
@@ -62,6 +62,16 @@ export const projectData = [
     icons: portfolioIcons,
     description:
       "This portfolio! I had lots of fun making this with framer motion and cool react libraries.",
+  },
+
+  {
+    title: "Words",
+    font: "",
+    img: "./images/Words.jpg",
+    link: "#",
+    repo: "#",
+    icons: WordsIcons,
+    description: "Coming soon",
   },
 
   {

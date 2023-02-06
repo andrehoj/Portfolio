@@ -18,7 +18,7 @@ module.exports = {
 
       "2xl": "1536px",
     },
-    fontFamily: { main_font: "Work+Sans", font_dev: "VT323" },
+    fontFamily: { main_font: "Bebas Neue", text_secondary: "Roboto" ,  font_dev: "VT323" },
     extend: {
       colors: {
         main_white: "#FFFFFF",
@@ -63,9 +63,13 @@ module.exports = {
         webpack_color: " #1C78C0",
         docker_color: "#019BC6",
         contact_gradient: "#48bb78",
-        img_gradient: "#ed8936"
+        img_gradient: "#ed8936",
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("tailwindcss"),
+    require("autoprefixer"),
+  ],
 };
