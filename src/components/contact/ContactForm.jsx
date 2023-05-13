@@ -77,7 +77,7 @@ export default function ContactForm({}) {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="mt-5 flex flex-col md:w-9/12  2xl:w-8/12 gap-3 text-start 2xl:mx-0 mx-auto"
+      className="mt-5 flex flex-col md:w-9/12 2xl:w-8/12 gap-3 text-start 2xl:mx-0 mx-auto"
     >
       <div className="relative z-10 mb-6 w-full group">
         <motion.input
@@ -87,14 +87,14 @@ export default function ContactForm({}) {
           type="text"
           name="name"
           id="name"
-          className="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="block py-2.5 px-0 w-full text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="name"
-          className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="peer-focus:font-medium absolute  text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
           Name
         </label>
@@ -107,14 +107,14 @@ export default function ContactForm({}) {
           type="email"
           name="email"
           id="email"
-          className="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="block py-2.5 px-0 w-full text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none  focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="floating_email"
-          className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="peer-focus:font-medium absolute  text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
           Email
         </label>
@@ -127,14 +127,14 @@ export default function ContactForm({}) {
           type="text"
           name="message"
           id=""
-          className="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="block py-2.5 px-0 w-full  text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="message"
-          className="peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="peer-focus:font-medium absolute  text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
           Message
         </label>
@@ -146,12 +146,12 @@ export default function ContactForm({}) {
         }   flex align-center `}
       >
         {successMessage && (
-          <div className="inline text-sm sm:text-lg transition-all duration-100 mr-2 text-green-500">
+          <div className="inline  sm:text-lg transition-all sm:text-xl font-black duration-100 mr-2 text-green-500">
             {capitalizeFirstLetter(successMessage)}
           </div>
         )}
         {errorMessage && (
-          <div className="inline text-sm sm:text-lg transition-all duration-100 mr-2 text-red-500">
+          <div className="inline  sm:text-xl font-black transition-all duration-100 mr-2 text-red-500">
             {capitalizeFirstLetter(errorMessage)}
           </div>
         )}

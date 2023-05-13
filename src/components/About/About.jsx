@@ -1,10 +1,22 @@
 import Skills from "./Skills/Skills";
 import { motion } from "framer-motion";
 import img from "./img_of_me.jpeg";
+import { useEffect } from "react";
 
-export default function about() {
+export default function About() {
+  // scroll to top of page when nav section is changed
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
-    <section id="About" className="sections">
+    <motion.section
+      initial={{ x: 30, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      exit={{ x: -30, opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      id="About"
+      className="sections "
+    >
       <div className="lg:mr-8 lg:mx-0 lg:w-9/12 m-auto ">
         <p className="font-black text-6xl sm:text-8xl gradient-title-about mb-5 lg:w-fit font-main_font">
           About Me
@@ -32,18 +44,18 @@ export default function about() {
           </motion.div>
 
           <motion.img
-              initial={{ opacity: 0, y: 35 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 35 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
             src={img}
             className="mt-5 md:mt-0 about-img  justify-self-center lg:justify-self-start"
-            height={275}
-            width={275}
+            height={225}
+            width={225}
             alt="image of myself"
           />
         </div>
       </div>
       <Skills />
-    </section>
+    </motion.section>
   );
 }

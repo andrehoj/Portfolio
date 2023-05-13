@@ -22,7 +22,7 @@ module.exports = {
     extend: {
       colors: {
         main_white: "#FFFFFF",
-        main_black: "#121212",
+        main_black: "#111111",
         text_secondary: "#888888",
         light_theme_blue: "#4284f5",
         theme_cyan: "#2FBD92",

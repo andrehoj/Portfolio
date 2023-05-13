@@ -1,47 +1,56 @@
-.heading-line-first {
-  background-image: linear-gradient(to left, #ed8936, #ed64a6);
+.heading-line {
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
-.heading-line-second {
-  background-image: linear-gradient(to left, #38b2ac, #0bc5ea);
+.heading-line::before {
+  line-height: 1;
+  display: block;
+  position: absolute;
+  color: #fff;
+  pointer-events: none;
+  width: 100%;
 }
 
-.heading-line-third {
-  background-image: linear-gradient(to left, #ecc94b, #48bb78);
-}
-
-/* move these style from .heading-line 
-   to .heading-line-gradient */
 .heading-line-gradient {
+  -webkit-text-fill-color: transparent;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-/* move this from .heading-line-first */
 .heading-line-first > .heading-line-gradient {
   background-image: linear-gradient(to left, #ed8936, #ed64a6);
+  animation: first_heading_gradient 12s infinite;
 }
 
-/* move this from .heading-line-second */
+.heading-line-first::before {
+  content: "Andrew.";
+  animation: first_heading_white_text 12s infinite;
+}
+
 .heading-line-second > .heading-line-gradient {
-  background-image: linear-gradient(to left, #8360c3, #2ebf91);
+  background-image: linear-gradient(to left, #38b2ac, #0bc5ea);
+  animation: second_heading_gradient 12s infinite;
 }
 
-/* move this from .heading-line-third */
+.heading-line-second::before {
+  content: "Web";
+  animation: second_heading_white_text 12s infinite;
+}
+
 .heading-line-third > .heading-line-gradient {
   background-image: linear-gradient(to left, #ecc94b, #48bb78);
+  animation: third_heading_gradient 12s infinite;
 }
 
-/* white text underneath the gradient text */
-.heading-line::before {
-  line-height: 1;
-  display: inline;
-  position: absolute;
-  color: #ffffff;
-  pointer-events: none;
-  width: 100%;
+.heading-line-third::before {
+  content: "Developer.";
+  animation: third_heading_white_text 12s infinite;
 }
+
 
 /* 1st heading gradient */
 @keyframes first_heading_gradient {
@@ -142,19 +151,4 @@
   100% {
     opacity: 1;
   }
-}
-
-.heading-line-first > .heading-line-gradient {
-  /* ... */
-  animation: first_heading_gradient 15s infinite;
-}
-
-.heading-line-second > .heading-line-gradient {
-  /* ... */
-  animation: second_heading_gradient 15s infinite;
-}
-
-.heading-line-third > .heading-line-gradient {
-  /* ... */
-  animation: third_heading_gradient 15s infinite;
 }

@@ -34,12 +34,13 @@ export default function Canvas({ bgColor }) {
   return (
     <ParticleImage
       className="block"
-      creationDuration={1000}
+      creationTimingFn={() => 0.5}
+      creationDuration={0}
       backgroundColor={bgColor}
       src={codeImage}
       width={width}
       height={height}
-      scale={biggerThan450 ? 0.50 : 0.27}
+      scale={biggerThan450 ? 0.5 : 0.27}
       entropy={5}
       maxParticles={1500}
       particleOptions={particleOptions}
