@@ -17,7 +17,7 @@
   }
 
   .sections {
-    @apply lg:ml-32 pt-24 min-h-screen text-center lg:text-left mx-5;
+    @apply lg:ml-32 pt-16 md:pt-24 min-h-screen text-center lg:text-left mx-5;
   }
 
   .nav-small {
@@ -79,11 +79,13 @@
 }
 
 body {
+
   background: linear-gradient(
     109.6deg,
     rgba(0, 0, 0, 0.93) 11.2%,
     rgb(48, 48, 48) 78.9%
   ); /* fallback for old browsers */
+  background-color: black;
 }
 
 .project-link:hover {

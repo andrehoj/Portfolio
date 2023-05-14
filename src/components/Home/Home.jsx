@@ -31,12 +31,12 @@ export default function Home() {
             </span>
           </span>
         </p>
-        <p className=" sm:my-4 my-0">
+        <p>
           based in <span> Ottawa, Ontario</span>&#x2e;
         </p>
       </div>
 
-      <span className="flex flex-col items-center lg:items-start ">
+      <span className="flex flex-col items-center lg:items-start mt-3">
         <Link to="/Contact">
           <button className="custom-btn-contact contact-btn tracking-tight">
             Contact Me
