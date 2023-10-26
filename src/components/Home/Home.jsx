@@ -13,38 +13,37 @@ export default function Home() {
       id="Home"
       className="sections"
     >
-      <div className="text-3xl sm:text-5xl font-main_font tracking-wider">
+      <div className="font-main_font text-3xl tracking-wider sm:text-5xl">
         <p>Hi,</p>
         <span>I'm </span>
-        <span className="heading-line heading-line-first sm:text-8xl md:text-9xl">
-          <span className="heading-line-gradient">Andrew.</span>
+        <span className="heading-line heading-line-first">
+          <span className="heading-line-gradient">Andrew</span>
         </span>{" "}
-        <p className="lg:mr-80">
-          <span>A </span>
-          <span className="heading-line heading-line-second sm:text-8xl md:text-9xl">
-            <span className="heading-line-gradient">Web</span>
+        <div className="lg:mr-80">
+          <span className="heading-line heading-line-second">
+            <span className="heading-line-gradient">Software</span>
           </span>{" "}
-          <span className="heading-line heading-line-third sm:text-8xl md:text-9xl">
+          <span className="heading-line heading-line-third">
             <span className="heading-line-gradient">Developer.</span>
-            <span className="hidden lg:block lg:absolute lg:-top-40 -right-96">
+
+            <span className="-right-96 hidden lg:absolute lg:-top-40 lg:block">
               <Canvas bgColor={"transparent"} />
             </span>
           </span>
-        </p>
+        </div>
         <p>
-          based in <span> Ottawa, Ontario</span>&#x2e;
+          based in <span>Ontario, <span className="">Canada</span></span>&#x2e;
         </p>
       </div>
 
-      <span className="flex flex-col items-center lg:items-start mt-3">
-        <Link to="/Contact">
-          <button className="custom-btn-contact contact-btn tracking-tight">
-            Contact Me
-          </button>
-        </Link>
-      </span>
+      <Link
+        className="mt-3 flex flex-col items-center lg:items-start"
+        to="/Contact"
+      >
+        <button className="custom-btn-contact">Contact Me</button>
+      </Link>
 
-      <div className="lg:hidden flex justify-center -mt-10 items-start z-0">
+      <div className="z-0 -mt-10 flex items-start justify-center lg:hidden">
         <Canvas bgColor={""} />
       </div>
     </motion.section>

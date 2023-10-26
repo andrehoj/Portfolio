@@ -13,7 +13,7 @@ export default function GlobeComponent() {
 
   useEffect(() => {
     globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 0.08;
+    globeEl.current.controls().autoRotateSpeed = .5;
     globeEl.current.pointOfView({ lat: 45.424721, lng: -75.695 });
   }, []);
 
@@ -22,7 +22,7 @@ export default function GlobeComponent() {
   const gData = [...Array(N).keys()].map(() => ({
     lat: 45.424721,
     lng: -75.695,
-    size: 40,
+    size: 30,
     color: ["#56D82D"],
   }));
 

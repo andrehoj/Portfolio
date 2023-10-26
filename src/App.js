@@ -4,14 +4,15 @@ import NavContainer from "./components/Nav/NavContainer";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 
 let msg = "%c Hello 👋";
+
 let styles = [
   "font-size: 12px",
   "font-family: monospace",
   "background: transparent",
   "display: inline-block",
-  "color: white",
+  "color: #FFFFFF",
   "padding: 8px 19px",
-  "border: 1px solid;",
+  "border: 1px dashed;",
   "border-radius: 5%"
 ].join(";");
 

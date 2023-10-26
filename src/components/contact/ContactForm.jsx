@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { validateEmail } from "../../utils/helpers.js";
 import { motion } from "framer-motion";
 
-export default function ContactForm({}) {
+export default function ContactForm() {
   const [formState, setFormState] = useState({
     name: "",
     from_email: "",
@@ -77,9 +77,9 @@ export default function ContactForm({}) {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="mt-5 flex flex-col md:w-9/12 2xl:w-8/12 gap-3 text-start 2xl:mx-0 mx-auto"
+      className="mx-auto mt-5 flex flex-col gap-3 text-start md:w-9/12 2xl:mx-0 2xl:w-8/12"
     >
-      <div className="relative z-10 mb-6 w-full group">
+      <div className="group relative z-10 mb-6 w-full">
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -87,19 +87,19 @@ export default function ContactForm({}) {
           type="text"
           name="name"
           id="name"
-          className="block py-2.5 px-0 w-full text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="peer block w-full appearance-none border-0 border-b border-gray-700 bg-transparent px-0 py-2.5   text-gray-400 focus:border-contact_gradient focus:outline-none  focus:ring-0"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="name"
-          className="peer-focus:font-medium absolute  text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="absolute top-3  -z-10 origin-[0] -translate-y-6 scale-75 transform border-contact_gradient text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-contact_gradient"
         >
           Name
         </label>
       </div>
-      <div className="relative z-0 mb-6 w-full group">
+      <div className="group relative z-0 mb-6 w-full">
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -107,19 +107,19 @@ export default function ContactForm({}) {
           type="email"
           name="email"
           id="email"
-          className="block py-2.5 px-0 w-full text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none  focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="peer block w-full appearance-none border-0 border-b border-gray-700 bg-transparent px-0 py-2.5  text-gray-400 focus:border-contact_gradient focus:outline-none  focus:ring-0"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="floating_email"
-          className="peer-focus:font-medium absolute  text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="absolute top-3  -z-10  origin-[0] -translate-y-6 scale-75 transform border-contact_gradient text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0  peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-contact_gradient"
         >
           Email
         </label>
       </div>
-      <div className="relative z-0 mb-6 w-full group">
+      <div className="group relative z-0 mb-6 w-full">
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -127,14 +127,14 @@ export default function ContactForm({}) {
           type="text"
           name="message"
           id=""
-          className="block py-2.5 px-0 w-full  text-gray-400 bg-transparent border-0 border-b border-gray-700 appearance-none   focus:outline-none focus:ring-0 focus:border-contact_gradient  peer"
+          className="peer block w-full appearance-none border-0 border-b border-gray-700 bg-transparent px-0 py-2.5   text-gray-400 focus:border-contact_gradient focus:outline-none  focus:ring-0"
           placeholder=" "
           required
           onBlur={handleChange}
         />
         <label
           htmlFor="message"
-          className="peer-focus:font-medium absolute  text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-contact_gradient border-contact_gradient  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="absolute top-3  -z-10  origin-[0] -translate-y-6 scale-75 transform border-contact_gradient text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0  peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-contact_gradient"
         >
           Message
         </label>
@@ -143,15 +143,15 @@ export default function ContactForm({}) {
       <div
         className={`font-light ${
           !errorMessage && !successMessage ? "justify-end" : "justify-between"
-        }   flex align-center `}
+        }   align-center flex `}
       >
         {successMessage && (
-          <div className="inline  sm:text-lg transition-all sm:text-xl font-black duration-100 mr-2 text-green-500">
+          <div className="mr-2  inline font-black text-green-500 transition-all duration-100 sm:text-lg sm:text-xl">
             {capitalizeFirstLetter(successMessage)}
           </div>
         )}
         {errorMessage && (
-          <div className="inline  sm:text-xl font-black transition-all duration-100 mr-2 text-red-500">
+          <div className="mr-2  inline font-black text-red-500 transition-all duration-100 sm:text-xl">
             {capitalizeFirstLetter(errorMessage)}
           </div>
         )}
@@ -163,14 +163,14 @@ export default function ContactForm({}) {
         >
           <button
             className={`${
-              loading ? "opacity-50 pointer-events-none" : null
-            } custom-btn px-3 flex items-center`}
+              loading ? "pointer-events-none opacity-50" : null
+            } flex items-center rounded-sm border border-theme_green px-4 py-1.5   text-lg  font-medium text-theme_green transition-all duration-200 ease-linear hover:bg-theme_green  hover:text-main_black active:scale-75`}
           >
             {loading ? (
               <div role="status">
                 <svg
                   aria-hidden="true"
-                  class="inline w-4 h-4 mr-2 text-gray-700 animate-spin  fill-theme_green"
+                  class="mr-2 inline h-4 w-4 animate-spin fill-theme_green  text-gray-700"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

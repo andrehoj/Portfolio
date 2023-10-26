@@ -17,18 +17,18 @@ export default function About() {
       id="About"
       className="sections "
     >
-      <div className="lg:mr-8 lg:mx-0 lg:w-9/12 m-auto ">
-        <p className="font-black text-6xl sm:text-8xl gradient-title-about mb-5 lg:w-fit font-main_font">
+      <div className="m-auto lg:mx-0 lg:mr-8 lg:w-9/12 ">
+        <p className="gradient-title-about mb-5 font-main_font text-6xl font-black sm:text-8xl lg:w-fit">
           About Me
         </p>
 
-        <div className="grid-cols-1 md:grid-cols-2 grid lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-text_secondary my-5">
+            <p className="my-5 text-text_secondary">
               Hi! Im Andrew, I'm an enthusiastic Web Developer who loves to
               solve problems using all kinds of web technologies and is obsessed
               with learning new ones! Some of my hobbies include reading, weight
@@ -48,7 +48,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             src={img}
-            className="mt-5 md:mt-0 about-img  justify-self-center lg:justify-self-start"
+            className="about-img mt-5 justify-self-center  md:mt-0 lg:justify-self-start"
             height={225}
             width={225}
             alt="image of myself"

@@ -8,19 +8,19 @@ export default function Skills() {
         initial={{ opacity: 0, y: 35 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-5xl font-main_font my-5 text-theme_pink"
+        className="my-5 font-main_font text-5xl text-theme_pink"
       >
         Skills and Tools
       </motion.p>
 
-      <div className="flex flex-wrap justify-center gap-10 mb-10 drop-shadow-2xl ">
+      <div className="mb-10 flex flex-wrap justify-center gap-10 drop-shadow-2xl ">
         {skillData.map((skill, i) => (
           <motion.div
             key={skill.name}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: i * 0.1 }}
-            className={`skill-icons flex flex-col items-center gap-1 justify-center justify-self-center ${skill.color}`}
+            className={`skill-icons flex flex-col items-center justify-center gap-1 justify-self-center ${skill.color}`}
           >
             {skill.image}
             <p className={`${skill.color} font-semibold`}>{skill.name}</p>

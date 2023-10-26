@@ -3,7 +3,6 @@ import GlobeComponent from "./GlobeComponent.jsx";
 import ContactForm from "./ContactForm.jsx";
 
 export default function Contact() {
-
   return (
     <motion.section
       initial={{ x: 30, opacity: 0 }}
@@ -11,20 +10,20 @@ export default function Contact() {
       exit={{ x: -30, opacity: 0 }}
       transition={{ duration: 0.5 }}
       id="Contact"
-      className="relative sections contact-section flex justify-center 2xl:justify-start items-center z-10 text-center 2xl:text-left 2xl:ml-32 m-0 overflow-x-hidden"
+      className="sections contact-section relative z-10 m-0 flex items-center justify-center overflow-x-hidden text-center 2xl:ml-32 2xl:justify-start 2xl:text-left"
     >
-      <div className={"w-9/12 2xl:w-7/12 self-start"}>
-        <h2 className="font-black text-5xl sm:text-7xl gradient-title-contact  w-fit m-auto 2xl:m-0 font-main_font">
+      <div className={"w-9/12 self-start 2xl:w-7/12"}>
+        <h2 className="gradient-title-contact m-auto w-fit font-main_font  text-5xl font-black sm:text-7xl 2xl:m-0">
           Contact me
         </h2>
 
-        <p className={`text-text_secondary text-lg mt-5`}>
+        <p className={`mt-5 text-lg text-text_secondary`}>
           If your interested in chatting you can reach me here{" "}
         </p>
 
         <a
           href="mailto:andrewhowran@gmail.com"
-          className="underline text-theme_yellow m-auto 2xl:m-0 text-base font-light block cursor-pointer w-fit"
+          className="m-auto block w-fit cursor-pointer text-base font-light text-theme_yellow underline 2xl:m-0"
           target={"_blank"}
           rel="noreferrer"
         >
@@ -34,7 +33,7 @@ export default function Contact() {
         <ContactForm />
       </div>
 
-      <div className="hidden min-w-fit xsm:block pointer-events-none absolute md:top-60 2xl:top-auto  2xl:right-40 z-0 opacity-20 2xl:opacity-80">
+      <div className="pointer-events-none absolute z-0 hidden min-w-fit opacity-20 xsm:block  md:top-60 2xl:right-40 2xl:top-auto 2xl:opacity-80">
         <GlobeComponent />
       </div>
     </motion.section>

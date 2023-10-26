@@ -1,12 +1,16 @@
 import TechIcons from "./TechIcons/TechIcons";
-import { motion, useInView, useAnimation } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+} from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
-import { useRef, useEffect } from "react";
-import useWindowSize from "../../../hooks/useWindowSize";
+import { useRef, useEffect, useState } from "react";
+import ProjectModal from "./ProjectModal";
 
 export default function SingleProject({ project }) {
   const projectRef = useRef(null);
-  const windowSize = useWindowSize();
 
   const isProjectInView = useInView(projectRef, {
     threshold: 0.3,
@@ -14,6 +18,8 @@ export default function SingleProject({ project }) {
 
   const projectAnimation = useAnimation();
   const projectImageAnimation = useAnimation();
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     if (isProjectInView) {
@@ -47,37 +53,49 @@ export default function SingleProject({ project }) {
       });
 
       projectImageAnimation.start({
+        transition: {
+          type: "spring",
+          duration: 0.3,
+          bounce: 0.1,
+          delay: 0.1,
+        },
         x: 30,
         opacity: 0,
       });
     }
-  }, [isProjectInView]);
+  }, [isProjectInView, projectAnimation, projectImageAnimation]);
+
+  function toggleModal() {
+    setModalOpen(!modalOpen);
+  }
 
   return (
-    <div className="mx-1 sm:mx-20 lg:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-full">
+    <div className="mx-1 grid max-w-full grid-cols-1 sm:mx-20 lg:mx-0 lg:grid-cols-2">
       <motion.div
         animate={projectAnimation}
         initial={{ opacity: 0, x: -30 }}
-        className="order-2 lg:order-1 md:min-w-[375px] px-8 py-5 rounded-lg shadow-sm shadow-theme_purple h-fit"
+        className="order-2 h-fit rounded-lg px-8 py-5 shadow-sm shadow-theme_purple md:min-w-[375px] lg:order-1"
       >
-        <div className="lg:w-9/12 w-100 flex flex-col justify-between text-center lg:text-start min-h-full">
-          <div className="flex flex-col gap-7 lg:gap-3 lg:w-11/12">
+        <div className="w-100 flex min-h-full flex-col justify-between text-center lg:w-9/12 lg:text-start">
+          <div className="flex flex-col gap-7 lg:w-11/12 lg:gap-3">
             <h1
-             
-              className={`text-2xl sm:text-4xl font-black text-theme_purple font-main_font`}
+              className={`font-main_font text-2xl font-black text-theme_purple sm:text-4xl`}
             >
               {project.title}
             </h1>
 
-            <p  ref={projectRef} className="font-text_secondary text-text_secondary font-semibold">
+            <p
+              ref={projectRef}
+              className="font-text_secondary font-semibold text-text_secondary"
+            >
               {project.description}
             </p>
             <div className="mb-2">
               {project.icons.length ? (
-                <p className="text-xl font-bold mb-2">Built with</p>
+                <p className="mb-2 text-xl font-bold">Built with</p>
               ) : null}
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-5 mb-5 ">
+              <div className="mb-5 flex flex-wrap justify-center gap-5 lg:justify-start ">
                 {project.icons.map((iconObj) => (
                   <TechIcons
                     icon={iconObj.name}
@@ -90,15 +108,16 @@ export default function SingleProject({ project }) {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-start justify-self-end gap-8 text-theme_cyan">
+          <div className="flex justify-center gap-8 justify-self-end text-theme_cyan lg:justify-start">
             <a
               href={`${project.repo}`}
               target="_blank"
-              className="flex flex-col justify-center  items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
+              rel="noreferrer"
+              className="group flex flex-col  items-center justify-center duration-150 hover:cursor-pointer hover:brightness-75"
             >
               <FaGithubAlt
                 size={"24"}
-                className="group-hover:-translate-y-1 duration-150"
+                className="duration-150 group-hover:-translate-y-1"
               />
               <p>Code</p>
             </a>
@@ -106,11 +125,12 @@ export default function SingleProject({ project }) {
             <a
               href={`${project.link}`}
               target="_blank"
-              className="flex flex-col justify-center  items-center hover:cursor-pointer hover:brightness-75 duration-150 group"
+              rel="noreferrer"
+              className="group flex flex-col  items-center justify-center duration-150 hover:cursor-pointer hover:brightness-75"
             >
               <FaRocket
                 size={"24"}
-                className="group-hover:-translate-y-1 duration-150"
+                className="duration-150 group-hover:-translate-y-1"
               />
               <p>App</p>
             </a>
@@ -120,17 +140,21 @@ export default function SingleProject({ project }) {
 
       <motion.div
         animate={projectImageAnimation}
-        className="lg:relative lg:-left-28 lg:top-5 order-1 lg:order-2 z-10 "
+        className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
       >
-        <div className="bg-theme_purple rounded-xl">
-          <a href={`${project.link ? project.link : null}`} target="_blank">
-            <img
-              className="rounded-xl project-link mb-5 lg:mb-0 transition-all duration-150 cursor-pointer "
-              src={project.img && require(`${project.img}`)}
-            />
-          </a>
+        <div
+          onClick={() => toggleModal()}
+          className="rounded-xl bg-theme_purple"
+        >
+          <img
+            className="project-link mb-5 cursor-pointer rounded-xl transition-all duration-150 lg:mb-0 "
+            src={project.img && require(`${project.img}`)}
+            alt="headshot of Andrew"
+          />
         </div>
       </motion.div>
+
+      <ProjectModal toggleModal={toggleModal} isVisible={modalOpen} project={project} />
     </div>
   );
 }

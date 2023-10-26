@@ -9,7 +9,7 @@
   line-height: 1;
   display: block;
   position: absolute;
-  color: #fff;
+  color: #FFFFFF;
   pointer-events: none;
   width: 100%;
 }
@@ -27,7 +27,7 @@
 }
 
 .heading-line-first::before {
-  content: "Andrew.";
+  content: "Andrew";
   animation: first_heading_white_text 12s infinite;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .heading-line-second::before {
-  content: "Web";
+  content: "Software";
   animation: second_heading_white_text 12s infinite;
 }
 
