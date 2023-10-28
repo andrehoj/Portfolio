@@ -5,7 +5,7 @@
 ## Built with
 
 <ul>
-  <li>React</li>
+  <li>Next js</li>
   <li>Tailwind</li>
   <li>Framer Motion</li>
 </ul>

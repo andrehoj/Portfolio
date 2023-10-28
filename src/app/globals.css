@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply text-main_white overflow-x-hidden bg-[#111] tracking-tighter antialiased;
+  }
+
+  .heading-line {
+    @apply relative inline-block bg-clip-text text-transparent;
+  }
+
+  .heading-line-first {
+    @apply bg-gradient-to-l;
+  }
+
+  .sections {
+    @apply mx-5 min-h-screen pt-16 text-center md:pt-24 lg:ml-32 lg:text-left;
+  }
+
+  .nav-small {
+    @apply fixed right-0 top-0 z-30 mx-3 flex w-full flex-col items-center justify-between gap-4;
+  }
+
+  .contact-section {
+    @apply overflow-y-hidden;
+  }
+
+  .icon-container {
+    @apply flex flex-col hover:cursor-pointer;
+  }
+
+  .icon-container-md {
+    @apply flex w-20 flex-col text-center hover:cursor-pointer;
+  }
+
+  .sidebar-icon {
+    @apply place-self-center self-center justify-self-center;
+  }
+
+  .icon-active {
+    @apply text-main_white;
+  }
+
+  .icon-active-md {
+    @apply text-main_white;
+  }
+
+  .contact-form {
+    @apply border-main_white dark:border-b-dark_theme_cyan focus:border-main_white dark:focus:border-dark_theme_cyan dark:bg-main_black outline-none focus:outline-none;
+  }
+
+  .custom-btn-contact {
+    @apply border-main_white text-main_white hover:bg-main_white hover:text-main_black relative z-50 inline rounded-sm border px-4 py-1.5 text-lg tracking-tight transition-all duration-200 ease-linear active:scale-75;
+  }
+
+  .heading-line {
+    @apply text-6xl font-black subpixel-antialiased  sm:text-8xl md:text-9xl;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  border-style: outset;
+}
+
+.about-img {
+  --b: 3px; /* border thickness*/
+  --s: 125px; /* size of the corner*/
+  --g: 10px; /* the gap*/
+  --c: #ed8936;
+
+  padding: calc(var(--b) + var(--g));
+  background-image: conic-gradient(
+      from 90deg at top var(--b) left var(--b),
+      #0000 25%,
+      var(--c) 0
+    ),
+    conic-gradient(
+      from -90deg at bottom var(--b) right var(--b),
+      #0000 25%,
+      var(--c) 0
+    );
+  background-position: var(--_p, 0%) var(--_p, 0%),
+    calc(100% - var(--_p, 0%)) calc(100% - var(--_p, 0%));
+  background-size: var(--s) var(--s);
+  background-repeat: no-repeat;
+  transition: background-position 0.3s var(--_i, 0.3s),
+    background-size 0.3s calc(0.3s - var(--_i, 0.3s));
+}
+
+img.alt {
+  background-image: conic-gradient(
+      from 180deg at top var(--b) right var(--b),
+      #0000 25%,
+      var(--c) 0
+    ),
+    conic-gradient(
+      from 0deg at bottom var(--b) left var(--b),
+      #0000 25%,
+      var(--c) 0
+    );
+  background-position: calc(100% - var(--_p, 0%)) var(--_p, 0%),
+    var(--_p, 0%) calc(100% - var(--_p, 0%));
+}
+
+.project-link:hover {
+  transform: translate(-0.5rem, -0.5ex);
+}
+
+.gradient-title-about {
+  background-image: linear-gradient(to left, #ed8936, #ed64a6);
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-title-projects {
+  background-image: linear-gradient(to left, #8360c3, #2ebf91);
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-title-contact {
+  background-image: linear-gradient(to left, #ecc94b, #48bb78);
+  color: transparent;
+  background-clip: text;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #565656;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}

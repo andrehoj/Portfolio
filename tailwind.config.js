@@ -1,7 +1,9 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: "class",
+const config = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     screens: {
       xsm: "350px",
@@ -18,7 +20,12 @@ module.exports = {
 
       "2xl": "1536px",
     },
-    fontFamily: { main_font: "Bebas Neue", text_secondary: "Roboto" ,  font_dev: "VT323" },
+    
+      fontFamily: {
+        display: "var(--display)",
+        body: "var(--body)",
+      },
+    
     extend: {
       colors: {
         main_white: "#FFFFFF",
@@ -32,7 +39,6 @@ module.exports = {
         secondary_text: "rgb(136 136 136)",
         theme_pink: "#ED6D8C",
         theme_purple: "#6F74B7",
-        github_color: "#1b1f23",
         linkedIn_color: "#0077B5",
         theme_yellow: "#C5C454",
         theme_green: "#4DBB76",
@@ -67,9 +73,7 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss"),
-    require("autoprefixer"),
-    require('prettier-plugin-tailwindcss')
-  ],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 };
+
+export default config;
