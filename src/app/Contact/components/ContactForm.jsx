@@ -158,9 +158,9 @@ export default function ContactForm() {
         )}
 
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.1 }}
+          transition={{ delay: 0.7, duration: 0.3}}
         >
           <button
             className={`${

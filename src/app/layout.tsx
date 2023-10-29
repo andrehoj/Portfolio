@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "../components/Nav/NavContainer";
-import "./globals.css";
 import { Roboto, Bebas_Neue } from "next/font/google";
+import "./globals.css";
 
 const roboto = Roboto({
   variable: "--body",
@@ -17,7 +17,7 @@ const bebas_Neue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: "Andrew Howran",
-  description: "Andrews Portfolio",
+  description: "Andrew Howran Web Developer",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.className} ${bebas_Neue.variable} `}>
       <body>
         <Nav />
-        {children}
+        <main className="sections">{children}</main>
       </body>
     </html>
   );

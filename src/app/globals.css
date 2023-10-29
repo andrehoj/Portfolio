@@ -7,6 +7,10 @@
     @apply text-main_white overflow-x-hidden bg-[#111] tracking-tighter antialiased;
   }
 
+  .page-title {
+    @apply font-black font-display text-6xl xsm:text-8xl w-fit;
+  }
+
   .heading-line {
     @apply relative inline-block bg-clip-text text-transparent;
   }
@@ -21,10 +25,6 @@
 
   .nav-small {
     @apply fixed right-0 top-0 z-30 mx-3 flex w-full flex-col items-center justify-between gap-4;
-  }
-
-  .contact-section {
-    @apply overflow-y-hidden;
   }
 
   .icon-container {

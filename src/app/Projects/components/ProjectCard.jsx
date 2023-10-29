@@ -2,8 +2,7 @@
 
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
-import { useRef, useEffect, useState } from "react";
-import ProjectModal from "./ProjectModal";
+import { useRef, useEffect } from "react";
 import Image from "next/image";
 
 export default function ProjectCard({ project }) {
@@ -16,8 +15,6 @@ export default function ProjectCard({ project }) {
   const projectAnimation = useAnimation();
   const projectImageAnimation = useAnimation();
 
-  const [modalOpen, setModalOpen] = useState(false);
-
   useEffect(() => {
     if (isProjectInView) {
       projectAnimation.start({
@@ -25,9 +22,9 @@ export default function ProjectCard({ project }) {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 0.3,
-          bounce: 0.1,
-          delay: 0.1,
+          duration: 0.5,
+          bounce: 0.3,
+          delay: 0.2,
         },
       });
 
@@ -36,9 +33,9 @@ export default function ProjectCard({ project }) {
         opacity: 1,
         transition: {
           type: "spring",
-          duration: 0.3,
-          bounce: 0.1,
-          delay: 0.1,
+          duration: 0.5,
+          bounce: 0.3,
+          delay: 0.2,
         },
       });
     }
@@ -52,19 +49,15 @@ export default function ProjectCard({ project }) {
       projectImageAnimation.start({
         transition: {
           type: "spring",
-          duration: 0.3,
-          bounce: 0.1,
-          delay: 0.1,
+          duration: 0.5,
+          bounce: 0.3,
+          delay: 0.2,
         },
         x: 30,
         opacity: 0,
       });
     }
   }, [isProjectInView, projectAnimation, projectImageAnimation]);
-
-  function toggleModal() {
-    setModalOpen(!modalOpen);
-  }
 
   return (
     <div className="mx-1 grid max-w-full grid-cols-1 sm:mx-20 lg:mx-0 lg:grid-cols-2">
@@ -76,7 +69,7 @@ export default function ProjectCard({ project }) {
         <div className="w-100 flex min-h-full flex-col justify-between text-center lg:w-9/12 lg:text-start">
           <div className="flex flex-col gap-7 lg:w-11/12 lg:gap-3">
             <h1
-              className={`font-display text-2xl font-black text-theme_purple sm:text-4xl`}
+              className={`font-display text-2xl font-black text-theme_purple sm:text-4xl `}
             >
               {project.title}
             </h1>
@@ -134,27 +127,17 @@ export default function ProjectCard({ project }) {
 
       <motion.div
         animate={projectImageAnimation}
+        initial={{ opacity: 0, x: 30 }}
         className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
       >
-        {/* <div
-          onClick={() => toggleModal()}
-          className="w-fit rounded-xl bg-theme_purple"
-        > */}
-          <Image
-            className="mb-5  rounded-xl transition-all duration-150 lg:mb-0 "
-            src={project.img && `${project.img}`}
-            alt={`${project.title}`}
-            height={600}
-            width={800}
-          />
-        {/* </div> */}
+        <Image
+          className="mb-5  rounded-xl transition-all duration-150 lg:mb-0 "
+          src={project.img && `${project.img}`}
+          alt={`${project.title}`}
+          height={600}
+          width={800}
+        />
       </motion.div>
-
-      <ProjectModal
-        toggleModal={toggleModal}
-        isVisible={modalOpen}
-        project={project}
-      />
     </div>
   );
 }

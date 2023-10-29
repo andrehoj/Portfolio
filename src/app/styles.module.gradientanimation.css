@@ -47,7 +47,7 @@
 }
 
 .heading-line-third::before {
-  content: "Developer.";
+  content: "Developer";
   animation: third_heading_white_text 12s infinite;
 }
 

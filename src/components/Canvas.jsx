@@ -1,6 +1,7 @@
+"use client";
+
 import ParticleImage, { Vector, forces } from "react-particle-image";
 import { useMediaPredicate } from "react-media-hook";
-import Image from "next/image";
 
 function motionForce(x, y) {
   return forces.disturbance(x, y, 25);
