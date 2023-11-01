@@ -1,5 +1,5 @@
 import SingleProject from "./components/ProjectCard";
-import { projectData } from "./projectData";
+import { projectData } from "./utils/projectData";
 
 export default function page() {
   return (

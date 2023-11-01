@@ -11,12 +11,11 @@ export default function ContactForm() {
     from_email: "",
     message: "",
   });
-
   const [loading, setLoading] = useState(false);
-
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
+  const form = useRef<HTMLFormElement | null>(null);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
 
@@ -40,14 +39,12 @@ export default function ContactForm() {
     }
   };
 
-  const form = useRef();
-
-  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
+  async function sendEmail(e: FormEvent) {
     e.preventDefault();
+
     setLoading(true);
 
     if (errorMessage) {
-      setErrorMessage("You must fill out all fields.");
       setLoading(false);
       return null;
     }
@@ -56,12 +53,13 @@ export default function ContactForm() {
       const result = await emailjs.sendForm(
         "service_bbrsffm",
         "template_8y9jxkw",
-        form.current,
+        form.current as HTMLFormElement,
         "8268wx-YQfeyZJ_Gb"
       );
 
       if (result.text === "OK" && result.status === 200) {
-        e.target.reset();
+        const target = e.target as HTMLFormElement;
+        target.reset();
         setErrorMessage("");
         setSuccessMessage("I got your message! 🎉");
         setLoading(false);
@@ -74,7 +72,7 @@ export default function ContactForm() {
         setLoading(false);
       }
     }
-  };
+  }
 
   return (
     <form

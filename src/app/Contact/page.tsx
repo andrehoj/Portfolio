@@ -1,7 +1,7 @@
 import GlobeComponent from "./components/GlobeComponent";
 import ContactForm from "./components/ContactForm";
 
-export default function Contact() {
+export default function page() {
   return (
     <div className="min-h-screen lg:text-left overflow-y-hidden relative z-10 flex items-center justify-center overflow-x-hidden text-center  2xl:justify-start 2xl:text-left">
       <div className="w-9/12 self-start 2xl:w-7/12">

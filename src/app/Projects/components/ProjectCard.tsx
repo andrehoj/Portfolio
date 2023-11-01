@@ -3,11 +3,9 @@
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useRef, useEffect } from "react";
-import Image from "next/image";
-import { ProjectType } from "../projectData";
 import { Carousel } from "@material-tailwind/react";
 
-export default function ProjectCard({ project }: { project: ProjectType }) {
+export default function ProjectCard({ project }) {
   const projectRef = useRef(null);
 
   const isProjectInView = useInView(projectRef);
@@ -146,7 +144,7 @@ export default function ProjectCard({ project }: { project: ProjectType }) {
             </div>
           )}
         >
-          {project.images.map((img) => (
+          {project.images.map((img: string) => (
             <img
               className="mb-5 h-fit w-fit rounded-xl transition-all duration-150 lg:mb-0 "
               src={img && `${img}`}

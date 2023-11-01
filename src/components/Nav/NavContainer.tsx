@@ -35,7 +35,7 @@ export default function NavContainer() {
           toggle={setOpen}
           duration={0.3}
           label="Show menu"
-          className="z-50 h-full w-full"
+        
           color="#FFFFFF"
         />
       </div>

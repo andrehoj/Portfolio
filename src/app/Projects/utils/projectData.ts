@@ -3,8 +3,6 @@ import {
   findYourEstateIcons,
   stopShopIcons,
   gymTrackerIcons,
-  portfolioIcons,
-  WordsIcons,
   IconType,
 } from "./projectIconData";
 
@@ -12,7 +10,7 @@ export interface ProjectType {
   title: String;
   link: String;
   repo: String;
-  images: [String];
+  images: String[];
   icons: [IconType];
   description: String;
 }

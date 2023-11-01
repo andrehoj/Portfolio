@@ -24,10 +24,12 @@ export const devHangOutIcons = [
     ),
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
     name: "Bootstrap",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
     name: "jQuery",
   },
@@ -38,7 +40,9 @@ export const devHangOutIcons = [
   },
 
   {
+    isIcon: false,
     name: "Sessions/Cookies",
+    link: "",
   },
 
   {
@@ -48,11 +52,13 @@ export const devHangOutIcons = [
   },
 
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     name: "MySQL",
   },
 
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg",
     name: "Sequelize",
   },
@@ -60,14 +66,17 @@ export const devHangOutIcons = [
 
 export const findYourEstateIcons = [
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
     name: "Material UI",
   },
   {
+    isIcon: false,
     link: "https://www.vectorlogo.zone/logos/rapidapi/rapidapi-icon.svg",
     name: "Rapid Api",
   },
@@ -75,19 +84,23 @@ export const findYourEstateIcons = [
 
 export const stopShopIcons = [
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
     name: "GraphQL",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     name: "MongoDB",
   },
 
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     name: "Tailwind CSS",
   },
@@ -105,10 +118,12 @@ export const stopShopIcons = [
 
 export const portfolioIcons = [
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     name: "React",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     name: "Tailwind CSS",
   },
@@ -116,6 +131,7 @@ export const portfolioIcons = [
 
 export const BudgetTrackerIcons = [
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
     name: "MongoDB",
   },
@@ -126,19 +142,23 @@ export const BudgetTrackerIcons = [
   },
 
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
     name: "HTML",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
     name: "CSS",
   },
   {
+    isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     name: "JavaScript",
   },
 
   {
+    isIcon: false,
     link: "",
     name: "Chart.js",
   },
@@ -146,50 +166,59 @@ export const BudgetTrackerIcons = [
 
 export const gymTrackerIcons = [
   {
+    isIcon: false,
     link: "",
     name: "React",
   },
 
   {
+    isIcon: false,
     name: "Mantine UI",
   },
 
   {
+    isIcon: false,
     link: "",
     name: "Tailwind",
   },
 
   {
     link: "",
+    isIcon: false,
     name: "Apollo",
   },
   {
+    isIcon: false,
     link: "",
     name: "GraphQL",
   },
 
   {
+    isIcon: false,
     link: "",
     name: "JWT",
   },
 
   {
     link: "",
+    isIcon: false,
     name: "MongoDB",
   },
   {
+    isIcon: false,
     link: "",
     name: "Express",
   },
   {
+    isIcon: false,
     link: "",
     name: "Mongoose",
   },
 ];
 
 export const WordsIcons = [
-  { name: "Vite", link: "" },
-  { name: "TypeScript", link: "" },
-  { name: "React", link: "" },
-  { name: "Daisy ui", link: "" },
+  { name: "Vite", isIcon: false, link: "" },
+  { name: "TypeScript", isIcon: false, link: "" },
+  { name: "React", isIcon: false, link: "" },
+  { name: "Daisy ui", isIcon: false, link: "" },
 ];

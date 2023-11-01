@@ -1,5 +1,5 @@
 "use client";
-import { skillData } from "../skillsData";
+import { skillData } from "../utils/skillsData";
 import { motion } from "framer-motion";
 
 export default function Skills() {
