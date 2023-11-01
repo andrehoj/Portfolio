@@ -1,9 +1,13 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
-import { useRef, useEffect } from "react";
-import { Carousel } from "@material-tailwind/react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import { IconType } from "../utils/projectIconData";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function ProjectCard({ project }) {
   const projectRef = useRef(null);
@@ -79,13 +83,14 @@ export default function ProjectCard({ project }) {
               {project.description}
             </p>
             <div className="mb-2">
-              {project.icons.length ? (
-                <p className="mb-2 text-xl font-bold">Built with</p>
-              ) : null}
+              <p className="mb-2 text-xl font-bold">Built with</p>
 
               <div className="mb-5 flex flex-wrap justify-center gap-5 lg:justify-start ">
-                {project.icons.map((icon) => (
-                  <span className="bg-transparent text-theme_cyan text-xs  mr-2 px-3.5 py-1 rounded  border border-theme_cyan">
+                {project.icons.map((icon: IconType) => (
+                  <span
+                    key={Math.random() * 50}
+                    className="bg-transparent text-theme_cyan text-xs  mr-2 px-3.5 py-1 rounded  border border-theme_cyan"
+                  >
                     {icon.name}
                   </span>
                 ))}
@@ -94,7 +99,7 @@ export default function ProjectCard({ project }) {
           </div>
 
           <div className="flex justify-center gap-8 justify-self-end text-theme_cyan lg:justify-start">
-            <a
+            <Link
               href={`${project.repo}`}
               target="_blank"
               rel="noreferrer"
@@ -105,9 +110,9 @@ export default function ProjectCard({ project }) {
                 className="duration-150 group-hover:-translate-y-1"
               />
               <p>Code</p>
-            </a>
+            </Link>
 
-            <a
+            <Link
               href={`${project.link}`}
               target="_blank"
               rel="noreferrer"
@@ -118,38 +123,21 @@ export default function ProjectCard({ project }) {
                 className="duration-150 group-hover:-translate-y-1"
               />
               <p>App</p>
-            </a>
+            </Link>
           </div>
         </div>
       </motion.div>
+
       <motion.div
         animate={projectImageAnimation}
         initial={{ opacity: 0, x: 30 }}
         className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
       >
-        <Carousel
-          className="h-fit w-fit rounded-md"
-          transition={{ duration: 0.2 }}
-          navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-              {new Array(length).fill("").map((_, i) => (
-                <span
-                  key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                    activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                  }`}
-                  onClick={() => setActiveIndex(i)}
-                />
-              ))}
+        <Carousel>
+          {project.images.map((image: string) => (
+            <div>
+              <Image src={image} alt="project" width={800} height={500} />
             </div>
-          )}
-        >
-          {project.images.map((img: string) => (
-            <img
-              className="mb-5 h-fit w-fit rounded-xl transition-all duration-150 lg:mb-0 "
-              src={img && `${img}`}
-              alt={`${project.title}`}
-            />
           ))}
         </Carousel>
       </motion.div>

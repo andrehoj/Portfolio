@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 
@@ -13,21 +13,24 @@ export function useWindowSize() {
     width: undefined,
     height: undefined,
   });
+
   useEffect(() => {
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+    if (typeof window !== "undefined") {
+      // Handler to call on window resize
+      const handleResize = function () {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+      // Call handler right away so state gets updated with init ial window size
+      handleResize();
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
     }
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-    // Call handler right away so state gets updated with init ial window size
-    handleResize();
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
   }, []); // Empty array ensures that effect is only run on mount
 
   return windowSize;

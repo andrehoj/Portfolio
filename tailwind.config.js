@@ -1,6 +1,4 @@
-const withMT = require("@material-tailwind/react/utils/withMT");
-
-export default withMT({
+export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -76,4 +74,4 @@ export default withMT({
     },
   },
   plugins: [require("tailwindcss"), require("autoprefixer")],
-});
+};

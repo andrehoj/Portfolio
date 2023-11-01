@@ -1,5 +1,5 @@
-import SingleProject from "./components/ProjectCard";
 import { projectData } from "./utils/projectData";
+import ProjectCard from "./components/ProjectCard";
 
 export default function page() {
   return (
@@ -9,7 +9,7 @@ export default function page() {
       </h2>
       <div className="grid grid-cols-1 gap-24">
         {projectData.map((project) => (
-          <SingleProject project={project} key={project.link} />
+          <ProjectCard project={project} key={project.link} />
         ))}
       </div>
     </section>

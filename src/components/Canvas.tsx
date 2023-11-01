@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import ParticleImage, { Vector, forces } from "react-particle-image";
 import { useMediaPredicate } from "react-media-hook";

@@ -25,7 +25,7 @@ export default function page() {
         <ContactForm />
       </div>
 
-      <div className="pointer-events-none absolute  z-0 hidden min-w-fit opacity-20 xsm:block  md:top-90 2xl:right-10  2xl:opacity-80">
+      <div className="pointer-events-none absolute z-0 hidden min-w-fit opacity-10 sm:block 2xl:right-10 2xl:opacity-70">
         <GlobeComponent />
       </div>
     </div>

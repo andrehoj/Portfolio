@@ -1,8 +1,8 @@
 "use client";
 
-import Globe from "react-globe.gl";
 import { useEffect, useRef } from "react";
-import { useWindowSize } from "../../../hooks/useWindowSize";
+let Globe = () => null;
+if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
 
 const markerSvg = `<svg viewBox="-4 0 36 36">
 <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
@@ -11,7 +11,6 @@ const markerSvg = `<svg viewBox="-4 0 36 36">
 
 export default function GlobeComponent() {
   const globeEl = useRef();
-  const windowSize = useWindowSize();
 
   useEffect(() => {
     if (globeEl.current) {
@@ -26,6 +25,7 @@ export default function GlobeComponent() {
   const hours = new Date().getHours();
 
   const isDayTime = hours > 6 && hours < 20;
+
   return (
     <Globe
       ref={globeEl}
@@ -39,7 +39,6 @@ export default function GlobeComponent() {
         return { lat: 45, lng: -75, altitude: 2.5 };
       }}
       width={750}
-      height={windowSize.width * 0.48}
       backgroundColor={"rgba(0,0,0,0)"}
       animateIn={true}
       waitForGlobeReady={true}
