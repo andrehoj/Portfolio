@@ -4,7 +4,7 @@
 
 @layer components {
   body {
-    @apply text-main_white overflow-x-hidden bg-[#111] tracking-tighter antialiased;
+    @apply text-main_white font-body overflow-x-hidden bg-[#111] tracking-tighter antialiased;
   }
 
   .page-title {
@@ -52,7 +52,7 @@
   }
 
   .custom-btn-contact {
-    @apply border-main_white text-main_white hover:bg-main_white hover:text-main_black relative z-50 inline rounded-sm border px-4 py-1.5 text-lg tracking-tight transition-all duration-200 ease-linear active:scale-75;
+    @apply border-main_white text-main_white hover:bg-main_white hover:text-main_black relative z-50 inline rounded-sm border px-4 py-1.5 text-2xl tracking-tight transition-all duration-200 ease-linear active:scale-75;
   }
 
   .heading-line {

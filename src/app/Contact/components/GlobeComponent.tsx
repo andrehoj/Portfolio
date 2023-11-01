@@ -1,7 +1,7 @@
 "use client";
 
 import Globe from "react-globe.gl";
-import { useRef, useEffect } from "react";
+import { useEffect, createRef, useRef } from "react";
 import useWindowSize from "../../../hooks/useWindowSize";
 
 const markerSvg = `<svg viewBox="-4 0 36 36">
@@ -10,13 +10,15 @@ const markerSvg = `<svg viewBox="-4 0 36 36">
 </svg>`;
 
 export default function GlobeComponent() {
-  const globeEl = useRef();
+  const globeEl = useRef<HTMLElement>(null);
   const window = useWindowSize();
 
   useEffect(() => {
-    globeEl.current.controls().autoRotate = true;
-    globeEl.current.controls().autoRotateSpeed = 0.5;
-    globeEl.current.pointOfView({ lat: 45.424721, lng: -75.695 });
+    if (globeEl.current) {
+      globeEl.current.controls().autoRotate = true;
+      globeEl.current.controls().autoRotateSpeed = 0.5;
+      globeEl.current.pointOfView({ lat: 45.424721, lng: -75.695 });
+    }
   }, []);
 
   const N = 1;

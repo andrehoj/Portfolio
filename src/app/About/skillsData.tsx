@@ -17,7 +17,12 @@ import {
 import { IoLogoJavascript } from "react-icons/io";
 import { GrMysql } from "react-icons/gr";
 
-export const skillData = [
+type Skill = {
+  image:  JSX.Element;
+  name: String;
+  color: String;
+};
+export const skillData: Skill[] = [
   {
     image: <SiHtml5 size={35} />,
     name: "HTML",

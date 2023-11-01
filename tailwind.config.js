@@ -1,4 +1,6 @@
-const config = {
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+export default withMT({
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,12 +22,12 @@ const config = {
 
       "2xl": "1536px",
     },
-    
-      fontFamily: {
-        display: "var(--display)",
-        body: "var(--body)",
-      },
-    
+
+    fontFamily: {
+      display: "var(--display)",
+      body: "var(--body)",
+    },
+
     extend: {
       colors: {
         main_white: "#FFFFFF",
@@ -74,6 +76,4 @@ const config = {
     },
   },
   plugins: [require("tailwindcss"), require("autoprefixer")],
-};
-
-export default config;
+});

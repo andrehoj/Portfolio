@@ -9,7 +9,7 @@ export default function page() {
       </h2>
       <div className="grid grid-cols-1 gap-24">
         {projectData.map((project) => (
-          <SingleProject project={project} key={project.title} />
+          <SingleProject project={project} key={project.link} />
         ))}
       </div>
     </section>

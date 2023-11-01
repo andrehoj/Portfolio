@@ -5,24 +5,42 @@ import {
   gymTrackerIcons,
   portfolioIcons,
   WordsIcons,
+  IconType,
 } from "./projectIconData";
+
+export interface ProjectType {
+  title: String;
+  link: String;
+  repo: String;
+  images: [String];
+  icons: [IconType];
+  description: String;
+}
 
 export const projectData = [
   {
     title: "Strength Log",
-    font: "",
     link: "https://gymtracker-production.up.railway.app/",
     repo: "https://github.com/AgentA12/gym_tracker",
-    img: "/Strength_log.png",
+    images: [
+      "/Strength_log_3.png",
+      "/Strength_log_2.png",
+      "/Strength_log_4.png",
+      "/Strength_log_5.png",
+      "/Strength_log_1.png",
+    ],
     icons: gymTrackerIcons,
     description:
-      "Strength Log is an fitness tracker application I made to help me keep track of my workouts. Most fitness apps have to many features I dont use so I wanted something simple and easy.",
+      "Strength Log is an fitness application I made to help me keep track of my workouts. Most fitness apps have to many features I dont use so I wanted something simple for myself.",
   },
 
   {
     title: "Developer Hangout",
-    font: "font-dev",
-    img: "/dev-hangout-image-1.png",
+    images: [
+      "/dev-hangout-image-1.png",
+      "/dev-hangout-image-3.png",
+      "/dev-hangout-image-2.png",
+    ],
     link: "https://devhangout-production.up.railway.app/",
     repo: "https://github.com/AgentA12/Dev_Hangout",
     icons: devHangOutIcons,
@@ -32,10 +50,9 @@ export const projectData = [
 
   {
     title: "Find Your Estate",
-    font: "",
     link: "https://agenta12.github.io/Find_An_Estate/",
     repo: "https://github.com/AgentA12/Find_An_Estate",
-    img: "/find-your-estate-1.png",
+    images: ["/find-your-estate-1.png", "/find-your-estate-2.png"],
     icons: findYourEstateIcons,
     description:
       "A real estate application where users can search for properties in the UAE area. Users can filter their search by Max and Min price, number of rooms and baths and either for rent or sale.",
@@ -43,35 +60,16 @@ export const projectData = [
 
   {
     title: "Stop Shop",
-    font: "",
     link: "https://stopshop-production.up.railway.app/",
     repo: "https://github.com/AgentA12/Stop_Shop",
-    img: "/stop-shop-image-1.png",
+    images: [
+      "/stop-shop-image-1.png",
+      "/stop-shop-image-2.png",
+      "/stop-shop-image-3.png",
+      "/stop-shop-image-4.png",
+    ],
     icons: stopShopIcons,
     description:
       "An Ecommerce full stack app that allows users to shop online for a variety of products. ",
   },
-
-  {
-    title: "My Portfolio",
-    font: "",
-    link: "https://andrewhowran.dev",
-    repo: "https://github.com/AgentA12/Portfolio",
-    img: "/Portfolio.png",
-    icons: portfolioIcons,
-    description:
-      "This portfolio! I had lots of fun making this with framer motion and cool react libraries.",
-  },
-
-  {
-    title: "Words",
-    font: "",
-    img: "/Words.jpg",
-    link: "#",
-    repo: "#",
-    icons: WordsIcons,
-    description: "Coming soon",
-  },
-
-  
 ];

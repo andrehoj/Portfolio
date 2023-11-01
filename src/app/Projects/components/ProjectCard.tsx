@@ -4,13 +4,13 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { FaGithubAlt, FaRocket } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
+import { ProjectType } from "../projectData";
+import { Carousel } from "@material-tailwind/react";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project }: { project: ProjectType }) {
   const projectRef = useRef(null);
 
-  const isProjectInView = useInView(projectRef, {
-    threshold: 0.3,
-  });
+  const isProjectInView = useInView(projectRef);
 
   const projectAnimation = useAnimation();
   const projectImageAnimation = useAnimation();
@@ -124,19 +124,36 @@ export default function ProjectCard({ project }) {
           </div>
         </div>
       </motion.div>
-
       <motion.div
         animate={projectImageAnimation}
         initial={{ opacity: 0, x: 30 }}
         className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
       >
-        <Image
-          className="mb-5  rounded-xl transition-all duration-150 lg:mb-0 "
-          src={project.img && `${project.img}`}
-          alt={`${project.title}`}
-          height={600}
-          width={800}
-        />
+        <Carousel
+          className="h-fit w-fit rounded-md"
+          transition={{ duration: 0.2 }}
+          navigation={({ setActiveIndex, activeIndex, length }) => (
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+              {new Array(length).fill("").map((_, i) => (
+                <span
+                  key={i}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                  }`}
+                  onClick={() => setActiveIndex(i)}
+                />
+              ))}
+            </div>
+          )}
+        >
+          {project.images.map((img) => (
+            <img
+              className="mb-5 h-fit w-fit rounded-xl transition-all duration-150 lg:mb-0 "
+              src={img && `${img}`}
+              alt={`${project.title}`}
+            />
+          ))}
+        </Carousel>
       </motion.div>
     </div>
   );

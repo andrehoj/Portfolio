@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { capitalizeFirstLetter, validateEmail } from "../../../utils/helpers";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { FormEvent, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ContactForm() {
@@ -17,30 +17,32 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
-  const handleChange = ({ target }) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+
     setSuccessMessage("");
-    if (target.name === "user_email") {
-      const isValid = validateEmail(target.value);
+    if (e.target.name === "user_email") {
+      const isValid = validateEmail(e.target.value);
       if (!isValid) {
         setErrorMessage("Email is invalid.");
       } else {
         setErrorMessage("");
       }
     } else {
-      if (!target.value.trim().length) {
-        setErrorMessage(`${target.name} is required.`);
+      if (!e.target.value.trim().length) {
+        setErrorMessage(`${e.target.name} is required.`);
       } else {
         setErrorMessage("");
       }
     }
     if (!errorMessage) {
-      setFormState({ ...formState, [target.name]: target.value });
+      setFormState({ ...formState, [e.target.name]: e.target.value });
     }
   };
 
   const form = useRef();
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -160,7 +162,7 @@ export default function ContactForm() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.3}}
+          transition={{ delay: 0.7, duration: 0.3 }}
         >
           <button
             className={`${
@@ -171,7 +173,7 @@ export default function ContactForm() {
               <div role="status">
                 <svg
                   aria-hidden="true"
-                  class="mr-2 inline h-4 w-4 animate-spin fill-theme_green  text-gray-700"
+                  className="mr-2 inline h-4 w-4 animate-spin fill-theme_green  text-gray-700"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -185,7 +187,7 @@ export default function ContactForm() {
                     fill="currentFill"
                   />
                 </svg>
-                <span class="sr-only">Loading...</span>
+                <span className="sr-only">Loading...</span>
               </div>
             ) : null}{" "}
             SEND

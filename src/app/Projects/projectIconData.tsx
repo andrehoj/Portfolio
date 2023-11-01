@@ -5,6 +5,12 @@ import {
   SiApollographql,
 } from "react-icons/si";
 
+export interface IconType {
+  isIcon: Boolean;
+  name: String;
+  link: String;
+}
+
 export const devHangOutIcons = [
   {
     isIcon: true,
@@ -133,7 +139,7 @@ export const BudgetTrackerIcons = [
   },
 
   {
-    link: '',
+    link: "",
     name: "Chart.js",
   },
 ];
@@ -178,21 +184,6 @@ export const gymTrackerIcons = [
   {
     link: "",
     name: "Mongoose",
-  },
-];
-
-export const dataStructureVisualizerIcons = [
-  {
-    name: "React",
-    link: "",
-  },
-  {
-    name: "TypeScript",
-    link: "",
-  },
-
-  {
-    name: "Styled Components",
   },
 ];
 

@@ -1,5 +1,5 @@
-import GlobeComponent from "./components/GlobeComponent.jsx";
-import ContactForm from "./components/ContactForm.jsx";
+import GlobeComponent from "./components/GlobeComponent";
+import ContactForm from "./components/ContactForm";
 
 export default function Contact() {
   return (

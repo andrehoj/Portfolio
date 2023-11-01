@@ -1,6 +1,6 @@
 "use client";
 import { skillData } from "../skillsData";
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   return (
@@ -18,7 +18,7 @@ export default function Skills() {
               delay: i * 0.07,
               duration: 0.2,
             }}
-            key={skill.name}
+            key={i}
             className={`skill-icons flex flex-col items-center justify-center gap-1 justify-self-center ${skill.color}`}
           >
             {skill.image}
