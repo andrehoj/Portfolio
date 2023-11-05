@@ -12,17 +12,20 @@ export default function Skills() {
       <div className="mb-10 flex flex-wrap justify-center gap-10">
         {skillData.map((skill, i) => (
           <motion.div
-            initial={{ opacity: 0, scale: 0, type: "spring" }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{
               delay: i * 0.07,
               duration: 0.2,
+              type: "spring",
+              stiffness: 260,
+              damping: 20,
             }}
             key={i}
             className={`skill-icons flex flex-col items-center justify-center gap-1 justify-self-center ${skill.color}`}
           >
             {skill.image}
-            <p>{skill.name}</p>
+            <p className="text-secondary_text">{skill.name}</p>
           </motion.div>
         ))}
       </div>

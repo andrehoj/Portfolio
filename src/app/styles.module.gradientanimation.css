@@ -9,7 +9,7 @@
   line-height: 1;
   display: block;
   position: absolute;
-  color: #FFFFFF;
+  color: #ffffff;
   pointer-events: none;
   width: 100%;
 }
@@ -37,7 +37,7 @@
 }
 
 .heading-line-second::before {
-  content: "Web";
+  content: "FullStack";
   animation: second_heading_white_text 12s infinite;
 }
 
@@ -50,7 +50,6 @@
   content: "Developer";
   animation: third_heading_white_text 12s infinite;
 }
-
 
 /* 1st heading gradient */
 @keyframes first_heading_gradient {

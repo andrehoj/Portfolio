@@ -84,7 +84,11 @@ export default function ContactForm() {
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
           type="text"
           name="name"
           id="name"
@@ -104,7 +108,12 @@ export default function ContactForm() {
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{
+            delay: 0.2,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
           type="email"
           name="email"
           id="email"
@@ -124,7 +133,12 @@ export default function ContactForm() {
         <motion.input
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{
+            delay: 0.4,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
           type="text"
           name="message"
           id=""
@@ -158,14 +172,19 @@ export default function ContactForm() {
         )}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.3 }}
+          transition={{
+            delay: .7,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
         >
           <button
             className={`${
               loading ? "pointer-events-none opacity-50" : null
-            } flex items-center rounded-sm border border-theme_green px-4 py-1.5   text-lg  font-medium text-theme_green transition-all duration-200 ease-linear hover:bg-theme_green  hover:text-main_black active:scale-75`}
+            } flex items-center rounded-sm border border-theme_green px-2 py-1   text-lg  font-medium text-theme_green transition-all duration-200 ease-linear hover:bg-theme_green  hover:text-main_black active:scale-75`}
           >
             {loading ? (
               <div role="status">

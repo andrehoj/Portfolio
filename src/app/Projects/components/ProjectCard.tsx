@@ -54,6 +54,7 @@ export default function ProjectCard({ project }) {
           duration: 0.5,
           bounce: 0.3,
           delay: 0.2,
+          
         },
         x: 30,
         opacity: 0,
@@ -78,7 +79,7 @@ export default function ProjectCard({ project }) {
 
             <p
               ref={projectRef}
-              className="font-text_secondary font-semibold text-text_secondary"
+              className="text-text_secondary"
             >
               {project.description}
             </p>
@@ -89,7 +90,7 @@ export default function ProjectCard({ project }) {
                 {project.icons.map((icon: IconType) => (
                   <span
                     key={Math.random() * 50}
-                    className="bg-transparent text-theme_cyan text-xs  mr-2 px-3.5 py-1 rounded  border border-theme_cyan"
+                    className="bg-transparent text-theme_cyan text-sm  mr-2 px-3.5 py-1 rounded  border border-theme_cyan"
                   >
                     {icon.name}
                   </span>
@@ -103,26 +104,26 @@ export default function ProjectCard({ project }) {
               href={`${project.repo}`}
               target="_blank"
               rel="noreferrer"
-              className="group flex flex-col  items-center justify-center duration-150 hover:cursor-pointer hover:brightness-75"
+              className="group flex flex-col  items-center justify-center hover:cursor-pointer hover:text-theme_purple"
             >
               <FaGithubAlt
                 size={"24"}
-                className="duration-150 group-hover:-translate-y-1"
+                className="duration-150 group-hover:-translate-y-1 group-hover:scale-110"
               />
-              <p>Code</p>
+              <p className="underline">Code</p>
             </Link>
 
             <Link
               href={`${project.link}`}
               target="_blank"
               rel="noreferrer"
-              className="group flex flex-col  items-center justify-center duration-150 hover:cursor-pointer hover:brightness-75"
+              className="group flex flex-col items-center justify-center  hover:cursor-pointer  hover:text-theme_purple"
             >
               <FaRocket
                 size={"24"}
-                className="duration-150 group-hover:-translate-y-1"
+                className="duration-150 group-hover:-translate-y-1 group-hover:scale-110"
               />
-              <p>App</p>
+              <p className="underline">App</p>
             </Link>
           </div>
         </div>
@@ -135,8 +136,8 @@ export default function ProjectCard({ project }) {
       >
         <Carousel>
           {project.images.map((image: string) => (
-            <div>
-              <Image src={image} alt="project" width={800} height={500} />
+            <div >
+              <Image  className="rounded-xl " src={image} alt="project" width={800} height={1} />
             </div>
           ))}
         </Carousel>

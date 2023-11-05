@@ -13,9 +13,14 @@ export default function page() {
 
       <div className="grid grid-cols-1 justify-between  md:grid-cols-2 lg:gap-10">
         <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.4 }}
+          initial={{ opacity: 0, x: -55 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 0.3,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
           className="text-text_secondary mt-5 self-start"
         >
           Hi! Im Andrew, I'm an enthusiastic Web Developer who loves to solve
@@ -28,10 +33,15 @@ export default function page() {
         </motion.p>
 
         <motion.div
-        className="w-fit justify-self-center lg:justify-self-auto"
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.4 }}
+          className="w-fit justify-self-center lg:justify-self-auto"
+          initial={{ opacity: 0, x: 55 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            delay: 0.3,
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
         >
           <Image
             className="about-img mt-5 md:mt-0 lg:justify-self-start"

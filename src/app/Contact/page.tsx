@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import GlobeComponent from "./components/GlobeComponent";
 import ContactForm from "./components/ContactForm";
 
@@ -9,18 +12,26 @@ export default function page() {
           Contact me
         </h2>
 
-        <p className={`text-lg text-center 2xl:text-left text-text_secondary`}>
+        <motion.p
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.2 }}
+          className={`text-lg text-center 2xl:text-left text-text_secondary`}
+        >
           If your interested in chatting you can reach me here
-        </p>
+        </motion.p>
 
-        <a
+        <motion.a
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.2 }}
           href="mailto:andrewhowran@gmail.com"
           className="m-auto block w-fit cursor-pointer text-base font-light text-theme_yellow underline 2xl:m-0"
           target={"_blank"}
           rel="noreferrer"
         >
           andrewhowran@gmail.com
-        </a>
+        </motion.a>
 
         <ContactForm />
       </div>
