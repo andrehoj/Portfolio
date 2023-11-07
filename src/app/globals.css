@@ -8,7 +8,7 @@
   }
 
   .page-title {
-    @apply font-black font-display text-6xl xsm:text-8xl w-fit;
+    @apply font-black font-display tracking-wide text-5xl first-line:subpixel-antialiased  sm:text-6xl md:text-7xl w-fit;
   }
 
   .heading-line {
@@ -20,7 +20,7 @@
   }
 
   .sections {
-    @apply mx-5 min-h-screen pt-16 text-center md:pt-24 lg:ml-32 lg:text-left;
+    @apply mx-5 min-h-screen pt-20 md:pt-16 text-center  lg:ml-32 lg:text-left;
   }
 
   .nav-small {

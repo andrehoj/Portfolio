@@ -21,11 +21,11 @@ export const projectData = [
     link: "https://gymtracker-production.up.railway.app/",
     repo: "https://github.com/AgentA12/gym_tracker",
     images: [
-      "/Strength_log_3.png",
-      "/Strength_log_2.png",
-      "/Strength_log_4.png",
-      "/Strength_log_5.png",
-      "/Strength_log_1.png",
+      "/strength-log-3.png",
+      "/strength-log-2.png",
+      "/strength-log-4.png",
+      "/strength-log-5.png",
+      "/strength-log-1.png",
     ],
     icons: gymTrackerIcons,
     description:

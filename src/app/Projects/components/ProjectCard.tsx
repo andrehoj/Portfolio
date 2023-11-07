@@ -54,7 +54,6 @@ export default function ProjectCard({ project }) {
           duration: 0.5,
           bounce: 0.3,
           delay: 0.2,
-          
         },
         x: 30,
         opacity: 0,
@@ -77,10 +76,7 @@ export default function ProjectCard({ project }) {
               {project.title}
             </h1>
 
-            <p
-              ref={projectRef}
-              className="text-text_secondary"
-            >
+            <p ref={projectRef} className="text-text_secondary">
               {project.description}
             </p>
             <div className="mb-2">
@@ -136,8 +132,14 @@ export default function ProjectCard({ project }) {
       >
         <Carousel>
           {project.images.map((image: string) => (
-            <div >
-              <Image  className="rounded-xl " src={image} alt="project" width={800} height={1} />
+            <div>
+              <Image
+                className="rounded-xl"
+                src={image}
+                alt="project"
+                width={800}
+                height={0}
+              />
             </div>
           ))}
         </Carousel>

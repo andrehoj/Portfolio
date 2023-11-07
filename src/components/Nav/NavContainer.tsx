@@ -2,7 +2,7 @@
 
 import Socials from "./Socials";
 import Tabs from "./Tabs";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Cross as Hamburger } from "hamburger-react";
 import { usePathname } from "next/navigation";
 
@@ -18,25 +18,23 @@ export default function NavContainer() {
 
   const [isOpen, setOpen] = useState(false);
 
-  const wrapperRef = useRef(null);
-
   return (
     <nav
-      ref={wrapperRef}
       className={`${
         isOpen
           ? "bg-main_black h-fit w-full border-b border-gray-700 px-10 py-3 pt-5"
           : "h-0 p-0 md:h-auto md:px-10 md:py-3 "
       } text-secondary_text fixed z-20 md:right-0 md:top-0 md:flex md:w-fit`}
     >
-      <div className="absolute left-5 top-5 z-50 hover:cursor-pointer md:hidden ">
+      <div className="absolute p-0 rounded-full border border-[#404040] left-5 top-5 z-50 hover:cursor-pointer md:hidden ">
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
           duration={0.3}
-          label="Show menu"
-        
-          color="#FFFFFF"
+          label="Show navbar"
+          color="#888888"
+          size={20}
+          distance="lg"
         />
       </div>
 
