@@ -4,6 +4,7 @@ import {
   stopShopIcons,
   gymTrackerIcons,
   IconType,
+  portfolioIcons,
 } from "./projectIconData";
 
 export interface ProjectType {
@@ -18,14 +19,13 @@ export interface ProjectType {
 export const projectData = [
   {
     title: "Strength Log",
-    link: "https://gymtracker-production.up.railway.app/",
+    link: "https://strengthlog-production.up.railway.app/",
     repo: "https://github.com/AgentA12/gym_tracker",
     images: [
-      "/strength-log-3.png",
-      "/strength-log-2.png",
-      "/strength-log-4.png",
-      "/strength-log-5.png",
       "/strength-log-1.png",
+      "/strength-log-2.png",
+      "/strength-log-3.png",
+      "/strength-log-4.png",
     ],
     icons: gymTrackerIcons,
     description:
@@ -44,6 +44,15 @@ export const projectData = [
     icons: devHangOutIcons,
     description:
       "A developer 'themed' chatting application where users can get help from other developers when they get stuck. Users can create an account, edit their settings and chat with others through direct messages or language based rooms.",
+  },
+
+  {
+    title: "Portfolio",
+    images: ["/portfolio-img-0.png"],
+    link: "https://andrewhowran.dev",
+    repo: "https://github.com/AgentA12/Portfolio",
+    icons: portfolioIcons,
+    description: "This portfolio of mine",
   },
 
   {

@@ -12,7 +12,7 @@ export default function NavContainer() {
   const tabs = [
     { name: "Home", link: "/" },
     { name: "About", link: "/About" },
-    { name: "Projects", link: "/Projects" },
+    { name: "Work", link: "/Projects" },
     { name: "Contact", link: "/Contact" },
   ];
 
@@ -26,7 +26,7 @@ export default function NavContainer() {
           : "h-0 p-0 md:h-auto md:px-10 md:py-3 "
       } text-secondary_text fixed z-20 md:right-0 md:top-0 md:flex md:w-fit`}
     >
-      <div className="absolute p-0 rounded-full border border-[#404040] left-5 top-5 z-50 hover:cursor-pointer md:hidden ">
+      <div className="absolute p-0 bg-main_black rounded-full border border-[#404040] left-5 top-5 z-50 hover:cursor-pointer md:hidden ">
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}

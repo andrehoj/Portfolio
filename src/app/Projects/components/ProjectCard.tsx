@@ -130,15 +130,15 @@ export default function ProjectCard({ project }) {
         initial={{ opacity: 0, x: 30 }}
         className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
       >
-        <Carousel>
+        <Carousel showThumbs={false}>
           {project.images.map((image: string) => (
-            <div>
+            <div key={image}>
               <Image
                 className="rounded-xl"
                 src={image}
                 alt="project"
                 width={800}
-                height={0}
+                height={200}
               />
             </div>
           ))}

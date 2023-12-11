@@ -17,7 +17,7 @@ const bebas_Neue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: "Andrew Howran",
-  description: "Andrew Howran Web Developer",
+  description: "Web Developer",
 };
 
 export default function RootLayout({
@@ -27,6 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.className} ${bebas_Neue.variable} `}>
+      <link rel="icon" href="/favicon-96x96.png" sizes="any" />
       <body>
         <Nav />
         <main className="sections">{children}</main>

@@ -3,6 +3,7 @@ import {
   SiExpress,
   SiSocketdotio,
   SiApollographql,
+  SiNextdotjs,
 } from "react-icons/si";
 
 export interface IconType {
@@ -118,14 +119,19 @@ export const stopShopIcons = [
 
 export const portfolioIcons = [
   {
+    isIcon: true,
+    link: <SiNextdotjs />,
+    name: "Nextjs",
+  },
+  {
     isIcon: false,
-    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    name: "React",
+    link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg",
+    name: "TypeScript",
   },
   {
     isIcon: false,
     link: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-    name: "Tailwind CSS",
+    name: "tailwindcss",
   },
 ];
 

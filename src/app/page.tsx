@@ -11,8 +11,8 @@ export default function page() {
         <span className="heading-line heading-line-first">
           <span className="heading-line-gradient">Andrew</span>
         </span>
-        <div className="lg:mr-96">
-          <span className="heading-line heading-line-second">
+        <div className="lg:mr-96">A {" "}
+          <span className="heading-line heading-line-second lg:mr-3">
             <span className="heading-line-gradient">FullStack</span>
           </span>
           &nbsp;
