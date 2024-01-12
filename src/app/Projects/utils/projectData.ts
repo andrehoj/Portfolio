@@ -19,7 +19,7 @@ export interface ProjectType {
 export const projectData = [
   {
     title: "Strength Log",
-    link: "https://strengthlog-production.up.railway.app/",
+    link: "https://strength-log-frontend.vercel.app/",
     repo: "https://github.com/AgentA12/gym_tracker",
     images: [
       "/strength-log-1.png",
