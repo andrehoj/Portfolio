@@ -1,22 +1,27 @@
 "use client";
-
-import { useRef, useEffect } from "react";
-import { motion, useInView, useAnimation } from "framer-motion";
-import { FaGithubAlt, FaRocket } from "react-icons/fa";
+import { useRef, useEffect, useState } from "react";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+} from "framer-motion";
+import { FaGithubAlt, FaRocket, FaRegImages } from "react-icons/fa";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import { IconType } from "../utils/projectIconData";
 import Link from "next/link";
 import Image from "next/image";
+import Modal from "./Modal";
+import EmblaCarousel from "./EmblaCarousel";
 
 export default function ProjectCard({ project }) {
   const projectRef = useRef(null);
 
   const isProjectInView = useInView(projectRef);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const projectAnimation = useAnimation();
   const projectImageAnimation = useAnimation();
-
   useEffect(() => {
     if (isProjectInView) {
       projectAnimation.start({
@@ -70,11 +75,16 @@ export default function ProjectCard({ project }) {
       >
         <div className="w-100 flex min-h-full flex-col justify-between text-center lg:w-9/12 lg:text-start">
           <div className="flex flex-col gap-7 lg:w-11/12 lg:gap-3">
-            <h1
-              className={`font-display text-2xl font-black text-theme_purple sm:text-4xl `}
-            >
-              {project.title}
-            </h1>
+            <div className="flex justify-center lg:justify-normal gap-2 w-full">
+              <h1
+                className={`inline-block font-display text-2xl font-black text-theme_purple sm:text-4xl `}
+              >
+                {project.title}
+              </h1>
+              <span className="text-theme_cyan  no-underline rounded-full  font-sans font-semibold text-sm border-blue btn-primary">
+                {project.date}
+              </span>
+            </div>
 
             <p ref={projectRef} className="text-text_secondary">
               {project.description}
@@ -121,6 +131,17 @@ export default function ProjectCard({ project }) {
               />
               <p className="underline">App</p>
             </Link>
+
+            <div
+              onClick={() => setModalOpen(true)}
+              className="flex group flex-col items-center justify-center  hover:cursor-pointer hover:text-theme_purple"
+            >
+              <FaRegImages
+                size={"24"}
+                className="duration-150 group-hover:scale-125 "
+              />
+              <p>Images</p>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -128,22 +149,41 @@ export default function ProjectCard({ project }) {
       <motion.div
         animate={projectImageAnimation}
         initial={{ opacity: 0, x: 30 }}
-        className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2 "
+        className="z-10 order-1 lg:relative lg:-left-28 lg:top-5 lg:order-2"
       >
-        <Carousel showThumbs={false}>
-          {project.images.map((image: string) => (
-            <div key={image}>
-              <Image
-                className="rounded-xl"
-                src={image}
-                alt="project"
-                width={800}
-                height={200}
-              />
-            </div>
-          ))}
-        </Carousel>
+        <Image
+          className="rounded-xl w-fit"
+          src={project.images[0]}
+          alt="project"
+          width={800}
+          height={200}
+        />
       </motion.div>
+
+      <AnimatePresence
+        // Disable any initial animations on children that
+        // are present when the component is first rendered
+        initial={false}
+        // Only render one component at a time.
+        // The exiting component will finish its exit
+        // animation before entering component is rendered
+        exitBeforeEnter={true}
+        // Fires when all exiting nodes have completed animating out
+        onExitComplete={() => null}
+      >
+        {modalOpen && (
+          <Modal handleClose={() => setModalOpen(false)}>
+            <EmblaCarousel
+              options={{
+                align: "center",
+                dragFree: false,
+                containScroll: "trimSnaps",
+              }}
+              images={project.images}
+            />
+          </Modal>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

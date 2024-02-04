@@ -1,0 +1,22 @@
+.embla {
+  --slide-spacing: 1rem;
+  --slide-size: 90%;
+}
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+.embla__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px 50px
+}
+.embla__slide {
+  flex: 0 0 var(--slide-size);
+}
+
+.embla__slide__img {
+  object-fit: contain; /* or "
+  contain" */
+}

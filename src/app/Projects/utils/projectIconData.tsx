@@ -179,24 +179,19 @@ export const gymTrackerIcons = [
 
   {
     isIcon: false,
+    link: "",
+    name: "TypeScript",
+  },
+
+  {
+    isIcon: false,
     name: "Mantine UI",
   },
 
   {
-    isIcon: false,
-    link: "",
-    name: "Tailwind",
-  },
-
-  {
     link: "",
     isIcon: false,
-    name: "Apollo",
-  },
-  {
-    isIcon: false,
-    link: "",
-    name: "GraphQL",
+    name: "Apollo GraphQL",
   },
 
   {
@@ -206,15 +201,17 @@ export const gymTrackerIcons = [
   },
 
   {
-    link: "",
-    isIcon: false,
-    name: "MongoDB",
-  },
-  {
     isIcon: false,
     link: "",
     name: "Express",
   },
+
+  {
+    link: "",
+    isIcon: false,
+    name: "MongoDB",
+  },
+
   {
     isIcon: false,
     link: "",

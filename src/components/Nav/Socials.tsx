@@ -10,9 +10,9 @@ export default function Socials() {
         href="https://github.com/AgentA12"
         target={"blank"}
       >
-        <RiGithubFill size="20" color="#FFFFFF"/>
+        <RiGithubFill size="24" color="#FFFFFF"/>
       </motion.a>
-      <motion.a
+      {/* <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
         href="https://www.linkedin.com/in/andrew-howran-01470222a/"
@@ -27,15 +27,15 @@ export default function Socials() {
         target={"blank"}
       >
         <RiTwitterXFill size="20" color="#FFFFFF" />
-      </motion.a>
-      <motion.a
+      </motion.a> */}
+      {/* <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
         href="https://stackoverflow.com/users/17832653/andrew-h"
         target={"blank"}
       >
         <RiStackOverflowLine size="20" className=" text-stackOF_color" />
-      </motion.a>
+      </motion.a> */}
      
     </div>
   );

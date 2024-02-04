@@ -207,7 +207,7 @@ export default function ContactForm() {
                 <span className="sr-only">Loading...</span>
               </div>
             ) : null}{" "}
-            SEND
+            Send
           </button>
         </motion.div>
       </div>
