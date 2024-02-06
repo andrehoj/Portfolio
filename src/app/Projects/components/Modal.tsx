@@ -1,9 +1,4 @@
 import { motion } from "framer-motion";
-import EmblaCarousel from "./EmblaCarousel";
-import { Carousel } from "@material-tailwind/react";
-import { EmblaOptionsType } from "embla-carousel";
-import Image from "next/image";
-import { ImageType } from "@/declaration";
 import { ReactNode } from "react";
 
 const dropIn = {
@@ -32,7 +27,7 @@ const Backdrop = ({ children, onClick }) => {
   return (
     <motion.div
       onClick={onClick}
-      className="overflow-hidden absolute top-0 left-0 h-screen w-screen"
+      className="bg-transparent border border-theme_cyan fixed top-0 left-0 h-full w-screen"
       style={{
         zIndex: 99,
         background: "rgba( 0, 0, 0, 0.25 )",
@@ -59,7 +54,7 @@ const Modal = ({
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation()}
-        className="bg-transparent absolute top-0 left-0 h-screen w-screen flex items-center justify-center"
+        className="absolute top-0 left-0 h-full w-full"
         variants={{ ...dropIn }}
         initial="hidden"
         animate="visible"
@@ -71,7 +66,7 @@ const Modal = ({
         >
           Close
         </button>
-        <div className="flex justify-center align-middle items-center">
+        <div className="flex h-full justify-center align-middle items-center mt-12">
           {children}
         </div>
       </motion.div>

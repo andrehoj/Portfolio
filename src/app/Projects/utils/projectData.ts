@@ -27,9 +27,9 @@ export const projectData = [
       // { src: "/strength-log-2.png", width: 800, height: 100 },
       { src: "/strength-log-3.png", width: 800, height: 100 },
       { src: "/strength-log-4.png", width: 800, height: 100 },
-      { src: "/strength-log-5.png", width: 300, height: 100 },
-      { src: "/strength-log-6.png", width: 300, height: 100 },
-      { src: "/strength-log-7.png", width: 270, height: 100 }
+      { src: "/strength-log-5.png", width: 260, height: 100 },
+      { src: "/strength-log-6.png", width: 260, height: 100 },
+      { src: "/strength-log-7.png", width: 225, height: 100 }
 
     ],
     icons: gymTrackerIcons,

@@ -32,6 +32,8 @@ export default function EmblaCarousel({ images, options }: Props<ImageType>) {
         <div className={styles.embla__container}>
           {images.map((img: ImageType) => (
             <Image
+              placeholder="blur"
+              blurDataURL={img.src}
               className="border border-theme_cyan rounded-md mr-10"
               alt=""
               src={img.src}
