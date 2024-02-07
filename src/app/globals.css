@@ -58,6 +58,10 @@
   .heading-line {
     @apply text-6xl font-black subpixel-antialiased  sm:text-8xl md:text-9xl;
   }
+
+  .close-modal-btn {
+    @apply border-y-theme_purple flex items-center rounded-sm border border-theme_purple px-2 py-1 text-lg font-medium text-theme_purple transition-all duration-200 ease-linear hover:bg-theme_purple  hover:text-main_black active:scale-75;
+  }
 }
 
 * {

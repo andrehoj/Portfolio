@@ -24,12 +24,15 @@ export const projectData = [
     repo: "https://github.com/andrehoj/Strength_Log",
     images: [
       { src: "/strength-log-1.png", width: 800, height: 100 },
-      // { src: "/strength-log-2.png", width: 800, height: 100 },
+      { src: "/strength-log-2.png", width: 800, height: 100 },
       { src: "/strength-log-3.png", width: 800, height: 100 },
       { src: "/strength-log-4.png", width: 800, height: 100 },
+      { src: "/strength-log-8.png", width: 500, height: 100 },
+      { src: "/strength-log-9.png", width: 500, height: 100 },
       { src: "/strength-log-5.png", width: 260, height: 100 },
       { src: "/strength-log-6.png", width: 260, height: 100 },
-      { src: "/strength-log-7.png", width: 225, height: 100 }
+      { src: "/strength-log-7.png", width: 225, height: 100 },
+
 
     ],
     icons: gymTrackerIcons,

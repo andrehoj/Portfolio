@@ -24,7 +24,7 @@ export default function page() {
             </span>
           </span>
         </div>
-        based in Ontario, Canada
+        based in <span>Canada</span>
       </h2>
       <Link className="custom-btn-contact" href="/Contact">
         Contact me

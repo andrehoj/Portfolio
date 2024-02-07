@@ -21,9 +21,7 @@ export default function GlobeComponent() {
   }, []);
 
   const gData = { lat: 45.424721, lng: -75.695, size: 30, color: ["#56D82D"] };
-
   const hours = new Date().getHours();
-
   const isDayTime = hours > 6 && hours < 20;
 
   return (
