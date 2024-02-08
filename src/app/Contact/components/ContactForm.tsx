@@ -161,12 +161,12 @@ export default function ContactForm() {
         }   align-center flex `}
       >
         {successMessage && (
-          <div className="mr-2  inline font-black text-green-500 transition-all duration-100 sm:text-lg sm:text-xl">
+          <div className="mr-2  inline font-black text-green-500 transition-all duration-100 sm:text-lg">
             {capitalizeFirstLetter(successMessage)}
           </div>
         )}
         {errorMessage && (
-          <div className="mr-2  inline font-black text-red-500 transition-all duration-100 sm:text-xl">
+          <div className="mr-2  inline font-black text-red-400 transition-all duration-100 sm:text-xl">
             {capitalizeFirstLetter(errorMessage)}
           </div>
         )}

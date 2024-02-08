@@ -38,7 +38,7 @@ export const projectData = [
     icons: gymTrackerIcons,
 
     description:
-      "Fitness application.",
+      "I dont like most weight lifting apps because they are a bit to verbose in their features for my needs, so I made Strength log. It's a simple fitness app that works using templates (a collection of exercises). You can save your templates and see how you progress over time.",
   },
 
   // {
@@ -55,14 +55,18 @@ export const projectData = [
   //     "A developer 'themed' chatting application where users can get help from other developers when they get stuck. Users can create an account, edit their settings and chat with others through direct messages or language based rooms.",
   // },
 
-  // {
-  //   title: "Portfolio",
-  //   images: ["/portfolio-img-0.png"],
-  //   link: "https://andrewhowran.dev",
-  //   repo: "https://github.com/AgentA12/Portfolio",
-  //   icons: portfolioIcons,
-  //   description: "This portfolio of mine",
-  // },
+  {
+    date: 2024,
+    title: "Portfolio",
+    images: [
+      { src: "/portfolio-img-0.png", width: 800, height: 100 },
+      { src: "/portfolio-img-1.png", width: 600, height: 100 },
+      { src: "/portfolio-img-2.png", width: 800, height: 100 }],
+    link: "#",
+    repo: "https://github.com/AgentA12/Portfolio",
+    icons: portfolioIcons,
+    description: "This portfolio of mine, I plan to add a blog in time.",
+  },
 
   // {
   //   title: "Find Your Estate",

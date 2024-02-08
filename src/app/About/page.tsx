@@ -3,6 +3,7 @@
 import Skills from "./components/Skills";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -23,13 +24,25 @@ export default function page() {
           }}
           className="text-text_secondary mt-5 self-start"
         >
-          Hi! Im Andrew, I'm an enthusiastic Web Developer who loves to solve
-          problems using all kinds of web technologies and is obsessed with
-          learning new ones! Some of my hobbies include weight lifting, watching
-          movies, playing guitar and of course coding. I'm always learning and
-          adapting to the constant changing environment that is the web. Feel
-          free to contact me whether its about a project, job opportunity or if
-          you have any questions.
+          Hi! My name's Andrew, I'm a Web Developer who likes to solve problems
+          using all kinds of web technologies and enjoy's learning new ones. Some
+          of my favourite past times include weight lifting, watching movies,
+          reading, playing{" "}
+          <span className="text-theme_orange underline cursor-pointer">
+            my guitar
+          </span>{" "}
+          and reading about code and writing it. I'm always learning and trying
+          to improve the maintainability, readability and overall quality of my
+          code, on top of adapting to the wild environment that is the web. Feel
+          free to{" "}
+          <Link
+            className="text-theme_pink underline cursor-pointer"
+            href="/Contact"
+          >
+            contact me
+          </Link>{" "}
+          whether it's about a project, job opportunity or if you have any
+          questions at all.
         </motion.p>
 
         <motion.div

@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <div className="lg:w-9/12">
       <p className="my-5 font-display text-5xl text-theme_pink">
-        Skills and Tools
+      Some Skills and Tools
       </p>
 
       <div className="mb-10 flex flex-wrap justify-center gap-10">

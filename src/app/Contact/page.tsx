@@ -16,7 +16,7 @@ export default function page() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.2 }}
-          className={`text-lg text-center 2xl:text-left text-text_secondary`}
+          className={`text-md text-center 2xl:text-left text-secondary_text`}
         >
           If your interested in chatting you can reach me here
         </motion.p>

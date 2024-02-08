@@ -43,7 +43,7 @@ export default function page() {
         based in{" "}
         <p className="text-red-400 inline relative">
           Canada
-          <span className="font-light text-[26px] absolute -top-1 -right-9">
+          <span className="font-light text-[22px] absolute -top-1 -right-7">
             &#127809;
           </span>
         </p>
