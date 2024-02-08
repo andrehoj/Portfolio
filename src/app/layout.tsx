@@ -16,8 +16,8 @@ const bebas_Neue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Andrew Howran",
-  description: "Web Developer",
+  title: "Andrew Howran: Software developer",
+  description: "Andrew is a Software devoloper residing in Canada",
 };
 
 export default function RootLayout({

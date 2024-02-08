@@ -11,7 +11,8 @@ export default function page() {
         <span className="heading-line heading-line-first">
           <span className="heading-line-gradient">Andrew</span>
         </span>
-        <div className="lg:mr-96">A {" "}
+        <div className="lg:mr-96">
+          A{" "}
           <span className="heading-line heading-line-second lg:mr-3">
             <span className="heading-line-gradient">FullStack</span>
           </span>
@@ -24,7 +25,13 @@ export default function page() {
             </span>
           </span>
         </div>
-        based in <span>Canada</span>
+        based in{" "}
+        <p className="text-red-400 inline relative">
+          Canada
+          <span className="font-light text-[26px] absolute -top-1 -right-9">
+            &#127809;
+          </span>
+        </p>
       </h2>
       <Link className="custom-btn-contact" href="/Contact">
         Contact me

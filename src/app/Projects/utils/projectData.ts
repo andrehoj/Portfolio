@@ -38,7 +38,7 @@ export const projectData = [
     icons: gymTrackerIcons,
 
     description:
-      "Strength Log is an fitness application I custom tailored to my needs.",
+      "Fitness application.",
   },
 
   // {

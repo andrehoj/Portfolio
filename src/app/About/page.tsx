@@ -8,7 +8,7 @@ export default function page() {
   return (
     <section className="flex flex-col m-auto lg:mx-0 lg:mr-8 lg:w-9/12 ">
       <h2 className="self-center lg:self-start gradient-title-about page-title">
-        About Me
+        Bit About Me
       </h2>
 
       <div className="grid grid-cols-1 justify-between  md:grid-cols-2 lg:gap-10">
