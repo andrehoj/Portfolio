@@ -1,6 +1,21 @@
 import Link from "next/link";
 import Canvas from "../components/Canvas";
 import "./styles.module.gradientanimation.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Andrew Howran",
+  description:
+    "Hi! I'm Andrew, a Full Stack developer with a focus on MERN technologies. I current reside in Canada",
+  keywords: [
+    "FullStack Developer",
+    "React",
+    "JavaScript",
+    "Node.js",
+    "HTML",
+    "CSS",
+  ],
+};
 
 export default function page() {
   return (

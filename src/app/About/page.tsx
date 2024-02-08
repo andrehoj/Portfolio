@@ -47,7 +47,7 @@ export default function page() {
             className="about-img mt-5 md:mt-0 lg:justify-self-start"
             height={225}
             width={225}
-            src="/img_of_me.jpeg"
+            src="/webimg.jpg"
             alt="picture of andrew"
           />
         </motion.div>

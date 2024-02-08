@@ -7,7 +7,7 @@ export default function Socials() {
       <motion.a
         whileHover={{ scale: 1.2 }}
         transition={{ type: "spring", stiffness: 400, damping: 10 }}
-        href="https://github.com/AgentA12"
+        href="https://github.com/andrehoj"
         target={"blank"}
       >
         <RiGithubFill size="24" color="#FFFFFF"/>
